@@ -1,13 +1,29 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<!-- Mirrored from flixgo.volkovdesign.com/main/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 03 Feb 2025 09:09:18 GMT -->
+<!doctype html>
+<html lang="en" data-bs-theme="dark">
 
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Movie Recommedy</title>
+    <!-- Google Font Api KEY-->
+    <meta name="google_font_api" content="AIzaSyBG58yNdAjc20_8jAvLNSVi9E4Xhwjau_k">
 
-    <!-- CSS -->
+    <!-- Library / Plugin Css Build -->
+    <link rel="stylesheet" href="{{asset('assets')}}/main/css/core/libs.min.css" />
+
+    <!-- font-awesome css -->
+    <link rel="stylesheet" href="{{asset('assets')}}/main/vendor/font-awesome/css/all.min.css" />
+
+    <!-- Iconly css -->
+    <link rel="stylesheet" href="{{asset('assets')}}/main/vendor/iconly/css/style.css" />
+
+    <!-- Animate css -->
+    <link rel="stylesheet" href="{{asset('assets')}}/main/vendor/animate.min.css" />
+
+    <!-- SwiperSlider css -->
+    <link rel="stylesheet" href="{{asset('assets')}}/main/vendor/swiperSlider/swiper.min.css">
+
+
     <link rel="stylesheet" href="{{asset('assets')}}/main/css/bootstrap.min.css">
     <link rel="stylesheet" href="{{asset('assets')}}/main/css/splide.min.css">
     <link rel="stylesheet" href="{{asset('assets')}}/main/css/slimselect.css">
@@ -16,423 +32,561 @@
     <link rel="stylesheet" href="{{asset('assets')}}/main/css/default-skin.css">
     <link rel="stylesheet" href="{{asset('assets')}}/main/css/main.css">
 
-    <!-- Favicons -->
-    <link rel="icon" type="image/png" href="{{asset('assets')}}/main/icon/favicon-32x32.png" sizes="32x32">
-    <link rel="apple-touch-icon" href="{{asset('assets')}}/main/icon/favicon-32x32.png">
 
-    <meta name="description" content="Online Movies, TV Shows & Cinema HTML Template">
-    <meta name="keywords" content="">
-    <meta name="author" content="Dmitry Volkov">
-    <title>FlixGo – Online Movies, TV Shows & Cinema HTML Template</title>
+    <!-- Streamit Design System Css -->
+    <link rel="stylesheet" href="{{asset('assets')}}/main/css/streamit.min848f.css?v=5.2.1" />
+
+    <!-- Custom Css -->
+    <link rel="stylesheet" href="{{asset('assets')}}/main/css/custom.min848f.css?v=5.2.1" />
+
+    <!-- Rtl Css -->
+    <link rel="stylesheet" href="{{asset('assets')}}/main/css/rtl.min848f.css?v=5.2.1" />
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com/">
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,300&amp;display=swap" rel="stylesheet">
 
 </head>
 
-<body>
-    <!-- header -->
-    <header class="header">
-        <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    <div class="header__content">
-                        <!-- header logo -->
-                        <a href="index.html" class="header__logo">
-                            <img src="{{asset('assets')}}/main/img/logo.svg" alt="">
-                        </a>
-                        <!-- end header logo -->
+<body class="  ">
+    <span class="screen-darken"></span>
+    <!-- loader Start -->
+    <!-- loader Start -->
+    <div class="loader simple-loader">
+        <div class="loader-body">
+            <img src="{{asset('assets')}}/main/img/1fpC.gif" alt="loader" class="img-fluid " width="300">
+        </div>
+    </div>
+    <!-- loader END --> <!-- loader END -->
+    <main class="main-content">
+        <!--Nav Start-->
+        <header class="header-center-home header-default header-sticky">
+            <nav class="nav navbar navbar-expand-xl navbar-light iq-navbar header-hover-menu py-xl-0">
+                <div class="container-fluid navbar-inner">
+                    <div class="d-flex align-items-center justify-content-between w-100 landing-header">
+                        <div class="d-flex gap-3 gap-xl-0 align-items-center">
+                            <div>
+                                <button type="button" data-bs-toggle="offcanvas" data-bs-target="#navbar_main"
+                                    aria-controls="navbar_main"
+                                    class="d-xl-none btn btn-primary rounded-pill p-1 pt-0 toggle-rounded-btn">
+                                    <svg width="20px" class="icon-20" viewBox="0 0 24 24">
+                                        <path fill="currentColor"
+                                            d="M4,11V13H16L10.5,18.5L11.92,19.92L19.84,12L11.92,4.08L10.5,5.5L16,11H4Z"></path>
+                                    </svg>
+                                </button>
+                            </div>
+                            <!--Logo -->
+                            <div class="logo-default">
+                                <a class="navbar-brand text-primary" href="{{route('index')}}">
+                                    <img class="img-fluid logo" src="{{asset('assets')}}/main/img/play-svgrepo-com.svg" loading="lazy" alt="streamit" />
+                                </a>
+                            </div>
+                            <div class="logo-hotstar">
+                                <a class="navbar-brand text-primary" href="{{route('index')}}">
+                                    <img class="img-fluid logo" src="{{asset('assets')}}/main/img/logo-hotstar.html" loading="lazy" alt="streamit" />
+                                </a>
+                            </div>
+                            <div class="logo-prime">
+                                <a class="navbar-brand text-primary" href="{{route('index')}}">
+                                    <img class="img-fluid logo" src="{{asset('assets')}}/main/img/logo-prime.html" loading="lazy" alt="streamit" />
+                                </a>
+                            </div>
+                            <div class="logo-hulu">
+                                <a class="navbar-brand text-primary" href="{{route('index')}}">
+                                    <img class="img-fluid logo" src="{{asset('assets')}}/main/img/logo-hulu.html" loading="lazy" alt="streamit" />
+                                </a>
+                            </div>
 
-                        <!-- header categories -->
-                        <div class="header__categories">
-                            <button class="header__categories-btn" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                <span></span>
-                                <span></span>
-                            </button>
-
-                            <div class="dropdown-menu header__dropdown-menu header__dropdown-menu--categories">
-                                <ul class="header__categories-list">
-                                    <li><a href="catalog1.html">Films</a></li>
-                                    <li><a href="catalog2.html">TV Series</a></li>
-                                    <li><a href="catalog1.html">Anime</a></li>
-                                    <li><a href="catalog2.html">Cartoons</a></li>
+                        </div>
+                        <nav id="navbar_main" class="offcanvas mobile-offcanvas nav navbar navbar-expand-xl hover-nav horizontal-nav mega-menu-content py-xl-0">
+                            <div class="container-fluid p-lg-0">
+                                <div class="offcanvas-header px-0">
+                                    <div class="navbar-brand ms-3">
+                                        <!--Logo -->
+                                        <div class="logo-default">
+                                            <a class="navbar-brand text-primary" href="{{route('index')}}">
+                                                <img class="img-fluid logo" src="{{asset('assets')}}/main/img/logo.html" loading="lazy" alt="streamit" />
+                                            </a>
+                                        </div>
+                                        <div class="logo-hotstar">
+                                            <a class="navbar-brand text-primary" href="{{route('index')}}">
+                                                <img class="img-fluid logo" src="{{asset('assets')}}/main/img/logo-hotstar.html" loading="lazy" alt="streamit" />
+                                            </a>
+                                        </div>
+                                        <div class="logo-prime">
+                                            <a class="navbar-brand text-primary" href="{{route('index')}}">
+                                                <img class="img-fluid logo" src="{{asset('assets')}}/main/img/logo-prime.html" loading="lazy" alt="streamit" />
+                                            </a>
+                                        </div>
+                                        <div class="logo-hulu">
+                                            <a class="navbar-brand text-primary" href="{{route('index')}}">
+                                                <img class="img-fluid logo" src="{{asset('assets')}}/main/img/logo-hulu.html" loading="lazy" alt="streamit" />
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <button type="button" class="btn-close float-end px-3" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                                </div>
+                                <ul class="navbar-nav iq-nav-menu  list-unstyled" id="header-menu">
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="{{route('index')}}" role="button" aria-expanded="false" aria-controls="homePages">
+                                            <span class="item-name">Home</span>
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" data-bs-toggle="collapse" href="#features" role="button" aria-expanded="false" aria-controls="homePages">
+                                            <span class="item-name">Features</span>
+                                            <span class="menu-icon">
+                                                <i class="fa fa-caret-down toggledrop-desktop right-icon" aria-hidden="true"></i>
+                                                <span class="toggle-menu">
+                                                    <i class="fa fa-plus  arrow-active text-white" aria-hidden="true"></i>
+                                                    <i class="fa fa-minus  arrow-hover text-white" aria-hidden="true"></i>
+                                                </span>
+                                            </span>
+                                        </a>
+                                        <ul class="sub-nav collapse  list-unstyled" id="features">
+                                            <li class="nav-item">
+                                                <a class="nav-link " href="{{route('movies-list')}}"> For You </a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link " href="{{route('cataloggrid')}}"> Genres </a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link " href="{{route('allmovies')}}"> All Movies </a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link " href="{{route('actor')}}"> Casts </a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link " href="{{route('tags')}}"> Tags </a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="{{route('aboutus')}}" role="button" aria-expanded="false" aria-controls="homePages">
+                                            <span class="item-name">About Us</span>
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="{{route('contactus')}}" role="button" aria-expanded="false" aria-controls="homePages">
+                                            <span class="item-name">Contact Us</span>
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="{{route('helpcenter')}}" role="button" aria-expanded="false" aria-controls="homePages">
+                                            <span class="item-name">FAQ</span>
+                                        </a>
+                                    </li>
                                 </ul>
-                                <ul class="header__categories-list">
-                                    <li><a href="catalog1.html">Catalog Grid</a></li>
-                                    <li><a href="catalog2.html">Catalog List</a></li>
-                                    <li><a href="details1.html">Details Film</a></li>
-                                    <li><a href="details2.html">Details TV Series</a></li>
+                            </div>
+                            <!-- container-fluid.// -->
+                        </nav>
+                        <div class="right-panel">
+                            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                                aria-label="Toggle navigation">
+                                <span class="navbar-toggler-btn">
+                                    <span class="navbar-toggler-icon"></span>
+                                </span>
+                            </button>
+                            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                                <ul class="navbar-nav align-items-center ms-auto mb-2 mb-xl-0">
+                                    <li class="nav-item dropdown iq-responsive-menu">
+                                        <div class="search-box">
+                                            <a href="#" class="nav-link p-0" id="search-drop" data-bs-toggle="dropdown">
+                                                <div class="btn-icon btn-sm rounded-pill btn-action">
+                                                    <span class="btn-inner">
+                                                        <svg class="icon-20" width="20" viewBox="0 0 24 24" fill="none"
+                                                            xmlns="http://www.w3.org/2000/svg">
+                                                            <circle cx="11.7669" cy="11.7666" r="8.98856" stroke="currentColor"
+                                                                stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                                            </circle>
+                                                            <path d="M18.0186 18.4851L21.5426 22" stroke="currentColor" stroke-width="1.5"
+                                                                stroke-linecap="round" stroke-linejoin="round">
+                                                            </path>
+                                                        </svg>
+                                                    </span>
+                                                </div>
+                                            </a>
+                                            <ul class="dropdown-menu p-0 dropdown-search m-0 iq-search-bar" style="width: 20rem;">
+                                                <li class="p-0">
+                                                    <div class="form-group input-group mb-0">
+                                                        <input type="text" class="form-control border-0" placeholder="Search...">
+                                                        <button type="submit" class="search-submit">
+                                                            <svg class="icon-15" width="15" viewBox="0 0 24 24" fill="none"
+                                                                xmlns="http://www.w3.org/2000/svg">
+                                                                <circle cx="11.7669" cy="11.7666" r="8.98856" stroke="currentColor"
+                                                                    stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                                                </circle>
+                                                                <path d="M18.0186 18.4851L21.5426 22" stroke="currentColor" stroke-width="1.5"
+                                                                    stroke-linecap="round" stroke-linejoin="round">
+                                                                </path>
+                                                            </svg>
+                                                        </button>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li class="nav-item dropdown" id="itemdropdown1">
+                                        <a class="nav-link d-flex align-items-center" href="#" id="navbarDropdown" role="button"
+                                            data-bs-toggle="dropdown" aria-expanded="false">
+                                            <div class="btn-icon rounded-pill user-icons">
+                                                <span class="btn-inner">
+                                                    <svg class="icon-18" width="18" viewBox="0 0 24 24" fill="none"
+                                                        xmlns="http://www.w3.org/2000/svg">
+                                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                                            d="M9.87651 15.2063C6.03251 15.2063 2.74951 15.7873 2.74951 18.1153C2.74951 20.4433 6.01251 21.0453 9.87651 21.0453C13.7215 21.0453 17.0035 20.4633 17.0035 18.1363C17.0035 15.8093 13.7415 15.2063 9.87651 15.2063Z"
+                                                            stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                                                            stroke-linejoin="round"></path>
+                                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                                            d="M9.8766 11.886C12.3996 11.886 14.4446 9.841 14.4446 7.318C14.4446 4.795 12.3996 2.75 9.8766 2.75C7.3546 2.75 5.3096 4.795 5.3096 7.318C5.3006 9.832 7.3306 11.877 9.8456 11.886H9.8766Z"
+                                                            stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                                                            stroke-linejoin="round"></path>
+                                                        <path d="M19.2036 8.66919V12.6792" stroke="currentColor" stroke-width="1.5"
+                                                            stroke-linecap="round" stroke-linejoin="round"></path>
+                                                        <path d="M21.2497 10.6741H17.1597" stroke="currentColor" stroke-width="1.5"
+                                                            stroke-linecap="round" stroke-linejoin="round"></path>
+                                                    </svg>
+                                                </span>
+                                            </div>
+                                        </a>
+                                        <ul class="dropdown-menu dropdown-menu-end dropdown-user border-0 p-0 m-0"
+                                            aria-labelledby="navbarDropdown">
+                                            <li class="user-info d-flex align-items-center gap-3 mb-3">
+                                                <img src="{{asset('assets')}}/main/img/user/user1.html" class="img-fluid" alt="" loading="lazy">
+                                                <span class="font-size-14 fw-500 text-capitalize text-white">Jenny</span>
+                                            </li>
+                                            <li>
+                                                <a href="playlist.html" class="iq-sub-card d-flex align-items-center gap-3">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 22" fill="none">
+                                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M7.84455 20.6621C4.15273 20.6621 1 20.0876 1 17.7868C1 15.486 4.13273 13.3621 7.84455 13.3621C11.5364 13.3621 14.6891 15.4654 14.6891 17.7662C14.6891 20.066 11.5564 20.6621 7.84455 20.6621Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M7.83725 10.1738C10.26 10.1738 12.2236 8.21015 12.2236 5.78742C12.2236 3.36469 10.26 1.40015 7.83725 1.40015C5.41452 1.40015 3.44998 3.36469 3.44998 5.78742C3.4418 8.20196 5.3918 10.1656 7.80634 10.1738C7.81725 10.1738 7.82725 10.1738 7.83725 10.1738Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                                    </svg>
+                                                    <h6 class="mb-0 font-size-14 fw-normal">My Account</h6>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="{{route('yourwatchlist')}}" class="iq-sub-card d-flex align-items-center gap-3">
+                                                    <svg width="16" height="16" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="m0 0h24v24h-24z" fill="#fff" opacity="0"
+                                                            transform="matrix(-1 0 0 -1 24 24)" />
+                                                        <path
+                                                            d="m19 11h-6v-6a1 1 0 0 0 -2 0v6h-6a1 1 0 0 0 0 2h6v6a1 1 0 0 0 2 0v-6h6a1 1 0 0 0 0-2z"
+                                                            fill="currentColor" />
+                                                    </svg>
+                                                    <h6 class="mb-0 font-size-14 fw-normal">Watchlist</h6>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="login.html"
+                                                    class="iq-sub-card iq-logout-2 mt-1 d-flex justify-content-center gap-2">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"
+                                                        fill="none">
+                                                        <path
+                                                            d="M1.82209 15.9999C1.46654 15.9999 1.16283 15.874 0.910981 15.6221C0.659129 15.3703 0.533203 15.0666 0.533203 14.711V1.73322C0.533203 1.37767 0.659129 1.07397 0.910981 0.822114C1.16283 0.570262 1.46654 0.444336 1.82209 0.444336H7.95543V1.44434H1.82209C1.74802 1.44434 1.68135 1.47397 1.62209 1.53322C1.56283 1.59248 1.5332 1.65915 1.5332 1.73322V14.711C1.5332 14.7851 1.56283 14.8517 1.62209 14.911C1.68135 14.9703 1.74802 14.9999 1.82209 14.9999H7.95543V15.9999H1.82209ZM12.0888 11.5999L11.3554 10.8888L13.5332 8.73322H5.68876V7.711H13.511L11.3332 5.55545L12.0665 4.82211L15.4665 8.24434L12.0888 11.5999Z"
+                                                            fill="currentColor"></path>
+                                                    </svg>
+                                                    <h6 class="mb-0 font-size-14 fw-normal">Logout</h6>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </li>
                                 </ul>
                             </div>
                         </div>
-                        <!-- end header categories -->
+                    </div>
+                </div>
+            </nav>
+        </header> <!--Nav End-->
+        <!--bread-crumb-->
 
-                        <!-- header nav -->
-                        <ul class="header__nav">
-                            <!-- dropdown -->
-                            <li class="header__nav-item">
-                                <a class="header__nav-link" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Home <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                                        <path d="M17,9.17a1,1,0,0,0-1.41,0L12,12.71,8.46,9.17a1,1,0,0,0-1.41,0,1,1,0,0,0,0,1.42l4.24,4.24a1,1,0,0,0,1.42,0L17,10.59A1,1,0,0,0,17,9.17Z" />
-                                    </svg></a>
+        <!-- content -->
+        @yield('content')
+        <!-- end content -->
+    </main>
 
-                                <ul class="dropdown-menu header__dropdown-menu">
-                                    <li><a href="index.html">Home style 1</a></li>
-                                    <li><a href="index2.html">Home style 2</a></li>
-                                </ul>
-                            </li>
-                            <!-- end dropdown -->
-
-                            <!-- dropdown -->
-                            <li class="header__nav-item">
-                                <a class="header__nav-link" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Catalog <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                                        <path d="M17,9.17a1,1,0,0,0-1.41,0L12,12.71,8.46,9.17a1,1,0,0,0-1.41,0,1,1,0,0,0,0,1.42l4.24,4.24a1,1,0,0,0,1.42,0L17,10.59A1,1,0,0,0,17,9.17Z" />
-                                    </svg></a>
-
-                                <ul class="dropdown-menu header__dropdown-menu">
-                                    <li><a href="catalog1.html">Catalog Grid</a></li>
-                                    <li><a href="catalog2.html">Catalog List</a></li>
-                                    <li><a href="details1.html">Details Movie</a></li>
-                                    <li><a href="details2.html">Details TV Series</a></li>
-                                </ul>
-                            </li>
-                            <!-- end dropdown -->
-
-                            <li class="header__nav-item">
-                                <a href="pricing.html" class="header__nav-link">Pricing plans</a>
-                            </li>
-
-                            <!-- dropdown -->
-                            <li class="header__nav-item">
-                                <a class="header__nav-link" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Pages <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                                        <path d="M17,9.17a1,1,0,0,0-1.41,0L12,12.71,8.46,9.17a1,1,0,0,0-1.41,0,1,1,0,0,0,0,1.42l4.24,4.24a1,1,0,0,0,1.42,0L17,10.59A1,1,0,0,0,17,9.17Z" />
-                                    </svg></a>
-
-                                <ul class="dropdown-menu header__dropdown-menu">
-                                    <li><a href="about.html">About us</a></li>
-                                    <li><a href="faq.html">Help center</a></li>
-                                    <li><a href="profile.html">Profile</a></li>
-                                    <li><a href="actor.html">Actor</a></li>
-                                    <li><a href="contacts.html">Contacts</a></li>
-                                    <li><a href="privacy.html">Privacy policy</a></li>
-                                </ul>
-                            </li>
-                            <!-- end dropdown -->
-
-                            <!-- dropdown -->
-                            <li class="header__nav-item">
-                                <a class="header__nav-link header__nav-link--more" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                                        <path d="M12,10a2,2,0,1,0,2,2A2,2,0,0,0,12,10ZM5,10a2,2,0,1,0,2,2A2,2,0,0,0,5,10Zm14,0a2,2,0,1,0,2,2A2,2,0,0,0,19,10Z" />
-                                    </svg>
+    <footer class="footer footer-default">
+        <div class="container-fluid">
+            <div class="footer-top">
+                <div class="row">
+                    <div class="col-xl-3 col-lg-6 mb-5 mb-lg-0">
+                        <div class="footer-logo">
+                            <!--Logo -->
+                            <div class="logo-default">
+                                <a class="navbar-brand text-primary" href="{{route('index')}}">
+                                    <img class="img-fluid logo" src="{{asset('assets')}}/main/img/logo.html" loading="lazy" alt="streamit" />
                                 </a>
-
-                                <ul class="dropdown-menu header__dropdown-menu">
-                                    <li><a href="signin.html">Sign In</a></li>
-                                    <li><a href="signup.html">Sign Up</a></li>
-                                    <li><a href="forgot.html">Forgot password</a></li>
-                                    <li><a href="404.html">404 Page</a></li>
-                                </ul>
-                            </li>
-                            <!-- end dropdown -->
-                        </ul>
-                        <!-- end header nav -->
-
-                        <!-- header actions -->
-                        <div class="header__actions">
-                            <form action="#" class="header__search">
-                                <input type="text" placeholder="Search">
-                                <button type="button"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                                        <path d="M21.71,20.29,18,16.61A9,9,0,1,0,16.61,18l3.68,3.68a1,1,0,0,0,1.42,0A1,1,0,0,0,21.71,20.29ZM11,18a7,7,0,1,1,7-7A7,7,0,0,1,11,18Z"></path>
-                                    </svg></button>
-                            </form>
-
-                            <div class="header__language">
-                                <a class="header__nav-link" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">EN <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                                        <path d="M17,9.17a1,1,0,0,0-1.41,0L12,12.71,8.46,9.17a1,1,0,0,0-1.41,0,1,1,0,0,0,0,1.42l4.24,4.24a1,1,0,0,0,1.42,0L17,10.59A1,1,0,0,0,17,9.17Z" />
-                                    </svg></a>
-
-                                <ul class="dropdown-menu header__dropdown-menu header__dropdown-menu--lang">
-                                    <li><a href="#">English</a></li>
-                                    <li><a href="#">Spanish</a></li>
-                                    <li><a href="#">French</a></li>
-                                </ul>
                             </div>
-
-                            <a href="signin.html" class="header__sign-in">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                                    <path d="M20,12a1,1,0,0,0-1-1H11.41l2.3-2.29a1,1,0,1,0-1.42-1.42l-4,4a1,1,0,0,0-.21.33,1,1,0,0,0,0,.76,1,1,0,0,0,.21.33l4,4a1,1,0,0,0,1.42,0,1,1,0,0,0,0-1.42L11.41,13H19A1,1,0,0,0,20,12ZM17,2H7A3,3,0,0,0,4,5V19a3,3,0,0,0,3,3H17a3,3,0,0,0,3-3V16a1,1,0,0,0-2,0v3a1,1,0,0,1-1,1H7a1,1,0,0,1-1-1V5A1,1,0,0,1,7,4H17a1,1,0,0,1,1,1V8a1,1,0,0,0,2,0V5A3,3,0,0,0,17,2Z" />
-                                </svg>
-                                <span>sign in</span>
+                            <div class="logo-hotstar">
+                                <a class="navbar-brand text-primary" href="{{route('index')}}">
+                                    <img class="img-fluid logo" src="{{asset('assets')}}/main/img/logo-hotstar.html" loading="lazy" alt="streamit" />
+                                </a>
+                            </div>
+                            <div class="logo-prime">
+                                <a class="navbar-brand text-primary" href="{{route('index')}}">
+                                    <img class="img-fluid logo" src="{{asset('assets')}}/main/img/logo-prime.html" loading="lazy" alt="streamit" />
+                                </a>
+                            </div>
+                            <div class="logo-hulu">
+                                <a class="navbar-brand text-primary" href="{{route('index')}}">
+                                    <img class="img-fluid logo" src="{{asset('assets')}}/main/img/logo-hulu.html" loading="lazy" alt="streamit" />
+                                </a>
+                            </div>
+                        </div>
+                        <p class="mb-4 font-size-14">Email us: <span class="text-white">customer@streamit.com</span>
+                        </p>
+                        <p class="text-uppercase letter-spacing-1 font-size-14 mb-1">customer services</p>
+                        <p class="mb-0 contact text-white">+ (480) 555-0103</p>
+                    </div>
+                    <div class="col-xl-2 col-lg-6 mb-5 mb-lg-0">
+                        <h4 class="footer-link-title">Quick Links</h4>
+                        <ul class="list-unstyled footer-menu">
+                            <li class="mb-3">
+                                <a href="about-us.html" class="ms-3">about us</a>
+                            </li>
+                            <li class="mb-3">
+                                <a href="blog/blog-listing.html" class="ms-3">Blog</a>
+                            </li>
+                            <li class="mb-3">
+                                <a href="pricing-plan.html" class="ms-3">Pricing Plan</a>
+                            </li>
+                            <li>
+                                <a href="faq.html" class="ms-3">FAQ</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-xl-2 col-lg-6 mb-5 mb-lg-0">
+                        <h4 class="footer-link-title">Movies to watch</h4>
+                        <ul class="list-unstyled footer-menu">
+                            <li class="mb-3">
+                                <a href="{{route('allmovies')}}" class="ms-3">Top trending</a>
+                            </li>
+                            <li class="mb-3">
+                                <a href="{{route('allmovies')}}" class="ms-3">Recommended</a>
+                            </li>
+                            <li>
+                                <a href="{{route('allmovies')}}" class="ms-3">Popular</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-xl-2 col-lg-6 mb-5 mb-lg-0">
+                        <h4 class="footer-link-title">About company</h4>
+                        <ul class="list-unstyled footer-menu">
+                            <li class="mb-3">
+                                <a href="contact-us.html" class="ms-3">contact us</a>
+                            </li>
+                            <li class="mb-3">
+                                <a href="privacy-policy.html" class="ms-3">privacy policy</a>
+                            </li>
+                            <li>
+                                <a href="terms-of-use.html" class="ms-3">Terms of use</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-xl-3 col-lg-6">
+                        <h4 class="footer-link-title">Subscribe Newsletter</h4>
+                        <div class="mailchimp mailchimp-dark">
+                            <div class="input-group mb-3 mt-4">
+                                <input type="text" class="form-control mb-0 font-size-14" placeholder="Email*" aria-describedby="button-addon2">
+                                <div class="iq-button">
+                                    <button type="submit" class="btn btn-sm" id="button-addon2">Subscribe</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="d-flex align-items-center mt-5">
+                            <span class="font-size-14 me-2">Follow Us:</span>
+                            <ul class="p-0 m-0 list-unstyled widget_social_media">
+                                <li>
+                                    <a href="https://www.facebook.com/" class="position-relative">
+                                        <i class="fab fa-facebook"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://twitter.com/" class="position-relative">
+                                        <i class="fab fa-twitter"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://github.com/" class="position-relative">
+                                        <i class="fab fa-github"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://www.instagram.com/" class="position-relative">
+                                        <i class="fab fa-instagram"></i>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom border-top">
+                <div class="row align-items-center">
+                    <div class="col-md-6">
+                        <ul class="menu list-inline p-0 d-flex flex-wrap align-items-center">
+                            <li class="menu-item">
+                                <a href="#"> Terms Of Use </a>
+                            </li>
+                            <li id="menu-item-7316" class="menu-item">
+                                <a href="privacy-policy.html"> Privacy-Policy </a>
+                            </li>
+                            <li class="menu-item">
+                                <a href="faq.html"> FAQ </a>
+                            </li>
+                            <li class="menu-item">
+                                <a href="{{route('yourwatchlist')}}"> Watch List </a>
+                            </li>
+                        </ul>
+                        <p class="font-size-14">© <span class="currentYear"></span> <span class="text-primary">STREAMIT</span>. All Rights Reserved. All videos and shows on this platform are trademarks of, and all related images and content are the property of, Streamit Inc. Duplication and copy of this is strictly prohibited.</p>
+                    </div>
+                    <div class="col-md-3"></div>
+                    <div class="col-md-3">
+                        <h6 class="font-size-14 pb-1">Download Streamit Apps </h6>
+                        <div class="d-flex align-items-center">
+                            <a class="app-image" href="#">
+                                <img src="{{asset('assets')}}/main/img/footer/google-play.html" loading="lazy" alt="play-store" />
+                            </a>
+                            <br />
+                            <a class="ms-3 app-image" href="#">
+                                <img src="{{asset('assets')}}/main/img/footer/apple.html" loading="lazy" alt="app-store" />
                             </a>
                         </div>
-                        <!-- end header actions -->
-
-                        <!-- header menu btn -->
-                        <button class="header__btn" type="button">
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                        </button>
-                        <!-- end header menu btn -->
                     </div>
                 </div>
-            </div>
-        </div>
-    </header>
-    <!-- end header -->
-
-
-    <!-- mobile menu -->
-    <div class="menu">
-        <!-- menu search -->
-        <form action="#" class="menu__search">
-            <input type="text" placeholder="Search">
-            <button type="button"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                    <path d="M21.71,20.29,18,16.61A9,9,0,1,0,16.61,18l3.68,3.68a1,1,0,0,0,1.42,0A1,1,0,0,0,21.71,20.29ZM11,18a7,7,0,1,1,7-7A7,7,0,0,1,11,18Z"></path>
-                </svg></button>
-        </form>
-        <!-- end menu search -->
-
-        <!-- menu nav -->
-        <ul class="menu__nav">
-            <!-- dropdown -->
-            <li class="menu__nav-item">
-                <a class="menu__nav-link" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Home <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                        <path d="M17,9.17a1,1,0,0,0-1.41,0L12,12.71,8.46,9.17a1,1,0,0,0-1.41,0,1,1,0,0,0,0,1.42l4.24,4.24a1,1,0,0,0,1.42,0L17,10.59A1,1,0,0,0,17,9.17Z" />
-                    </svg></a>
-
-                <ul class="dropdown-menu menu__dropdown-menu">
-                    <li><a href="index.html">Home style 1</a></li>
-                    <li><a href="index2.html">Home style 2</a></li>
-                </ul>
-            </li>
-            <!-- end dropdown -->
-
-            <!-- dropdown -->
-            <li class="menu__nav-item">
-                <a class="menu__nav-link" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Catalog <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                        <path d="M17,9.17a1,1,0,0,0-1.41,0L12,12.71,8.46,9.17a1,1,0,0,0-1.41,0,1,1,0,0,0,0,1.42l4.24,4.24a1,1,0,0,0,1.42,0L17,10.59A1,1,0,0,0,17,9.17Z" />
-                    </svg></a>
-
-                <ul class="dropdown-menu menu__dropdown-menu">
-                    <li><a href="catalog1.html">Catalog Grid</a></li>
-                    <li><a href="catalog2.html">Catalog List</a></li>
-                    <li><a href="details1.html">Details Movie</a></li>
-                    <li><a href="details2.html">Details TV Series</a></li>
-                </ul>
-            </li>
-            <!-- end dropdown -->
-
-            <li class="menu__nav-item">
-                <a href="pricing.html" class="menu__nav-link">Pricing plans</a>
-            </li>
-
-            <!-- dropdown -->
-            <li class="menu__nav-item">
-                <a class="menu__nav-link" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Pages <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                        <path d="M17,9.17a1,1,0,0,0-1.41,0L12,12.71,8.46,9.17a1,1,0,0,0-1.41,0,1,1,0,0,0,0,1.42l4.24,4.24a1,1,0,0,0,1.42,0L17,10.59A1,1,0,0,0,17,9.17Z" />
-                    </svg></a>
-
-                <ul class="dropdown-menu menu__dropdown-menu">
-                    <li><a href="about.html">About us</a></li>
-                    <li><a href="faq.html">Help center</a></li>
-                    <li><a href="profile.html">Profile</a></li>
-                    <li><a href="actor.html">Actor</a></li>
-                    <li><a href="contacts.html">Contacts</a></li>
-                    <li><a href="privacy.html">Privacy policy</a></li>
-                </ul>
-            </li>
-            <!-- end dropdown -->
-
-            <!-- dropdown -->
-            <li class="menu__nav-item">
-                <a class="menu__nav-link menu__nav-link--more" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                        <path d="M12,10a2,2,0,1,0,2,2A2,2,0,0,0,12,10ZM5,10a2,2,0,1,0,2,2A2,2,0,0,0,5,10Zm14,0a2,2,0,1,0,2,2A2,2,0,0,0,19,10Z" />
-                    </svg>
-                </a>
-
-                <ul class="dropdown-menu menu__dropdown-menu">
-                    <li><a href="signin.html">Sign In</a></li>
-                    <li><a href="signup.html">Sign Up</a></li>
-                    <li><a href="forgot.html">Forgot password</a></li>
-                    <li><a href="404.html">404 Page</a></li>
-                </ul>
-            </li>
-            <!-- end dropdown -->
-        </ul>
-        <!-- end menu nav -->
-    </div>
-    <!-- end mobile menu -->
-
-    @yield('content')
-
-    <!-- footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="row">
-                <div class="col-12 col-md-8 order-md-1 col-lg-12 col-xl-4">
-                    <div class="footer__logo">
-                        <img src="{{asset('assets')}}/main/img/logo.svg" alt="">
-                    </div>
-                    <p class="footer__tagline">Movies & TV Shows, Online cinema,<br> Movie database HTML Template. <br>The perfect choice for your project.</p>
-
-                    <ul class="footer__social">
-                        <li><a href="#"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                                    <path d="M15.12,5.32H17V2.14A26.11,26.11,0,0,0,14.26,2C11.54,2,9.68,3.66,9.68,6.7V9.32H6.61v3.56H9.68V22h3.68V12.88h3.06l.46-3.56H13.36V7.05C13.36,6,13.64,5.32,15.12,5.32Z"></path>
-                                </svg></a></li>
-                        <li><a href="#"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                                    <path d="M17.34,5.46h0a1.2,1.2,0,1,0,1.2,1.2A1.2,1.2,0,0,0,17.34,5.46Zm4.6,2.42a7.59,7.59,0,0,0-.46-2.43,4.94,4.94,0,0,0-1.16-1.77,4.7,4.7,0,0,0-1.77-1.15,7.3,7.3,0,0,0-2.43-.47C15.06,2,14.72,2,12,2s-3.06,0-4.12.06a7.3,7.3,0,0,0-2.43.47A4.78,4.78,0,0,0,3.68,3.68,4.7,4.7,0,0,0,2.53,5.45a7.3,7.3,0,0,0-.47,2.43C2,8.94,2,9.28,2,12s0,3.06.06,4.12a7.3,7.3,0,0,0,.47,2.43,4.7,4.7,0,0,0,1.15,1.77,4.78,4.78,0,0,0,1.77,1.15,7.3,7.3,0,0,0,2.43.47C8.94,22,9.28,22,12,22s3.06,0,4.12-.06a7.3,7.3,0,0,0,2.43-.47,4.7,4.7,0,0,0,1.77-1.15,4.85,4.85,0,0,0,1.16-1.77,7.59,7.59,0,0,0,.46-2.43c0-1.06.06-1.4.06-4.12S22,8.94,21.94,7.88ZM20.14,16a5.61,5.61,0,0,1-.34,1.86,3.06,3.06,0,0,1-.75,1.15,3.19,3.19,0,0,1-1.15.75,5.61,5.61,0,0,1-1.86.34c-1,.05-1.37.06-4,.06s-3,0-4-.06A5.73,5.73,0,0,1,6.1,19.8,3.27,3.27,0,0,1,5,19.05a3,3,0,0,1-.74-1.15A5.54,5.54,0,0,1,3.86,16c0-1-.06-1.37-.06-4s0-3,.06-4A5.54,5.54,0,0,1,4.21,6.1,3,3,0,0,1,5,5,3.14,3.14,0,0,1,6.1,4.2,5.73,5.73,0,0,1,8,3.86c1,0,1.37-.06,4-.06s3,0,4,.06a5.61,5.61,0,0,1,1.86.34A3.06,3.06,0,0,1,19.05,5,3.06,3.06,0,0,1,19.8,6.1,5.61,5.61,0,0,1,20.14,8c.05,1,.06,1.37.06,4S20.19,15,20.14,16ZM12,6.87A5.13,5.13,0,1,0,17.14,12,5.12,5.12,0,0,0,12,6.87Zm0,8.46A3.33,3.33,0,1,1,15.33,12,3.33,3.33,0,0,1,12,15.33Z"></path>
-                                </svg></a></li>
-                        <li><a href="#"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                                    <path d="M22.26465,2.42773a2.04837,2.04837,0,0,0-2.07813-.32421L2.26562,9.33887a2.043,2.043,0,0,0,.1045,3.81836l3.625,1.26074,2.0205,6.68164A.998.998,0,0,0,8.134,21.352c.00775.012.01868.02093.02692.03259a.98844.98844,0,0,0,.21143.21576c.02307.01758.04516.03406.06982.04968a.98592.98592,0,0,0,.31073.13611l.01184.001.00671.00287a1.02183,1.02183,0,0,0,.20215.02051c.00653,0,.01233-.00312.0188-.00324a.99255.99255,0,0,0,.30109-.05231c.02258-.00769.04193-.02056.06384-.02984a.9931.9931,0,0,0,.20429-.11456,250.75993,250.75993,0,0,1,.15222-.12818L12.416,18.499l4.03027,3.12207a2.02322,2.02322,0,0,0,1.24121.42676A2.05413,2.05413,0,0,0,19.69531,20.415L22.958,4.39844A2.02966,2.02966,0,0,0,22.26465,2.42773ZM9.37012,14.73633a.99357.99357,0,0,0-.27246.50586l-.30951,1.504-.78406-2.59307,4.06525-2.11695ZM17.67188,20.04l-4.7627-3.68945a1.00134,1.00134,0,0,0-1.35352.11914l-.86541.9552.30584-1.48645,7.083-7.083a.99975.99975,0,0,0-1.16894-1.59375L6.74487,12.55432,3.02051,11.19141,20.999,3.999Z"></path>
-                                </svg></a></li>
-                        <li><a href="#"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                                    <path d="M22,5.8a8.49,8.49,0,0,1-2.36.64,4.13,4.13,0,0,0,1.81-2.27,8.21,8.21,0,0,1-2.61,1,4.1,4.1,0,0,0-7,3.74A11.64,11.64,0,0,1,3.39,4.62a4.16,4.16,0,0,0-.55,2.07A4.09,4.09,0,0,0,4.66,10.1,4.05,4.05,0,0,1,2.8,9.59v.05a4.1,4.1,0,0,0,3.3,4A3.93,3.93,0,0,1,5,13.81a4.9,4.9,0,0,1-.77-.07,4.11,4.11,0,0,0,3.83,2.84A8.22,8.22,0,0,1,3,18.34a7.93,7.93,0,0,1-1-.06,11.57,11.57,0,0,0,6.29,1.85A11.59,11.59,0,0,0,20,8.45c0-.17,0-.35,0-.53A8.43,8.43,0,0,0,22,5.8Z"></path>
-                                </svg></a></li>
-                        <li><a href="#"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                                    <path d="M20.91887,10.653c-.31445-.16992-3.01074-1.73438-4.02246-2.32324l-.00293-.002L4.6386,1.25262a1.679,1.679,0,0,0-1.40711-.1593c-.02618.0094-.05078.01886-.07623.03051a1.41835,1.41835,0,0,0-.17291.06922,1.51864,1.51864,0,0,0-.73828,1.36426V21.54266a1.43542,1.43542,0,0,0,.69238,1.2705,1.30761,1.30761,0,0,0,.15479.06373c.02893.01336.05651.025.08636.03552a1.37893,1.37893,0,0,0,.44635.0824,1.67263,1.67263,0,0,0,.83106-.23145c.38867-.22559,12.43847-7.18262,12.43847-7.18262L20.914,13.25945a1.52522,1.52522,0,0,0,.8418-1.334A1.49078,1.49078,0,0,0,20.91887,10.653ZM4.24407,19.839V4.10186l7.94012,7.85907Zm5.018-2.16168,4.34351-4.30957,1.14954,1.13782C13.49047,15.23583,11.35381,16.4696,9.26207,17.67736Zm4.3418-7.125L9.206,6.19933l5.55365,3.2063ZM16.55065,13.469l-1.52539-1.50977L16.553,10.44341c.72027.41828,1.84283,1.06934,2.6159,1.51429Z"></path>
-                                </svg></a></li>
-                        <li><a href="#"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                                    <path d="M14.94,5.19A4.38,4.38,0,0,0,16,2,4.44,4.44,0,0,0,13,3.52,4.17,4.17,0,0,0,12,6.61,3.69,3.69,0,0,0,14.94,5.19Zm2.52,7.44a4.51,4.51,0,0,1,2.16-3.81,4.66,4.66,0,0,0-3.66-2c-1.56-.16-3,.91-3.83.91s-2-.89-3.3-.87A4.92,4.92,0,0,0,4.69,9.39C2.93,12.45,4.24,17,6,19.47,6.8,20.68,7.8,22.05,9.12,22s1.75-.82,3.28-.82,2,.82,3.3.79,2.22-1.24,3.06-2.45a11,11,0,0,0,1.38-2.85A4.41,4.41,0,0,1,17.46,12.63Z"></path>
-                                </svg></a></li>
-                    </ul>
-                </div>
-
-                <div class="col-12 order-md-3 col-md-8 col-lg-6 col-xl-4">
-                    <div class="row">
-                        <div class="col-12">
-                            <h6 class="footer__title">Browse</h6>
-                        </div>
-
-                        <div class="col-6">
-                            <ul class="footer__list">
-                                <li><a href="catalog1.html">Movies</a></li>
-                                <li><a href="catalog1.html">TV Shows</a></li>
-                                <li><a href="catalog1.html">Anime</a></li>
-                                <li><a href="catalog1.html">Cartoons</a></li>
-                            </ul>
-                        </div>
-
-                        <div class="col-6">
-                            <ul class="footer__list">
-                                <li><a href="catalog1.html">Netflix</a></li>
-                                <li><a href="catalog1.html">Marvel</a></li>
-                                <li><a href="catalog1.html">DC Comics</a></li>
-                                <li><a href="catalog1.html">Book adaptations</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-6 order-md-2 col-md-4 col-lg-3 col-xl-2">
-                    <h6 class="footer__title">Resources</h6>
-                    <ul class="footer__list">
-                        <li><a href="about.html">About us</a></li>
-                        <li><a href="pricing.html">Pricing plans</a></li>
-                        <li><a href="faq.html">Help center</a></li>
-                        <li><a href="contacts.html">Contacts</a></li>
-                    </ul>
-                </div>
-
-                <div class="col-6 order-md-4 col-md-4 col-lg-3 col-xl-2">
-                    <h6 class="footer__title">Help</h6>
-                    <ul class="footer__list">
-                        <li><a href="privacy.html">Account & Billing</a></li>
-                        <li><a href="privacy.html">Plans & Pricing</a></li>
-                        <li><a href="privacy.html">Supported devices</a></li>
-                        <li><a href="privacy.html">Accessibility</a></li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="row">
-                <!-- footer copyright -->
-                <div class="col-12">
-                    <div class="footer__copyright">
-                        <small>© FlixGo, 2018—2023. Create by <a href="https://themeforest.net/user/dmitryvolkov/portfolio" target="_blank" rel="noopener">Dmitry Volkov</a>.</small>
-
-                        <ul>
-                            <li><a href="privacy.html">Privacy policy</a></li>
-                            <li><a href="privacy.html">Terms and conditions</a></li>
-                        </ul>
-                    </div>
-                </div>
-                <!-- end footer copyright -->
             </div>
         </div>
     </footer>
-    <!-- end footer -->
 
-    <!-- plan modal -->
-    <div class="modal fade" id="plan-modal" tabindex="-1" aria-labelledby="plan-modal" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content">
-                <div class="modal__content">
-                    <button class="modal__close" type="button" data-bs-dismiss="modal" aria-label="Close"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                            <path d="M13.41,12l6.3-6.29a1,1,0,1,0-1.42-1.42L12,10.59,5.71,4.29A1,1,0,0,0,4.29,5.71L10.59,12l-6.3,6.29a1,1,0,0,0,0,1.42,1,1,0,0,0,1.42,0L12,13.41l6.29,6.3a1,1,0,0,0,1.42,0,1,1,0,0,0,0-1.42Z" />
-                        </svg></button>
-
-                    <form action="#" class="modal__form">
-                        <h4 class="modal__title">Select plan</h4>
-
-                        <div class="sign__group">
-                            <label for="fullname" class="sign__label">Name</label>
-                            <input id="fullname" type="text" name="name" class="sign__input" placeholder="Full name">
+    <div class="rtl-box">
+        <a class="btn btn-icon btn-setting" id="settingbutton" data-bs-toggle="offcanvas"
+            data-bs-target="#live-customizer" role="button" aria-controls="live-customizer">
+            <svg xmlns="http://www.w3.org/2000/svg" width="1.875em" height="1.875em" viewBox="0 0 20 20" fill="white">
+                <path fill-rule="evenodd"
+                    d="M11.49 3.17c-.38-1.56-2.6-1.56-2.98 0a1.532 1.532 0 01-2.286.948c-1.372-.836-2.942.734-2.106 2.106.54.886.061 2.042-.947 2.287-1.561.379-1.561 2.6 0 2.978a1.532 1.532 0 01.947 2.287c-.836 1.372.734 2.942 2.106 2.106a1.532 1.532 0 012.287.947c.379 1.561 2.6 1.561 2.978 0a1.533 1.533 0 012.287-.947c1.372.836 2.942-.734 2.106-2.106a1.533 1.533 0 01.947-2.287c1.561-.379 1.561-2.6 0-2.978a1.532 1.532 0 01-.947-2.287c.836-1.372-.734-2.942-2.106-2.106a1.532 1.532 0 01-2.287-.947zM10 13a3 3 0 100-6 3 3 0 000 6z"
+                    clip-rule="evenodd" />
+            </svg>
+        </a>
+        <div class="offcanvas offcanvas-end live-customizer on-rtl end" tabindex="-1" id="live-customizer"
+            data-bs-scroll="true" data-bs-backdrop="false" aria-labelledby="live-customizer-label" aria-modal="true"
+            role="dialog">
+            <div class="offcanvas-header gap-3">
+                <div class="d-flex align-items-center">
+                    <h5 class="offcanvas-title text-dark" id="live-customizer-label">Live Customizer</h5>
+                </div>
+                <div class="d-flex gap-1 align-items-center">
+                    <button class="btn btn-icon text-primary" data-reset="settings" data-bs-toggle="tooltip" data-bs-placement="left" aria-label="Reset All Settings"
+                        data-bs-original-title="Reset All Settings">
+                        <span class="btn-inner">
+                            <i class="fa-solid fa-arrows-rotate"></i>
+                        </span>
+                    </button>
+                    <button type="button" class="btn btn-icon btn-close px-0 text-reset shadow-none text-dark" data-bs-dismiss="offcanvas" aria-label="Close">
+                    </button>
+                </div>
+            </div>
+            <div class="offcanvas-body pt-0">
+                <div class="modes row row-cols-2 gx-2">
+                    <div class="col">
+                        <div data-setting="attribute" class="text-center w-100">
+                            <input type="radio" value="ltr" class="btn-check" name="theme_scheme_direction" data-prop="dir"
+                                id="theme-scheme-direction-ltr" checked>
+                            <label class="btn dir-btn cutomizer-button w-100" for="theme-scheme-direction-ltr">
+                                LTR
+                            </label>
                         </div>
-
-                        <div class="sign__group">
-                            <label for="email" class="sign__label">Email</label>
-                            <input id="email" type="text" name="email" class="sign__input" placeholder="example@domain.com">
+                    </div>
+                    <div class="col">
+                        <div data-setting="attribute" class="text-center w-100">
+                            <input type="radio" value="rtl" class="btn-check" name="theme_scheme_direction" data-prop="dir"
+                                id="theme-scheme-direction-rtl">
+                            <label class="btn dir-btn cutomizer-button w-100" for="theme-scheme-direction-rtl">
+                                RTL
+                            </label>
                         </div>
-
-                        <div class="sign__group">
-                            <label class="sign__label" for="value">Choose plan:</label>
-                            <select class="sign__select" name="value" id="value">
-                                <option value="20">Premium - $19.99</option>
-                                <option value="40">Cinematic - $39.99</option>
-                            </select>
-
-                            <span class="sign__text">You can spend money from your account on the renewal of the connected packages, or to order cars on our website.</span>
+                    </div>
+                </div>
+                <div class="modes mt-3">
+                    <div class="color-customizer mb-3">
+                        <h6 class="mb-0 title-customizer">Color Customizer</h6>
+                    </div>
+                    <div class="row row-cols-2 gx-2">
+                        <div class="col mb-3">
+                            <div data-setting="attribute" class="text-center w-100">
+                                <input type="radio" value="dark" class="btn-check" name="theme_style_appearance"
+                                    data-prop="data-bs-theme" id="theme-scheme-color-netflix" data-colors="{&quot;primary&quot;: &quot;#e50914&quot;, &quot;secondary&quot;: &quot;#adafb8&quot;, &quot;tertiray&quot;: &quot;#adafb8&quot;}" checked>
+                                <label class="btn dir-btn cutomizer-button w-100" for="theme-scheme-color-netflix">
+                                    Netflix
+                                </label>
+                            </div>
                         </div>
-
-                        <div class="sign__group">
-                            <label class="sign__label">Payment method:</label>
-
-                            <ul class="sign__radio">
-                                <li>
-                                    <input id="type1" type="radio" name="type" checked="">
-                                    <label for="type1">Visa</label>
-                                </li>
-                                <li>
-                                    <input id="type2" type="radio" name="type">
-                                    <label for="type2">Mastercard</label>
-                                </li>
-                                <li>
-                                    <input id="type3" type="radio" name="type">
-                                    <label for="type3">Paypal</label>
-                                </li>
-                            </ul>
+                        <div class="col mb-3">
+                            <div data-setting="attribute" class="text-center w-100">
+                                <input type="radio" value="hotstar" class="btn-check" name="theme_style_appearance"
+                                    data-prop="data-bs-theme" id="theme-scheme-color-hotstar" data-colors="{&quot;primary&quot;: &quot;#0959E4&quot;, &quot;secondary&quot;: &quot;#adafb8&quot;, &quot;tertiray&quot;: &quot;#EA4335&quot;}">
+                                <label class="btn dir-btn cutomizer-button w-100" for="theme-scheme-color-hotstar">
+                                    Hotstar
+                                </label>
+                            </div>
                         </div>
-
-                        <button type="button" class="sign__btn sign__btn--modal">
-                            <span>Proceed</span>
-                        </button>
-                    </form>
+                        <div class="col">
+                            <div data-setting="attribute" class="text-center w-100">
+                                <input type="radio" value="amazonprime" class="btn-check" name="theme_style_appearance"
+                                    data-prop="data-bs-theme" id="theme-scheme-color-prime" data-colors="{&quot;primary&quot;: &quot;#1A98FF&quot;, &quot;secondary&quot;: &quot;#adafb8&quot;, &quot;tertiray&quot;: &quot;#89F425&quot;}">
+                                <label class="btn dir-btn cutomizer-button w-100" for="theme-scheme-color-prime">
+                                    Prime
+                                </label>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div data-setting="attribute" class="text-center w-100">
+                                <input type="radio" value="hulu" class="btn-check" name="theme_style_appearance"
+                                    data-prop="data-bs-theme" id="theme-scheme-color-hulu" data-colors="{&quot;primary&quot;: &quot;#3ee783&quot;, &quot;secondary&quot;: &quot;#adafb8&quot;, &quot;tertiray&quot;: &quot;#0E0E0E&quot;}">
+                                <label class="btn dir-btn cutomizer-button w-100" for="theme-scheme-color-hulu">
+                                    Hulu
+                                </label>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-    <!-- end plan modal -->
+    <div id="back-to-top" style="display: none;">
+        <a class="p-0 btn bg-primary btn-sm position-fixed top border-0 rounded-circle text-white" id="top" href="#top">
+            <i class="fa-solid fa-chevron-up"></i>
+        </a>
+    </div>
+    <!-- Wrapper End-->
+    <!-- Library Bundle Script -->
+    <script src="{{asset('assets')}}/main/js/core/libs.min.js"></script>
+    <!-- Plugin Scripts -->
 
-    <!-- JS -->
-    <script src="{{asset('assets')}}/main/js/bootstrap.bundle.min.js"></script>
-    <script src="{{asset('assets')}}/main/js/splide.min.js"></script>
-    <script src="{{asset('assets')}}/main/js/smooth-scrollbar.js"></script>
-    <script src="{{asset('assets')}}/main/js/slimselect.min.js"></script>
-    <script src="{{asset('assets')}}/main/js/plyr.min.js"></script>
-    <script src="{{asset('assets')}}/main/js/photoswipe.min.js"></script>
-    <script src="{{asset('assets')}}/main/js/photoswipe-ui-default.min.js"></script>
-    <script src="{{asset('assets')}}/main/js/main.js"></script>
+
+    <!-- SwiperSlider Script -->
+    <script src="{{asset('assets')}}/main/vendor/swiperSlider/swiper.min.js"></script>
+
+
+
+
+    <!-- Lodash Utility -->
+    <script src="{{asset('assets')}}/main/vendor/lodash/lodash.min.js"></script>
+    <!-- External Library Bundle Script -->
+    <script src="{{asset('assets')}}/main/js/core/external.min.js"></script>
+    <!-- countdown Script -->
+    <script src="{{asset('assets')}}/main/js/plugins/countdown.js"></script>
+    <!-- utility Script -->
+    <script src="{{asset('assets')}}/main/js/utility.js"></script>
+    <!-- Setting Script -->
+    <script src="{{asset('assets')}}/main/js/setting.js"></script>
+    <script src="{{asset('assets')}}/main/js/setting-init.js" defer></script>
+    <!-- Streamit Script -->
+    <script src="{{asset('assets')}}/main/js/streamit.js" defer></script>
+    <script src="{{asset('assets')}}/main/js/swiper.js" defer></script>
 </body>
 
-<!-- Mirrored from flixgo.volkovdesign.com/main/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 03 Feb 2025 09:09:32 GMT -->
+
+<!-- Mirrored from templates.iqonic.design/streamit-dist/frontend/html/{{route('index')}} by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 04 Feb 2025 04:12:39 GMT -->
 
 </html>

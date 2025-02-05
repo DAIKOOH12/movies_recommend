@@ -1,1595 +1,4435 @@
 @extends('layout.main_master')
 
 @section('content')
-<!-- home -->
-<section class="home home--bg">
-    <div class="container">
-        <div class="row">
-            <div class="col-12">
-                <h1 class="home__title"><b>NEW ITEMS</b> OF THIS SEASON</h1>
-            </div>
-
-            <div class="col-12">
-                <div class="home__carousel splide splide--home">
-                    <div class="splide__arrows">
-                        <button class="splide__arrow splide__arrow--prev" type="button"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                                <path d="M17,11H9.41l3.3-3.29a1,1,0,1,0-1.42-1.42l-5,5a1,1,0,0,0-.21.33,1,1,0,0,0,0,.76,1,1,0,0,0,.21.33l5,5a1,1,0,0,0,1.42,0,1,1,0,0,0,0-1.42L9.41,13H17a1,1,0,0,0,0-2Z" />
-                            </svg></button>
-                        <button class="splide__arrow splide__arrow--next" type="button"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                                <path d="M17.92,11.62a1,1,0,0,0-.21-.33l-5-5a1,1,0,0,0-1.42,1.42L14.59,11H7a1,1,0,0,0,0,2h7.59l-3.3,3.29a1,1,0,0,0,0,1.42,1,1,0,0,0,1.42,0l5-5a1,1,0,0,0,.21-.33A1,1,0,0,0,17.92,11.62Z" />
-                            </svg></button>
+<div class="iq-banner-thumb-slider">
+    <div class="slider">
+        <div class="position-relative slider-bg d-flex justify-content-end">
+            <div class="position-relative my-auto">
+                <div class="horizontal_thumb_slider" data-swiper="slider-thumbs-ott">
+                    <div class="banner-thumb-slider-nav">
+                        <div class="swiper-container " data-swiper="slider-thumbs-inner-ott">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide swiper-bg">
+                                    <div class="block-images position-relative ">
+                                        <div class="img-box">
+                                            <img src="{{asset('assets')}}/main/img/movies/ott1.html" class="img-fluid" alt=""
+                                                loading="lazy">
+                                            <div class="block-description">
+                                                <h6 class="iq-title fw-500 mb-0">The Hunter</h6>
+                                                <span class="fs-12">2hr : 6mins</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide swiper-bg">
+                                    <div class="block-images position-relative ">
+                                        <div class="img-box">
+                                            <img src="{{asset('assets')}}/main/img/movies/ott2.html" class="img-fluid" alt=""
+                                                loading="lazy">
+                                            <div class="block-description">
+                                                <h6 class="iq-title fw-500 mb-0">The Mandalorian</h6>
+                                                <span class="fs-12">2hr : 14mins</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide swiper-bg">
+                                    <div class="block-images position-relative ">
+                                        <div class="img-box">
+                                            <img src="{{asset('assets')}}/main/img/movies/ott3.html" class="img-fluid" alt=""
+                                                loading="lazy">
+                                            <div class="block-description">
+                                                <h6 class="iq-title fw-500 mb-0">Better call saul</h6>
+                                                <span class="fs-12">2hr : 55mins</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="slider-prev swiper-button">
+                            <i class="iconly-Arrow-Left-2 icli"></i>
+                        </div>
+                        <div class="slider-next swiper-button">
+                            <i class="iconly-Arrow-Right-2 icli"></i>
+                        </div>
                     </div>
-
-                    <div class="splide__track">
-                        <ul class="splide__list">
-                            <li class="splide__slide">
-                                <div class="item item--big">
-                                    <a href="details1.html" class="item__cover">
-                                        <img src="{{asset('assets')}}/main/img/covers/13.png" alt="">
-                                        <span class="item__play">
-                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                                                <path d="M18.54,9,8.88,3.46a3.42,3.42,0,0,0-5.13,3V17.58A3.42,3.42,0,0,0,7.17,21a3.43,3.43,0,0,0,1.71-.46L18.54,15a3.42,3.42,0,0,0,0-5.92Zm-1,4.19L7.88,18.81a1.44,1.44,0,0,1-1.42,0,1.42,1.42,0,0,1-.71-1.23V6.42a1.42,1.42,0,0,1,.71-1.23A1.51,1.51,0,0,1,7.17,5a1.54,1.54,0,0,1,.71.19l9.66,5.58a1.42,1.42,0,0,1,0,2.46Z" />
-                                            </svg>
-                                        </span>
-                                    </a>
-                                    <div class="item__content">
-                                        <h3 class="item__title"><a href="details1.html">The Edge of Tomorrow</a></h3>
-                                        <span class="item__category">
-                                            <a href="#">Action</a>
-                                            <a href="#">Sci-Fi</a>
-                                        </span>
-                                        <span class="item__rate">8.4</span>
+                </div>
+            </div>
+            <div class="slider-images" data-swiper="slider-images-ott">
+                <div class="swiper-container" data-swiper="slider-images-inner-ott">
+                    <div class="swiper-wrapper m-0">
+                        <div class="swiper-slide p-0">
+                            <div class="slider--image block-images">
+                                <img src="{{asset('assets')}}/main/img/movies/ott1.html" loading="lazy" alt="banner" />
+                            </div>
+                            <div class="description">
+                                <div class="row align-items-center h-100">
+                                    <div class="col-lg-6 col-md-12">
+                                        <div class="slider-content">
+                                            <div class="d-flex align-items-center RightAnimate mb-3">
+                                                <span
+                                                    class="badge rounded-0 text-dark text-uppercase px-3 py-2 me-3 bg-white mr-3">Pg</span>
+                                                <ul class="p-0 mb-0 list-inline d-flex flex-wrap align-items-center movie-tag">
+                                                    <li class="position-relative text-capitalize font-size-14 letter-spacing-1">
+                                                        <a href="{{route('allmovies')}}" class="text-decoration-none">Adventure</a>
+                                                    </li>
+                                                    <li class="position-relative text-capitalize font-size-14 letter-spacing-1">
+                                                        <a href="{{route('allmovies')}}" class="text-decoration-none">Thriller</a>
+                                                    </li>
+                                                    <li class="position-relative text-capitalize font-size-14 letter-spacing-1">
+                                                        <a href="{{route('allmovies')}}" class="text-decoration-none">Drama</a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <h1
+                                                class="texture-text big-font letter-spacing-1 line-count-1 text-capitalize RightAnimate-two">
+                                                The Hunter </h1>
+                                            <p class="line-count-3 RightAnimate-two">After the death of their father, two siblings
+                                                fight for the throne, thereby causing a civil war known as the Dance of the Dragons.
+                                                Rhaenyra tries to hold the realm together as the tension rises following a tragic
+                                                loss. Meanwhile, Daemon prepares for war.</p>
+                                            <div class="d-flex flex-wrap align-items-center gap-3 RightAnimate-three">
+                                                <div class="slider-ratting d-flex align-items-center">
+                                                    <ul
+                                                        class="ratting-start p-0 m-0 list-inline text-warning d-flex align-items-center justify-content-left">
+                                                        <li>
+                                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                                        </li>
+                                                    </ul>
+                                                    <span class="text-white ms-2 font-size-14 fw-500">4.3/5</span>
+                                                    <span class="ms-2">
+                                                        <img src="{{asset('assets')}}/main/img/movies/imdb-logo.svg" alt="imdb logo"
+                                                            class="img-fluid">
+                                                    </span>
+                                                </div>
+                                                <span class="font-size-14 fw-500">2hr : 6mins</span>
+                                                <div class="text-primary font-size-14 fw-500 text-capitalize">genres: <a
+                                                        href="{{route('allmovies')}}" class="text-decoration-none ms-1">Drama</a>
+                                                </div>
+                                                <div class="text-primary font-size-14 fw-500 text-capitalize">Starting: <a
+                                                        href="person-detail.html" class="text-decoration-none ms-1">Jeffrey Silver</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="RightAnimate-four">
+                                            <div class="iq-button">
+                                                <a href="{{route('details')}}" class="btn text-uppercase position-relative">
+                                                    <span class="button-text">Info</span>
+                                                    <i class="fa-solid fa-play"></i>
+                                                </a>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
-                            </li>
-
-                            <li class="splide__slide">
-                                <div class="item item--big">
-                                    <a href="details1.html" class="item__cover">
-                                        <img src="{{asset('assets')}}/main/img/covers/16.png" alt="">
-                                        <span class="item__play">
-                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                                                <path d="M18.54,9,8.88,3.46a3.42,3.42,0,0,0-5.13,3V17.58A3.42,3.42,0,0,0,7.17,21a3.43,3.43,0,0,0,1.71-.46L18.54,15a3.42,3.42,0,0,0,0-5.92Zm-1,4.19L7.88,18.81a1.44,1.44,0,0,1-1.42,0,1.42,1.42,0,0,1-.71-1.23V6.42a1.42,1.42,0,0,1,.71-1.23A1.51,1.51,0,0,1,7.17,5a1.54,1.54,0,0,1,.71.19l9.66,5.58a1.42,1.42,0,0,1,0,2.46Z" />
-                                            </svg>
-                                        </span>
-                                    </a>
-                                    <div class="item__content">
-                                        <h3 class="item__title"><a href="details1.html">Beyond the Horizon</a></h3>
-                                        <span class="item__category">
-                                            <a href="#">Drama</a>
-                                        </span>
-                                        <span class="item__rate">7.1</span>
+                            </div>
+                        </div>
+                        <div class="swiper-slide p-0">
+                            <div class="slider--image block-images">
+                                <img src="{{asset('assets')}}/main/img/movies/ott2.html" loading="lazy" alt="" />
+                            </div>
+                            <div class="description">
+                                <div class="row align-items-center h-100">
+                                    <div class="col-lg-6 col-md-12">
+                                        <div class="slider-content">
+                                            <div class="d-flex align-items-center RightAnimate mb-3">
+                                                <span
+                                                    class="badge rounded-0 text-dark text-uppercase px-3 py-2 me-3 bg-white mr-3">NC-17</span>
+                                                <ul class="p-0 mb-0 list-inline d-flex flex-wrap align-items-center movie-tag">
+                                                    <li class="position-relative text-capitalize font-size-14 letter-spacing-1">
+                                                        <a href="{{route('allmovies')}}" class="text-decoration-none">Animation</a>
+                                                    </li>
+                                                    <li class="position-relative text-capitalize font-size-14 letter-spacing-1">
+                                                        <a href="{{route('allmovies')}}" class="text-decoration-none">Sci-Fi</a>
+                                                    </li>
+                                                    <li class="position-relative text-capitalize font-size-14 letter-spacing-1">
+                                                        <a href="{{route('allmovies')}}" class="text-decoration-none">Action</a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <h1
+                                                class="texture-text big-font letter-spacing-1 line-count-1 text-capitalize RightAnimate-two">
+                                                The Mandalorian </h1>
+                                            <p class="line-count-3 RightAnimate-two">After the fall of the Galactic Empire, a lone
+                                                gunfighter makes his way through the outer reaches of the lawless galaxy he show
+                                                follows the adventures of a lone Mandalorian bounty hunter, Din Djarin, as he
+                                                navigates the outer reaches of the galaxy, far from the authority of the New
+                                                Republic.</p>
+                                            <div class="d-flex flex-wrap align-items-center gap-3 RightAnimate-three">
+                                                <div class="slider-ratting d-flex align-items-center">
+                                                    <ul
+                                                        class="ratting-start p-0 m-0 list-inline text-warning d-flex align-items-center justify-content-left">
+                                                        <li>
+                                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                                        </li>
+                                                    </ul>
+                                                    <span class="text-white ms-2 font-size-14 fw-500">4.3/5</span>
+                                                </div>
+                                                <span class="font-size-14 fw-500">2hr : 14mins</span>
+                                                <div class="text-primary font-size-14 fw-500 text-capitalize">genres: <a
+                                                        href="{{route('allmovies')}}" class="text-decoration-none ms-1">Sci-Fi</a>
+                                                </div>
+                                                <div class="text-primary font-size-14 fw-500 text-capitalize">Starting:
+                                                    <a href="person-detail.html" class="text-decoration-none ms-1">James Chinlund</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="RightAnimate-four">
+                                            <div class="iq-button">
+                                                <a href="{{route('details')}}" class="btn text-uppercase position-relative">
+                                                    <span class="button-text">stream now</span>
+                                                    <i class="fa-solid fa-play"></i>
+                                                </a>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
-                            </li>
-
-                            <li class="splide__slide">
-                                <div class="item item--big">
-                                    <a href="details1.html" class="item__cover">
-                                        <img src="{{asset('assets')}}/main/img/covers/4.png" alt="">
-                                        <span class="item__play">
-                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                                                <path d="M18.54,9,8.88,3.46a3.42,3.42,0,0,0-5.13,3V17.58A3.42,3.42,0,0,0,7.17,21a3.43,3.43,0,0,0,1.71-.46L18.54,15a3.42,3.42,0,0,0,0-5.92Zm-1,4.19L7.88,18.81a1.44,1.44,0,0,1-1.42,0,1.42,1.42,0,0,1-.71-1.23V6.42a1.42,1.42,0,0,1,.71-1.23A1.51,1.51,0,0,1,7.17,5a1.54,1.54,0,0,1,.71.19l9.66,5.58a1.42,1.42,0,0,1,0,2.46Z" />
-                                            </svg>
-                                        </span>
-                                    </a>
-                                    <div class="item__content">
-                                        <h3 class="item__title"><a href="details1.html">Blindspotting</a></h3>
-                                        <span class="item__category">
-                                            <a href="#">Comedy</a>
-                                            <a href="#">Drama</a>
-                                        </span>
-                                        <span class="item__rate">7.9</span>
+                            </div>
+                        </div>
+                        <div class="swiper-slide p-0">
+                            <div class="slider--image block-images">
+                                <img src="{{asset('assets')}}/main/img/movies/ott3.html" loading="lazy" alt="" />
+                            </div>
+                            <div class="description">
+                                <div class="row align-items-center h-100">
+                                    <div class="col-lg-6 col-md-12">
+                                        <div class="slider-content">
+                                            <div class="d-flex align-items-center RightAnimate mb-3">
+                                                <span
+                                                    class="badge rounded-0 text-dark text-uppercase px-3 py-2 me-3 bg-white mr-3">G</span>
+                                                <ul class="p-0 mb-0 list-inline d-flex flex-wrap align-items-center movie-tag">
+                                                    <li class="position-relative text-capitalize font-size-14 letter-spacing-1">
+                                                        <a href="{{route('allmovies')}}" class="text-decoration-none">History</a>
+                                                    </li>
+                                                    <li class="position-relative text-capitalize font-size-14 letter-spacing-1">
+                                                        <a href="{{route('allmovies')}}" class="text-decoration-none">Action</a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <h1
+                                                class="texture-text big-font letter-spacing-1 line-count-1 text-capitalize RightAnimate-two">
+                                                Better call saul </h1>
+                                            <p class="line-count-3 RightAnimate-two">Ex-con artist Jimmy McGill turns into a
+                                                small-time attorney and goes through a series of trials and tragedies, as he
+                                                transforms into his alter ego Saul Goodman, a morally challenged criminal lawyer.
+                                            </p>
+                                            <div class="d-flex flex-wrap align-items-center gap-3 RightAnimate-three">
+                                                <div class="slider-ratting d-flex align-items-center">
+                                                    <ul
+                                                        class="ratting-start p-0 m-0 list-inline text-warning d-flex align-items-center justify-content-left">
+                                                        <li>
+                                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                                <span class="font-size-14 fw-500">2hr : 55mins</span>
+                                                <div class="text-primary font-size-14 fw-500 text-capitalize">genres:<a
+                                                        href="{{route('allmovies')}}" class="text-decoration-none ms-1">horror</a>
+                                                </div>
+                                                <div class="text-primary font-size-14 fw-500 text-capitalize">Starting:<a href="#"
+                                                        class="text-decoration-none ms-1">Brenda Chapman</a>
+                                                    <span class="text-body">,</span>
+                                                    <a href="person-detail.html" class="text-decoration-none ms-1">Caleb
+                                                        Deschannelr</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="RightAnimate-four">
+                                            <div class="iq-button">
+                                                <a href="{{route('details')}}" class="btn text-uppercase position-relative">
+                                                    <span class="button-text">stream now</span>
+                                                    <i class="fa-solid fa-play"></i>
+                                                </a>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
-                            </li>
-
-                            <li class="splide__slide">
-                                <div class="item item--big">
-                                    <a href="details1.html" class="item__cover">
-                                        <img src="{{asset('assets')}}/main/img/covers/3.png" alt="">
-                                        <span class="item__play">
-                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                                                <path d="M18.54,9,8.88,3.46a3.42,3.42,0,0,0-5.13,3V17.58A3.42,3.42,0,0,0,7.17,21a3.43,3.43,0,0,0,1.71-.46L18.54,15a3.42,3.42,0,0,0,0-5.92Zm-1,4.19L7.88,18.81a1.44,1.44,0,0,1-1.42,0,1.42,1.42,0,0,1-.71-1.23V6.42a1.42,1.42,0,0,1,.71-1.23A1.51,1.51,0,0,1,7.17,5a1.54,1.54,0,0,1,.71.19l9.66,5.58a1.42,1.42,0,0,1,0,2.46Z" />
-                                            </svg>
-                                        </span>
-                                    </a>
-                                    <div class="item__content">
-                                        <h3 class="item__title"><a href="details1.html">Shattered Dreams</a></h3>
-                                        <span class="item__category">
-                                            <a href="#">Drama</a>
-                                            <a href="#">Romance</a>
-                                        </span>
-                                        <span class="item__rate">6.3</span>
-                                    </div>
-                                </div>
-                            </li>
-
-                            <li class="splide__slide">
-                                <div class="item item--big">
-                                    <a href="details1.html" class="item__cover">
-                                        <img src="{{asset('assets')}}/main/img/covers/10.png" alt="">
-                                        <span class="item__play">
-                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                                                <path d="M18.54,9,8.88,3.46a3.42,3.42,0,0,0-5.13,3V17.58A3.42,3.42,0,0,0,7.17,21a3.43,3.43,0,0,0,1.71-.46L18.54,15a3.42,3.42,0,0,0,0-5.92Zm-1,4.19L7.88,18.81a1.44,1.44,0,0,1-1.42,0,1.42,1.42,0,0,1-.71-1.23V6.42a1.42,1.42,0,0,1,.71-1.23A1.51,1.51,0,0,1,7.17,5a1.54,1.54,0,0,1,.71.19l9.66,5.58a1.42,1.42,0,0,1,0,2.46Z" />
-                                            </svg>
-                                        </span>
-                                    </a>
-                                    <div class="item__content">
-                                        <h3 class="item__title"><a href="details1.html">Echoes of the Past</a></h3>
-                                        <span class="item__category">
-                                            <a href="#">Fantasy</a>
-                                        </span>
-                                        <span class="item__rate">9.0</span>
-                                    </div>
-                                </div>
-                            </li>
-
-                            <li class="splide__slide">
-                                <div class="item item--big">
-                                    <a href="details1.html" class="item__cover">
-                                        <img src="{{asset('assets')}}/main/img/covers/5.png" alt="">
-                                        <span class="item__play">
-                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                                                <path d="M18.54,9,8.88,3.46a3.42,3.42,0,0,0-5.13,3V17.58A3.42,3.42,0,0,0,7.17,21a3.43,3.43,0,0,0,1.71-.46L18.54,15a3.42,3.42,0,0,0,0-5.92Zm-1,4.19L7.88,18.81a1.44,1.44,0,0,1-1.42,0,1.42,1.42,0,0,1-.71-1.23V6.42a1.42,1.42,0,0,1,.71-1.23A1.51,1.51,0,0,1,7.17,5a1.54,1.54,0,0,1,.71.19l9.66,5.58a1.42,1.42,0,0,1,0,2.46Z" />
-                                            </svg>
-                                        </span>
-                                    </a>
-                                    <div class="item__content">
-                                        <h3 class="item__title"><a href="details1.html">Tales from the Underworld</a></h3>
-                                        <span class="item__category">
-                                            <a href="#">Action</a>
-                                            <a href="#">Western</a>
-                                        </span>
-                                        <span class="item__rate">8.6</span>
-                                    </div>
-                                </div>
-                            </li>
-
-                            <li class="splide__slide">
-                                <div class="item item--big">
-                                    <a href="details1.html" class="item__cover">
-                                        <img src="{{asset('assets')}}/main/img/covers/6.png" alt="">
-                                        <span class="item__play">
-                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                                                <path d="M18.54,9,8.88,3.46a3.42,3.42,0,0,0-5.13,3V17.58A3.42,3.42,0,0,0,7.17,21a3.43,3.43,0,0,0,1.71-.46L18.54,15a3.42,3.42,0,0,0,0-5.92Zm-1,4.19L7.88,18.81a1.44,1.44,0,0,1-1.42,0,1.42,1.42,0,0,1-.71-1.23V6.42a1.42,1.42,0,0,1,.71-1.23A1.51,1.51,0,0,1,7.17,5a1.54,1.54,0,0,1,.71.19l9.66,5.58a1.42,1.42,0,0,1,0,2.46Z" />
-                                            </svg>
-                                        </span>
-                                    </a>
-                                    <div class="item__content">
-                                        <h3 class="item__title"><a href="details1.html">Midnight Sun</a></h3>
-                                        <span class="item__category">
-                                            <a href="#">Drama</a>
-                                        </span>
-                                        <span class="item__rate">7.7</span>
-                                    </div>
-                                </div>
-                            </li>
-
-                            <li class="splide__slide">
-                                <div class="item item--big">
-                                    <a href="details1.html" class="item__cover">
-                                        <img src="{{asset('assets')}}/main/img/covers/7.png" alt="">
-                                        <span class="item__play">
-                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                                                <path d="M18.54,9,8.88,3.46a3.42,3.42,0,0,0-5.13,3V17.58A3.42,3.42,0,0,0,7.17,21a3.43,3.43,0,0,0,1.71-.46L18.54,15a3.42,3.42,0,0,0,0-5.92Zm-1,4.19L7.88,18.81a1.44,1.44,0,0,1-1.42,0,1.42,1.42,0,0,1-.71-1.23V6.42a1.42,1.42,0,0,1,.71-1.23A1.51,1.51,0,0,1,7.17,5a1.54,1.54,0,0,1,.71.19l9.66,5.58a1.42,1.42,0,0,1,0,2.46Z" />
-                                            </svg>
-                                        </span>
-                                    </a>
-                                    <div class="item__content">
-                                        <h3 class="item__title"><a href="details1.html">Wild Hearts</a></h3>
-                                        <span class="item__category">
-                                            <a href="#">Comedy</a>
-                                        </span>
-                                        <span class="item__rate">8.2</span>
-                                    </div>
-                                </div>
-                            </li>
-
-                            <li class="splide__slide">
-                                <div class="item item--big">
-                                    <a href="details1.html" class="item__cover">
-                                        <img src="{{asset('assets')}}/main/img/covers/12.png" alt="">
-                                        <span class="item__play">
-                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                                                <path d="M18.54,9,8.88,3.46a3.42,3.42,0,0,0-5.13,3V17.58A3.42,3.42,0,0,0,7.17,21a3.43,3.43,0,0,0,1.71-.46L18.54,15a3.42,3.42,0,0,0,0-5.92Zm-1,4.19L7.88,18.81a1.44,1.44,0,0,1-1.42,0,1.42,1.42,0,0,1-.71-1.23V6.42a1.42,1.42,0,0,1,.71-1.23A1.51,1.51,0,0,1,7.17,5a1.54,1.54,0,0,1,.71.19l9.66,5.58a1.42,1.42,0,0,1,0,2.46Z" />
-                                            </svg>
-                                        </span>
-                                    </a>
-                                    <div class="item__content">
-                                        <h3 class="item__title"><a href="details1.html">The Last Hope</a></h3>
-                                        <span class="item__category">
-                                            <a href="#">Animals</a>
-                                            <a href="#">Documentary</a>
-                                        </span>
-                                        <span class="item__rate">7.3</span>
-                                    </div>
-                                </div>
-                            </li>
-                        </ul>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-</section>
-<!-- end home -->
+</div>
 
-<!-- content -->
-<section class="content">
-    <div class="content__head">
-        <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    <!-- content title -->
-                    <h2 class="content__title">Recently Updated</h2>
-                    <!-- end content title -->
+<div class="top-ten-block">
+    <div class="container-fluid">
+        <section class="overflow-hidden">
+            <div class="d-flex align-items-center justify-content-between px-md-3 px-1 mb-4">
+                <h5 class="main-title text-capitalize mb-0">top ten movies to watch</h5>
+                <a href="{{route('allmovies')}}" class="text-primary iq-view-all text-decoration-none flex-none">View All</a>
+            </div>
+            <div class="position-relative swiper swiper-card iq-top-ten-block-slider" data-slide="6" data-laptop="6"
+                data-tab="3" data-mobile="2" data-mobile-sm="2" data-autoplay="false" data-loop="false"
+                data-navigation="true" data-pagination="true">
+                <ul class="p-0 swiper-wrapper mb-5 list-inline">
+                    <li class="swiper-slide">
+                        <div class="iq-top-ten-block">
+                            <div class="block-image position-relative">
+                                <div class="img-box">
+                                    <a class="overly-images" href="{{route('details')}}">
+                                        <img src="{{asset('assets')}}/main/img/top-ten-number/01.html" alt="movie-card" class="img-fluid object-cover">
+                                    </a>
+                                    <span class="top-ten-numbers texture-text">1</span>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="swiper-slide">
+                        <div class="iq-top-ten-block">
+                            <div class="block-image position-relative">
+                                <div class="img-box">
+                                    <a class="overly-images" href="{{route('details')}}">
+                                        <img src="{{asset('assets')}}/main/img/top-ten-number/02.html" alt="movie-card" class="img-fluid object-cover">
+                                    </a>
+                                    <span class="top-ten-numbers texture-text">2</span>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="swiper-slide">
+                        <div class="iq-top-ten-block">
+                            <div class="block-image position-relative">
+                                <div class="img-box">
+                                    <a class="overly-images" href="{{route('details')}}">
+                                        <img src="{{asset('assets')}}/main/img/top-ten-number/03.html" alt="movie-card" class="img-fluid object-cover">
+                                    </a>
+                                    <span class="top-ten-numbers texture-text">3</span>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="swiper-slide">
+                        <div class="iq-top-ten-block">
+                            <div class="block-image position-relative">
+                                <div class="img-box">
+                                    <a class="overly-images" href="{{route('details')}}">
+                                        <img src="{{asset('assets')}}/main/img/top-ten-number/04.html" alt="movie-card" class="img-fluid object-cover">
+                                    </a>
+                                    <span class="top-ten-numbers texture-text">4</span>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="swiper-slide">
+                        <div class="iq-top-ten-block">
+                            <div class="block-image position-relative">
+                                <div class="img-box">
+                                    <a class="overly-images" href="{{route('details')}}">
+                                        <img src="{{asset('assets')}}/main/img/top-ten-number/05.html" alt="movie-card" class="img-fluid object-cover">
+                                    </a>
+                                    <span class="top-ten-numbers texture-text">5</span>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="swiper-slide">
+                        <div class="iq-top-ten-block">
+                            <div class="block-image position-relative">
+                                <div class="img-box">
+                                    <a class="overly-images" href="{{route('details')}}">
+                                        <img src="{{asset('assets')}}/main/img/top-ten-number/06.html" alt="movie-card" class="img-fluid object-cover">
+                                    </a>
+                                    <span class="top-ten-numbers texture-text">6</span>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="swiper-slide">
+                        <div class="iq-top-ten-block">
+                            <div class="block-image position-relative">
+                                <div class="img-box">
+                                    <a class="overly-images" href="{{route('details')}}">
+                                        <img src="{{asset('assets')}}/main/img/top-ten-number/07.html" alt="movie-card" class="img-fluid object-cover">
+                                    </a>
+                                    <span class="top-ten-numbers texture-text">7</span>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="swiper-slide">
+                        <div class="iq-top-ten-block">
+                            <div class="block-image position-relative">
+                                <div class="img-box">
+                                    <a class="overly-images" href="{{route('details')}}">
+                                        <img src="{{asset('assets')}}/main/img/top-ten-number/08.html" alt="movie-card" class="img-fluid object-cover">
+                                    </a>
+                                    <span class="top-ten-numbers texture-text">8</span>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="swiper-slide">
+                        <div class="iq-top-ten-block">
+                            <div class="block-image position-relative">
+                                <div class="img-box">
+                                    <a class="overly-images" href="{{route('details')}}">
+                                        <img src="{{asset('assets')}}/main/img/top-ten-number/09.html" alt="movie-card" class="img-fluid object-cover">
+                                    </a>
+                                    <span class="top-ten-numbers texture-text">9</span>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="swiper-slide">
+                        <div class="iq-top-ten-block">
+                            <div class="block-image position-relative">
+                                <div class="img-box">
+                                    <a class="overly-images" href="{{route('details')}}">
+                                        <img src="{{asset('assets')}}/main/img/top-ten-number/10.html" alt="movie-card" class="img-fluid object-cover">
+                                    </a>
+                                    <span class="top-ten-numbers texture-text">10</span>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+                <div class="swiper-button swiper-button-next"></div>
+                <div class="swiper-button swiper-button-prev"></div>
+            </div>
+        </section>
+    </div>
+</div>
 
-                    <!-- content tabs nav -->
-                    <ul class="nav nav-tabs content__tabs" id="content__tabs" role="tablist">
-                        <li class="nav-item" role="presentation">
-                            <button id="1-tab" class="active" data-bs-toggle="tab" data-bs-target="#tab-1" type="button" role="tab" aria-controls="tab-1" aria-selected="true">New items</button>
+<div class="streamit-block">
+    <div class="container-fluid">
+        <div class="overflow-hidden">
+            <div class="d-flex align-items-center justify-content-between px-md-3 px-1 my-4">
+                <h5 class="main-title text-capitalize mb-0">Only on Streamit</h5>
+                <a href="{{route('allmovies')}}" class="text-primary iq-view-all text-decoration-none flex-none">View All</a>
+            </div>
+            <div class="card-style-slider">
+                <div class="position-relative swiper swiper-card" data-slide="6" data-laptop="6" data-tab="3"
+                    data-mobile="2" data-mobile-sm="2" data-autoplay="false" data-loop="true" data-navigation="true"
+                    data-pagination="true">
+                    <ul class="p-0 swiper-wrapper m-0  list-inline">
+                        <li class="swiper-slide">
+                            <div class="iq-card card-hover">
+                                <div class="block-images position-relative w-100">
+                                    <div class="img-box w-100">
+                                        <a href="{{route('details')}}" class="position-absolute top-0 bottom-0 start-0 end-0"></a>
+                                        <img src="{{asset('assets')}}/main/img/movies/related/01.html" alt="movie-card" class="img-fluid object-cover w-100 d-block border-0">
+                                    </div>
+                                    <div class="card-description with-transition">
+                                        <div class="cart-content">
+                                            <div class="content-left">
+                                                <h5 class="iq-title text-capitalize">
+                                                    <a href="{{route('details')}}">giikre</a>
+                                                </h5>
+                                                <div class="movie-time d-flex align-items-center my-2">
+                                                    <span class="movie-time-text font-normal">2hr : 12mins</span>
+                                                </div>
+                                            </div>
+                                            <div class="watchlist">
+                                                <a class="watch-list-not" href="playlist.html">
+                                                    <svg width="10" height="10" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="icon-10">
+                                                        <path d="M12 4V20M20 12H4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                                                    </svg>
+                                                    <span class="watchlist-label"> Watchlist </span>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="block-social-info align-items-center">
+                                        <ul class="p-0 m-0 d-flex gap-2 music-play-lists">
+                                            <li class="share position-relative d-flex align-items-center text-center mb-0">
+                                                <span class="w-100 h-100 d-inline-block bg-transparent">
+                                                    <i class="fas fa-share-alt"></i>
+                                                </span>
+                                                <div class="share-wrapper">
+                                                    <div class="share-boxs d-inline-block">
+                                                        <svg width="15" height="40" class="share-shape" viewBox="0 0 15 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M14.8842 40C6.82983 37.2868 1 29.3582 1 20C1 10.6418 6.82983 2.71323 14.8842 0H0V40H14.8842Z" fill="#191919"></path>
+                                                        </svg>
+                                                        <div class=" overflow-hidden">
+                                                            <a href="#" target="_blank">
+                                                                <i class="fab fa-facebook-f"></i>
+                                                            </a>
+                                                            <a href="#" target="_blank">
+                                                                <i class="fab fa-twitter"></i>
+                                                            </a>
+                                                            <a href="#">
+                                                                <i class="fas fa-link"></i>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="share position-relative d-flex align-items-center text-center mb-0">
+                                                <span class="w-100 h-100 d-inline-block bg-transparent">
+                                                    <i class="fa-regular fa-heart"></i>
+                                                </span>
+                                                <div class="share-wrapper">
+                                                    <div class="share-boxs d-inline-block">
+                                                        <svg width="15" height="40" class="share-shape" viewBox="0 0 15 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M14.8842 40C6.82983 37.2868 1 29.3582 1 20C1 10.6418 6.82983 2.71323 14.8842 0H0V40H14.8842Z" fill="#191919"></path>
+                                                        </svg>
+                                                        <div class=" overflow-hidden">
+                                                            <span>+51</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                        <div class="iq-button">
+                                            <a href="{{route('details')}}" class="btn text-uppercase position-relative rounded-circle">
+                                                <i class="fa-solid fa-play ms-0"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
                         </li>
+                        <li class="swiper-slide">
+                            <div class="iq-card card-hover">
+                                <div class="block-images position-relative w-100">
+                                    <div class="img-box w-100">
+                                        <a href="{{route('details')}}" class="position-absolute top-0 bottom-0 start-0 end-0"></a>
+                                        <img src="{{asset('assets')}}/main/img/movies/related/02.html" alt="movie-card" class="img-fluid object-cover w-100 d-block border-0">
+                                    </div>
+                                    <div class="card-description with-transition">
+                                        <div class="cart-content">
+                                            <div class="content-left">
+                                                <h5 class="iq-title text-capitalize">
+                                                    <a href="{{route('details')}}">YoShi</a>
+                                                </h5>
+                                                <div class="movie-time d-flex align-items-center my-2">
+                                                    <span class="movie-time-text font-normal">1hr : 22mins</span>
+                                                </div>
+                                            </div>
+                                            <div class="watchlist">
+                                                <a class="watch-list-not" href="playlist.html">
+                                                    <svg width="10" height="10" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="icon-10">
+                                                        <path d="M12 4V20M20 12H4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                                                    </svg>
+                                                    <span class="watchlist-label"> Watchlist </span>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="block-social-info align-items-center">
+                                        <ul class="p-0 m-0 d-flex gap-2 music-play-lists">
+                                            <li class="share position-relative d-flex align-items-center text-center mb-0">
+                                                <span class="w-100 h-100 d-inline-block bg-transparent">
+                                                    <i class="fas fa-share-alt"></i>
+                                                </span>
+                                                <div class="share-wrapper">
+                                                    <div class="share-boxs d-inline-block">
+                                                        <svg width="15" height="40" class="share-shape" viewBox="0 0 15 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M14.8842 40C6.82983 37.2868 1 29.3582 1 20C1 10.6418 6.82983 2.71323 14.8842 0H0V40H14.8842Z" fill="#191919"></path>
+                                                        </svg>
+                                                        <div class=" overflow-hidden">
+                                                            <a href="#" target="_blank">
+                                                                <i class="fab fa-facebook-f"></i>
+                                                            </a>
+                                                            <a href="#" target="_blank">
+                                                                <i class="fab fa-twitter"></i>
+                                                            </a>
+                                                            <a href="#">
+                                                                <i class="fas fa-link"></i>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="share position-relative d-flex align-items-center text-center mb-0">
+                                                <span class="w-100 h-100 d-inline-block bg-transparent">
+                                                    <i class="fa-regular fa-heart"></i>
+                                                </span>
+                                                <div class="share-wrapper">
+                                                    <div class="share-boxs d-inline-block">
+                                                        <svg width="15" height="40" class="share-shape" viewBox="0 0 15 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M14.8842 40C6.82983 37.2868 1 29.3582 1 20C1 10.6418 6.82983 2.71323 14.8842 0H0V40H14.8842Z" fill="#191919"></path>
+                                                        </svg>
+                                                        <div class=" overflow-hidden">
+                                                            <span>+51</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                        <div class="iq-button">
+                                            <a href="{{route('details')}}" class="btn text-uppercase position-relative rounded-circle">
+                                                <i class="fa-solid fa-play ms-0"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
 
-                        <li class="nav-item" role="presentation">
-                            <button id="2-tab" data-bs-toggle="tab" data-bs-target="#tab-2" type="button" role="tab" aria-controls="tab-2" aria-selected="false">Movies</button>
+
                         </li>
+                        <li class="swiper-slide">
+                            <div class="iq-card card-hover">
+                                <div class="block-images position-relative w-100">
+                                    <div class="img-box w-100">
+                                        <a href="{{route('details')}}" class="position-absolute top-0 bottom-0 start-0 end-0"></a>
+                                        <img src="{{asset('assets')}}/main/img/movies/related/03.html" alt="movie-card" class="img-fluid object-cover w-100 d-block border-0">
+                                    </div>
+                                    <div class="card-description with-transition">
+                                        <div class="cart-content">
+                                            <div class="content-left">
+                                                <h5 class="iq-title text-capitalize">
+                                                    <a href="{{route('details')}}">We Gare</a>
+                                                </h5>
+                                                <div class="movie-time d-flex align-items-center my-2">
+                                                    <span class="movie-time-text font-normal">1hr : 30mins</span>
+                                                </div>
+                                            </div>
+                                            <div class="watchlist">
+                                                <a class="watch-list-not" href="playlist.html">
+                                                    <svg width="10" height="10" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="icon-10">
+                                                        <path d="M12 4V20M20 12H4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                                                    </svg>
+                                                    <span class="watchlist-label"> Watchlist </span>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="block-social-info align-items-center">
+                                        <ul class="p-0 m-0 d-flex gap-2 music-play-lists">
+                                            <li class="share position-relative d-flex align-items-center text-center mb-0">
+                                                <span class="w-100 h-100 d-inline-block bg-transparent">
+                                                    <i class="fas fa-share-alt"></i>
+                                                </span>
+                                                <div class="share-wrapper">
+                                                    <div class="share-boxs d-inline-block">
+                                                        <svg width="15" height="40" class="share-shape" viewBox="0 0 15 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M14.8842 40C6.82983 37.2868 1 29.3582 1 20C1 10.6418 6.82983 2.71323 14.8842 0H0V40H14.8842Z" fill="#191919"></path>
+                                                        </svg>
+                                                        <div class=" overflow-hidden">
+                                                            <a href="#" target="_blank">
+                                                                <i class="fab fa-facebook-f"></i>
+                                                            </a>
+                                                            <a href="#" target="_blank">
+                                                                <i class="fab fa-twitter"></i>
+                                                            </a>
+                                                            <a href="#">
+                                                                <i class="fas fa-link"></i>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="share position-relative d-flex align-items-center text-center mb-0">
+                                                <span class="w-100 h-100 d-inline-block bg-transparent">
+                                                    <i class="fa-regular fa-heart"></i>
+                                                </span>
+                                                <div class="share-wrapper">
+                                                    <div class="share-boxs d-inline-block">
+                                                        <svg width="15" height="40" class="share-shape" viewBox="0 0 15 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M14.8842 40C6.82983 37.2868 1 29.3582 1 20C1 10.6418 6.82983 2.71323 14.8842 0H0V40H14.8842Z" fill="#191919"></path>
+                                                        </svg>
+                                                        <div class=" overflow-hidden">
+                                                            <span>+51</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                        <div class="iq-button">
+                                            <a href="{{route('details')}}" class="btn text-uppercase position-relative rounded-circle">
+                                                <i class="fa-solid fa-play ms-0"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
 
-                        <li class="nav-item" role="presentation">
-                            <button id="3-tab" data-bs-toggle="tab" data-bs-target="#tab-3" type="button" role="tab" aria-controls="tab-3" aria-selected="false">TV Shows</button>
+
                         </li>
+                        <li class="swiper-slide">
+                            <div class="iq-card card-hover">
+                                <div class="block-images position-relative w-100">
+                                    <div class="img-box w-100">
+                                        <a href="{{route('details')}}" class="position-absolute top-0 bottom-0 start-0 end-0"></a>
+                                        <img src="{{asset('assets')}}/main/img/movies/related/04.html" alt="movie-card" class="img-fluid object-cover w-100 d-block border-0">
+                                    </div>
+                                    <div class="card-description with-transition">
+                                        <div class="cart-content">
+                                            <div class="content-left">
+                                                <h5 class="iq-title text-capitalize">
+                                                    <a href="{{route('details')}}">Avengers</a>
+                                                </h5>
+                                                <div class="movie-time d-flex align-items-center my-2">
+                                                    <span class="movie-time-text font-normal">1hr : 45mins</span>
+                                                </div>
+                                            </div>
+                                            <div class="watchlist">
+                                                <a class="watch-list-not" href="playlist.html">
+                                                    <svg width="10" height="10" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="icon-10">
+                                                        <path d="M12 4V20M20 12H4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                                                    </svg>
+                                                    <span class="watchlist-label"> Watchlist </span>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="block-social-info align-items-center">
+                                        <ul class="p-0 m-0 d-flex gap-2 music-play-lists">
+                                            <li class="share position-relative d-flex align-items-center text-center mb-0">
+                                                <span class="w-100 h-100 d-inline-block bg-transparent">
+                                                    <i class="fas fa-share-alt"></i>
+                                                </span>
+                                                <div class="share-wrapper">
+                                                    <div class="share-boxs d-inline-block">
+                                                        <svg width="15" height="40" class="share-shape" viewBox="0 0 15 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M14.8842 40C6.82983 37.2868 1 29.3582 1 20C1 10.6418 6.82983 2.71323 14.8842 0H0V40H14.8842Z" fill="#191919"></path>
+                                                        </svg>
+                                                        <div class=" overflow-hidden">
+                                                            <a href="#" target="_blank">
+                                                                <i class="fab fa-facebook-f"></i>
+                                                            </a>
+                                                            <a href="#" target="_blank">
+                                                                <i class="fab fa-twitter"></i>
+                                                            </a>
+                                                            <a href="#">
+                                                                <i class="fas fa-link"></i>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="share position-relative d-flex align-items-center text-center mb-0">
+                                                <span class="w-100 h-100 d-inline-block bg-transparent">
+                                                    <i class="fa-regular fa-heart"></i>
+                                                </span>
+                                                <div class="share-wrapper">
+                                                    <div class="share-boxs d-inline-block">
+                                                        <svg width="15" height="40" class="share-shape" viewBox="0 0 15 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M14.8842 40C6.82983 37.2868 1 29.3582 1 20C1 10.6418 6.82983 2.71323 14.8842 0H0V40H14.8842Z" fill="#191919"></path>
+                                                        </svg>
+                                                        <div class=" overflow-hidden">
+                                                            <span>+51</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                        <div class="iq-button">
+                                            <a href="{{route('details')}}" class="btn text-uppercase position-relative rounded-circle">
+                                                <i class="fa-solid fa-play ms-0"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
 
-                        <li class="nav-item" role="presentation">
-                            <button id="4-tab" data-bs-toggle="tab" data-bs-target="#tab-4" type="button" role="tab" aria-controls="tab-4" aria-selected="false">Anime</button>
+
+                        </li>
+                        <li class="swiper-slide">
+                            <div class="iq-card card-hover">
+                                <div class="block-images position-relative w-100">
+                                    <div class="img-box w-100">
+                                        <a href="{{route('details')}}" class="position-absolute top-0 bottom-0 start-0 end-0"></a>
+                                        <img src="{{asset('assets')}}/main/img/movies/related/05.html" alt="movie-card" class="img-fluid object-cover w-100 d-block border-0">
+                                    </div>
+                                    <div class="card-description with-transition">
+                                        <div class="cart-content">
+                                            <div class="content-left">
+                                                <h5 class="iq-title text-capitalize">
+                                                    <a href="{{route('details')}}">Chosfies</a>
+                                                </h5>
+                                                <div class="movie-time d-flex align-items-center my-2">
+                                                    <span class="movie-time-text font-normal">1hr : 30mins</span>
+                                                </div>
+                                            </div>
+                                            <div class="watchlist">
+                                                <a class="watch-list-not" href="playlist.html">
+                                                    <svg width="10" height="10" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="icon-10">
+                                                        <path d="M12 4V20M20 12H4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                                                    </svg>
+                                                    <span class="watchlist-label"> Watchlist </span>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="block-social-info align-items-center">
+                                        <ul class="p-0 m-0 d-flex gap-2 music-play-lists">
+                                            <li class="share position-relative d-flex align-items-center text-center mb-0">
+                                                <span class="w-100 h-100 d-inline-block bg-transparent">
+                                                    <i class="fas fa-share-alt"></i>
+                                                </span>
+                                                <div class="share-wrapper">
+                                                    <div class="share-boxs d-inline-block">
+                                                        <svg width="15" height="40" class="share-shape" viewBox="0 0 15 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M14.8842 40C6.82983 37.2868 1 29.3582 1 20C1 10.6418 6.82983 2.71323 14.8842 0H0V40H14.8842Z" fill="#191919"></path>
+                                                        </svg>
+                                                        <div class=" overflow-hidden">
+                                                            <a href="#" target="_blank">
+                                                                <i class="fab fa-facebook-f"></i>
+                                                            </a>
+                                                            <a href="#" target="_blank">
+                                                                <i class="fab fa-twitter"></i>
+                                                            </a>
+                                                            <a href="#">
+                                                                <i class="fas fa-link"></i>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="share position-relative d-flex align-items-center text-center mb-0">
+                                                <span class="w-100 h-100 d-inline-block bg-transparent">
+                                                    <i class="fa-regular fa-heart"></i>
+                                                </span>
+                                                <div class="share-wrapper">
+                                                    <div class="share-boxs d-inline-block">
+                                                        <svg width="15" height="40" class="share-shape" viewBox="0 0 15 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M14.8842 40C6.82983 37.2868 1 29.3582 1 20C1 10.6418 6.82983 2.71323 14.8842 0H0V40H14.8842Z" fill="#191919"></path>
+                                                        </svg>
+                                                        <div class=" overflow-hidden">
+                                                            <span>+51</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                        <div class="iq-button">
+                                            <a href="{{route('details')}}" class="btn text-uppercase position-relative rounded-circle">
+                                                <i class="fa-solid fa-play ms-0"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                        </li>
+                        <li class="swiper-slide">
+                            <div class="iq-card card-hover">
+                                <div class="block-images position-relative w-100">
+                                    <div class="img-box w-100">
+                                        <a href="{{route('details')}}" class="position-absolute top-0 bottom-0 start-0 end-0"></a>
+                                        <img src="{{asset('assets')}}/main/img/movies/related/06.html" alt="movie-card" class="img-fluid object-cover w-100 d-block border-0">
+                                    </div>
+                                    <div class="card-description with-transition">
+                                        <div class="cart-content">
+                                            <div class="content-left">
+                                                <h5 class="iq-title text-capitalize">
+                                                    <a href="{{route('details')}}">Tf Oaler</a>
+                                                </h5>
+                                                <div class="movie-time d-flex align-items-center my-2">
+                                                    <span class="movie-time-text font-normal">1hr : 30mins</span>
+                                                </div>
+                                            </div>
+                                            <div class="watchlist">
+                                                <a class="watch-list-not" href="playlist.html">
+                                                    <svg width="10" height="10" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="icon-10">
+                                                        <path d="M12 4V20M20 12H4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                                                    </svg>
+                                                    <span class="watchlist-label"> Watchlist </span>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="block-social-info align-items-center">
+                                        <ul class="p-0 m-0 d-flex gap-2 music-play-lists">
+                                            <li class="share position-relative d-flex align-items-center text-center mb-0">
+                                                <span class="w-100 h-100 d-inline-block bg-transparent">
+                                                    <i class="fas fa-share-alt"></i>
+                                                </span>
+                                                <div class="share-wrapper">
+                                                    <div class="share-boxs d-inline-block">
+                                                        <svg width="15" height="40" class="share-shape" viewBox="0 0 15 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M14.8842 40C6.82983 37.2868 1 29.3582 1 20C1 10.6418 6.82983 2.71323 14.8842 0H0V40H14.8842Z" fill="#191919"></path>
+                                                        </svg>
+                                                        <div class=" overflow-hidden">
+                                                            <a href="#" target="_blank">
+                                                                <i class="fab fa-facebook-f"></i>
+                                                            </a>
+                                                            <a href="#" target="_blank">
+                                                                <i class="fab fa-twitter"></i>
+                                                            </a>
+                                                            <a href="#">
+                                                                <i class="fas fa-link"></i>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="share position-relative d-flex align-items-center text-center mb-0">
+                                                <span class="w-100 h-100 d-inline-block bg-transparent">
+                                                    <i class="fa-regular fa-heart"></i>
+                                                </span>
+                                                <div class="share-wrapper">
+                                                    <div class="share-boxs d-inline-block">
+                                                        <svg width="15" height="40" class="share-shape" viewBox="0 0 15 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M14.8842 40C6.82983 37.2868 1 29.3582 1 20C1 10.6418 6.82983 2.71323 14.8842 0H0V40H14.8842Z" fill="#191919"></path>
+                                                        </svg>
+                                                        <div class=" overflow-hidden">
+                                                            <span>+51</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                        <div class="iq-button">
+                                            <a href="{{route('details')}}" class="btn text-uppercase position-relative rounded-circle">
+                                                <i class="fa-solid fa-play ms-0"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                        </li>
+                        <li class="swiper-slide">
+                            <div class="iq-card card-hover">
+                                <div class="block-images position-relative w-100">
+                                    <div class="img-box w-100">
+                                        <a href="{{route('details')}}" class="position-absolute top-0 bottom-0 start-0 end-0"></a>
+                                        <img src="{{asset('assets')}}/main/img/movies/related/07.html" alt="movie-card" class="img-fluid object-cover w-100 d-block border-0">
+                                    </div>
+                                    <div class="card-description with-transition">
+                                        <div class="cart-content">
+                                            <div class="content-left">
+                                                <h5 class="iq-title text-capitalize">
+                                                    <a href="{{route('details')}}">Another Danger</a>
+                                                </h5>
+                                                <div class="movie-time d-flex align-items-center my-2">
+                                                    <span class="movie-time-text font-normal">1hr : 30mins</span>
+                                                </div>
+                                            </div>
+                                            <div class="watchlist">
+                                                <a class="watch-list-not" href="playlist.html">
+                                                    <svg width="10" height="10" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="icon-10">
+                                                        <path d="M12 4V20M20 12H4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                                                    </svg>
+                                                    <span class="watchlist-label"> Watchlist </span>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="block-social-info align-items-center">
+                                        <ul class="p-0 m-0 d-flex gap-2 music-play-lists">
+                                            <li class="share position-relative d-flex align-items-center text-center mb-0">
+                                                <span class="w-100 h-100 d-inline-block bg-transparent">
+                                                    <i class="fas fa-share-alt"></i>
+                                                </span>
+                                                <div class="share-wrapper">
+                                                    <div class="share-boxs d-inline-block">
+                                                        <svg width="15" height="40" class="share-shape" viewBox="0 0 15 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M14.8842 40C6.82983 37.2868 1 29.3582 1 20C1 10.6418 6.82983 2.71323 14.8842 0H0V40H14.8842Z" fill="#191919"></path>
+                                                        </svg>
+                                                        <div class=" overflow-hidden">
+                                                            <a href="#" target="_blank">
+                                                                <i class="fab fa-facebook-f"></i>
+                                                            </a>
+                                                            <a href="#" target="_blank">
+                                                                <i class="fab fa-twitter"></i>
+                                                            </a>
+                                                            <a href="#">
+                                                                <i class="fas fa-link"></i>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="share position-relative d-flex align-items-center text-center mb-0">
+                                                <span class="w-100 h-100 d-inline-block bg-transparent">
+                                                    <i class="fa-regular fa-heart"></i>
+                                                </span>
+                                                <div class="share-wrapper">
+                                                    <div class="share-boxs d-inline-block">
+                                                        <svg width="15" height="40" class="share-shape" viewBox="0 0 15 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M14.8842 40C6.82983 37.2868 1 29.3582 1 20C1 10.6418 6.82983 2.71323 14.8842 0H0V40H14.8842Z" fill="#191919"></path>
+                                                        </svg>
+                                                        <div class=" overflow-hidden">
+                                                            <span>+51</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                        <div class="iq-button">
+                                            <a href="{{route('details')}}" class="btn text-uppercase position-relative rounded-circle">
+                                                <i class="fa-solid fa-play ms-0"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
                         </li>
                     </ul>
-                    <!-- end content tabs nav -->
+                    <div class="swiper-button swiper-button-next"></div>
+                    <div class="swiper-button swiper-button-prev"></div>
                 </div>
             </div>
         </div>
     </div>
+</div>
 
-    <div class="container">
-        <!-- content tabs -->
-        <div class="tab-content">
-            <div class="tab-pane fade show active" id="tab-1" role="tabpanel" aria-labelledby="1-tab" tabindex="0">
-                <div class="row">
-                    <!-- item -->
-                    <div class="col-6 col-sm-12 col-lg-6 col-xxl-4">
-                        <div class="item item--list">
-                            <a href="details1.html" class="item__cover">
-                                <img src="{{asset('assets')}}/main/img/covers/1.png" alt="">
-                                <span class="item__play">
-                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                                        <path d="M18.54,9,8.88,3.46a3.42,3.42,0,0,0-5.13,3V17.58A3.42,3.42,0,0,0,7.17,21a3.43,3.43,0,0,0,1.71-.46L18.54,15a3.42,3.42,0,0,0,0-5.92Zm-1,4.19L7.88,18.81a1.44,1.44,0,0,1-1.42,0,1.42,1.42,0,0,1-.71-1.23V6.42a1.42,1.42,0,0,1,.71-1.23A1.51,1.51,0,0,1,7.17,5a1.54,1.54,0,0,1,.71.19l9.66,5.58a1.42,1.42,0,0,1,0,2.46Z" />
-                                    </svg>
-                                </span>
-                            </a>
-
-                            <div class="item__content">
-                                <h3 class="item__title"><a href="details1.html">The Lost City</a></h3>
-                                <span class="item__category">
-                                    <a href="#">Action</a>
-                                    <a href="#">Triler</a>
-                                </span>
-
-                                <div class="item__wrap">
-                                    <span class="item__rate"> 8.4</span>
-
-                                    <ul class="item__list">
-                                        <li>HD</li>
-                                        <li>16+</li>
-                                    </ul>
-                                </div>
-
-                                <div class="item__description">
-                                    <p>When a renowned archaeologist goes missing, his daughter sets out on a perilous journey to the heart of the Amazon rainforest to find him. Along the way, she discovers a hidden city and a dangerous conspiracy that threatens the very balance of power in the world. With the help of a charming rogue, she must navigate treacherous terrain and outwit powerful enemies to save her father and uncover the secrets of the lost city.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- end item -->
-
-                    <!-- item -->
-                    <div class="col-6 col-sm-12 col-lg-6 col-xxl-4">
-                        <div class="item item--list">
-                            <a href="details1.html" class="item__cover">
-                                <img src="{{asset('assets')}}/main/img/covers/2.png" alt="">
-                                <span class="item__play">
-                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                                        <path d="M18.54,9,8.88,3.46a3.42,3.42,0,0,0-5.13,3V17.58A3.42,3.42,0,0,0,7.17,21a3.43,3.43,0,0,0,1.71-.46L18.54,15a3.42,3.42,0,0,0,0-5.92Zm-1,4.19L7.88,18.81a1.44,1.44,0,0,1-1.42,0,1.42,1.42,0,0,1-.71-1.23V6.42a1.42,1.42,0,0,1,.71-1.23A1.51,1.51,0,0,1,7.17,5a1.54,1.54,0,0,1,.71.19l9.66,5.58a1.42,1.42,0,0,1,0,2.46Z" />
-                                    </svg>
-                                </span>
-                            </a>
-
-                            <div class="item__content">
-                                <h3 class="item__title"><a href="details1.html">Undercurrents</a></h3>
-                                <span class="item__category">
-                                    <a href="#">Comedy</a>
-                                </span>
-
-                                <div class="item__wrap">
-                                    <span class="item__rate"> 7.1</span>
-
-                                    <ul class="item__list">
-                                        <li>FHD</li>
-                                        <li>18+</li>
-                                    </ul>
-                                </div>
-
-                                <div class="item__description">
-                                    <p>A brilliant scientist discovers a way to harness the power of the ocean's currents to create a new, renewable energy source. But when her groundbreaking technology falls into the wrong hands, she must race against time to stop it from being used for evil. Along the way, she must navigate complex political alliances and confront her own past to save the world from disaster.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- end item -->
-
-                    <!-- item -->
-                    <div class="col-6 col-sm-12 col-lg-6 col-xxl-4">
-                        <div class="item item--list">
-                            <a href="details1.html" class="item__cover">
-                                <img src="{{asset('assets')}}/main/img/covers/3.png" alt="">
-                                <span class="item__play">
-                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                                        <path d="M18.54,9,8.88,3.46a3.42,3.42,0,0,0-5.13,3V17.58A3.42,3.42,0,0,0,7.17,21a3.43,3.43,0,0,0,1.71-.46L18.54,15a3.42,3.42,0,0,0,0-5.92Zm-1,4.19L7.88,18.81a1.44,1.44,0,0,1-1.42,0,1.42,1.42,0,0,1-.71-1.23V6.42a1.42,1.42,0,0,1,.71-1.23A1.51,1.51,0,0,1,7.17,5a1.54,1.54,0,0,1,.71.19l9.66,5.58a1.42,1.42,0,0,1,0,2.46Z" />
-                                    </svg>
-                                </span>
-                            </a>
-
-                            <div class="item__content">
-                                <h3 class="item__title"><a href="details1.html">Redemption Road</a></h3>
-                                <span class="item__category">
-                                    <a href="#">Romance</a>
-                                    <a href="#">Drama</a>
-                                    <a href="#">Music</a>
-                                </span>
-
-                                <div class="item__wrap">
-                                    <span class="item__rate"> 6.3</span>
-
-                                    <ul class="item__list">
-                                        <li>HD</li>
-                                        <li>12+</li>
-                                    </ul>
-                                </div>
-
-                                <div class="item__description">
-                                    <p>A down-on-his-luck boxer struggles to make ends meet while raising his young son. When an old friend offers him a chance to make some quick cash by fighting in an illegal underground boxing tournament, he sees it as his last shot at redemption. But as the stakes get higher and the fights get more brutal, he must confront his own demons and find the strength to win not just for himself, but for his son.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- end item -->
-
-                    <!-- item -->
-                    <div class="col-6 col-sm-12 col-lg-6 col-xxl-4">
-                        <div class="item item--list">
-                            <a href="details1.html" class="item__cover">
-                                <img src="{{asset('assets')}}/main/img/covers/4.png" alt="">
-                                <span class="item__play">
-                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                                        <path d="M18.54,9,8.88,3.46a3.42,3.42,0,0,0-5.13,3V17.58A3.42,3.42,0,0,0,7.17,21a3.43,3.43,0,0,0,1.71-.46L18.54,15a3.42,3.42,0,0,0,0-5.92Zm-1,4.19L7.88,18.81a1.44,1.44,0,0,1-1.42,0,1.42,1.42,0,0,1-.71-1.23V6.42a1.42,1.42,0,0,1,.71-1.23A1.51,1.51,0,0,1,7.17,5a1.54,1.54,0,0,1,.71.19l9.66,5.58a1.42,1.42,0,0,1,0,2.46Z" />
-                                    </svg>
-                                </span>
-                            </a>
-
-                            <div class="item__content">
-                                <h3 class="item__title"><a href="details1.html">Tales from the Underworld</a></h3>
-                                <span class="item__category">
-                                    <a href="#">Comedy</a>
-                                    <a href="#">Drama</a>
-                                </span>
-
-                                <div class="item__wrap">
-                                    <span class="item__rate"> 7.9</span>
-
-                                    <ul class="item__list">
-                                        <li>HD</li>
-                                        <li>16+</li>
-                                    </ul>
-                                </div>
-
-                                <div class="item__description">
-                                    <p>When a luxury cruise ship sets sail on its final voyage before retirement, the passengers and crew expect nothing but relaxation and indulgence. But when a mysterious illness spreads through the ship, they find themselves fighting for survival in the middle of the ocean. As tensions rise and resources dwindle, they must confront their own mortality and make impossible choices to stay alive.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- end item -->
-
-                    <!-- item -->
-                    <div class="col-6 col-sm-12 col-lg-6 col-xxl-4">
-                        <div class="item item--list">
-                            <a href="details1.html" class="item__cover">
-                                <img src="{{asset('assets')}}/main/img/covers/5.png" alt="">
-                                <span class="item__play">
-                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                                        <path d="M18.54,9,8.88,3.46a3.42,3.42,0,0,0-5.13,3V17.58A3.42,3.42,0,0,0,7.17,21a3.43,3.43,0,0,0,1.71-.46L18.54,15a3.42,3.42,0,0,0,0-5.92Zm-1,4.19L7.88,18.81a1.44,1.44,0,0,1-1.42,0,1.42,1.42,0,0,1-.71-1.23V6.42a1.42,1.42,0,0,1,.71-1.23A1.51,1.51,0,0,1,7.17,5a1.54,1.54,0,0,1,.71.19l9.66,5.58a1.42,1.42,0,0,1,0,2.46Z" />
-                                    </svg>
-                                </span>
-                            </a>
-
-                            <div class="item__content">
-                                <h3 class="item__title"><a href="details1.html">Voices from the Other Side</a></h3>
-                                <span class="item__category">
-                                    <a href="#">Action</a>
-                                    <a href="#">Triler</a>
-                                </span>
-
-                                <div class="item__wrap">
-                                    <span class="item__rate"> 8.4</span>
-
-                                    <ul class="item__list">
-                                        <li>HD</li>
-                                        <li>12+</li>
-                                    </ul>
-                                </div>
-
-                                <div class="item__description">
-                                    <p>In a world where magic is outlawed and hunted, a young witch must use her powers to fight back against the corrupt authorities who seek to destroy her kind. With the help of a rogue witch hunter, she sets out on a dangerous mission to uncover the truth about the government's dark secrets and restore balance to the world. But as the stakes get higher and the risks get greater, she must confront her own fears and decide what she's willing to sacrifice for the greater good.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- end item -->
-
-                    <!-- item -->
-                    <div class="col-6 col-sm-12 col-lg-6 col-xxl-4">
-                        <div class="item item--list">
-                            <a href="details1.html" class="item__cover">
-                                <img src="{{asset('assets')}}/main/img/covers/6.png" alt="">
-                                <span class="item__play">
-                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                                        <path d="M18.54,9,8.88,3.46a3.42,3.42,0,0,0-5.13,3V17.58A3.42,3.42,0,0,0,7.17,21a3.43,3.43,0,0,0,1.71-.46L18.54,15a3.42,3.42,0,0,0,0-5.92Zm-1,4.19L7.88,18.81a1.44,1.44,0,0,1-1.42,0,1.42,1.42,0,0,1-.71-1.23V6.42a1.42,1.42,0,0,1,.71-1.23A1.51,1.51,0,0,1,7.17,5a1.54,1.54,0,0,1,.71.19l9.66,5.58a1.42,1.42,0,0,1,0,2.46Z" />
-                                    </svg>
-                                </span>
-                            </a>
-
-                            <div class="item__content">
-                                <h3 class="item__title"><a href="details1.html">The Unseen World</a></h3>
-                                <span class="item__category">
-                                    <a href="#">Comedy</a>
-                                </span>
-
-                                <div class="item__wrap">
-                                    <span class="item__rate"> 7.1</span>
-
-                                    <ul class="item__list">
-                                        <li>HD</li>
-                                        <li>16+</li>
-                                    </ul>
-                                </div>
-
-                                <div class="item__description">
-                                    <p>When a brilliant scientist invents a machine that can access parallel universes, she unwittingly unleashes a dangerous force that threatens to destroy everything she holds dear. With the help of her trusted colleagues, she must race against time to stop the machine from falling into the wrong hands and prevent a catastrophic chain reaction that could unravel the fabric of reality itself. But as she delves deeper into the unseen world, she realizes that the greatest danger may be closer than she ever imagined.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- end item -->
-                </div>
+<div class="streamit-card-height-block d-none">
+    <div class="container-fluid">
+        <div class="overflow-hidden">
+            <div class="d-flex align-items-center justify-content-between px-md-3 px-1 my-4">
+                <h5 class="main-title text-capitalize mb-0">Only on Streamit</h5>
+                <a href="{{route('allmovies')}}" class="text-primary iq-view-all text-decoration-none flex-none">View All</a>
             </div>
-
-            <div class="tab-pane fade" id="tab-2" role="tabpanel" aria-labelledby="2-tab" tabindex="0">
-                <div class="row">
-                    <!-- item -->
-                    <div class="col-6 col-sm-4 col-lg-3 col-xl-2">
-                        <div class="item">
-                            <a href="details1.html" class="item__cover">
-                                <img src="{{asset('assets')}}/main/img/covers/7.png" alt="">
-                                <span class="item__play">
-                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                                        <path d="M18.54,9,8.88,3.46a3.42,3.42,0,0,0-5.13,3V17.58A3.42,3.42,0,0,0,7.17,21a3.43,3.43,0,0,0,1.71-.46L18.54,15a3.42,3.42,0,0,0,0-5.92Zm-1,4.19L7.88,18.81a1.44,1.44,0,0,1-1.42,0,1.42,1.42,0,0,1-.71-1.23V6.42a1.42,1.42,0,0,1,.71-1.23A1.51,1.51,0,0,1,7.17,5a1.54,1.54,0,0,1,.71.19l9.66,5.58a1.42,1.42,0,0,1,0,2.46Z" />
-                                    </svg>
-                                </span>
-                            </a>
-                            <div class="item__content">
-                                <h3 class="item__title"><a href="details1.html">The Lost Key</a></h3>
-                                <span class="item__category">
-                                    <a href="#">Action</a>
-                                    <a href="#">Triler</a>
-                                </span>
-                                <span class="item__rate">8.4</span>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- end item -->
-
-                    <!-- item -->
-                    <div class="col-6 col-sm-4 col-lg-3 col-xl-2">
-                        <div class="item">
-                            <a href="details1.html" class="item__cover">
-                                <img src="{{asset('assets')}}/main/img/covers/8.png" alt="">
-                                <span class="item__play">
-                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                                        <path d="M18.54,9,8.88,3.46a3.42,3.42,0,0,0-5.13,3V17.58A3.42,3.42,0,0,0,7.17,21a3.43,3.43,0,0,0,1.71-.46L18.54,15a3.42,3.42,0,0,0,0-5.92Zm-1,4.19L7.88,18.81a1.44,1.44,0,0,1-1.42,0,1.42,1.42,0,0,1-.71-1.23V6.42a1.42,1.42,0,0,1,.71-1.23A1.51,1.51,0,0,1,7.17,5a1.54,1.54,0,0,1,.71.19l9.66,5.58a1.42,1.42,0,0,1,0,2.46Z" />
-                                    </svg>
-                                </span>
-                            </a>
-                            <div class="item__content">
-                                <h3 class="item__title"><a href="details1.html">Red Sky at Night</a></h3>
-                                <span class="item__category">
-                                    <a href="#">Comedy</a>
-                                </span>
-                                <span class="item__rate">7.1</span>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- end item -->
-
-                    <!-- item -->
-                    <div class="col-6 col-sm-4 col-lg-3 col-xl-2">
-                        <div class="item">
-                            <a href="details1.html" class="item__cover">
-                                <img src="{{asset('assets')}}/main/img/covers/9.png" alt="">
-                                <span class="item__play">
-                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                                        <path d="M18.54,9,8.88,3.46a3.42,3.42,0,0,0-5.13,3V17.58A3.42,3.42,0,0,0,7.17,21a3.43,3.43,0,0,0,1.71-.46L18.54,15a3.42,3.42,0,0,0,0-5.92Zm-1,4.19L7.88,18.81a1.44,1.44,0,0,1-1.42,0,1.42,1.42,0,0,1-.71-1.23V6.42a1.42,1.42,0,0,1,.71-1.23A1.51,1.51,0,0,1,7.17,5a1.54,1.54,0,0,1,.71.19l9.66,5.58a1.42,1.42,0,0,1,0,2.46Z" />
-                                    </svg>
-                                </span>
-                            </a>
-                            <div class="item__content">
-                                <h3 class="item__title"><a href="details1.html">The Forgotten Road</a></h3>
-                                <span class="item__category">
-                                    <a href="#">Romance</a>
-                                    <a href="#">Drama</a>
-                                    <a href="#">Music</a>
-                                </span>
-                                <span class="item__rate">6.3</span>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- end item -->
-
-                    <!-- item -->
-                    <div class="col-6 col-sm-4 col-lg-3 col-xl-2">
-                        <div class="item">
-                            <a href="details1.html" class="item__cover">
-                                <img src="{{asset('assets')}}/main/img/covers/10.png" alt="">
-                                <span class="item__play">
-                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                                        <path d="M18.54,9,8.88,3.46a3.42,3.42,0,0,0-5.13,3V17.58A3.42,3.42,0,0,0,7.17,21a3.43,3.43,0,0,0,1.71-.46L18.54,15a3.42,3.42,0,0,0,0-5.92Zm-1,4.19L7.88,18.81a1.44,1.44,0,0,1-1.42,0,1.42,1.42,0,0,1-.71-1.23V6.42a1.42,1.42,0,0,1,.71-1.23A1.51,1.51,0,0,1,7.17,5a1.54,1.54,0,0,1,.71.19l9.66,5.58a1.42,1.42,0,0,1,0,2.46Z" />
-                                    </svg>
-                                </span>
-                            </a>
-                            <div class="item__content">
-                                <h3 class="item__title"><a href="details1.html">Dark Horizons</a></h3>
-                                <span class="item__category">
-                                    <a href="#">Comedy</a>
-                                    <a href="#">Drama</a>
-                                </span>
-                                <span class="item__rate">7.9</span>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- end item -->
-
-                    <!-- item -->
-                    <div class="col-6 col-sm-4 col-lg-3 col-xl-2">
-                        <div class="item">
-                            <a href="details1.html" class="item__cover">
-                                <img src="{{asset('assets')}}/main/img/covers/11.png" alt="">
-                                <span class="item__play">
-                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                                        <path d="M18.54,9,8.88,3.46a3.42,3.42,0,0,0-5.13,3V17.58A3.42,3.42,0,0,0,7.17,21a3.43,3.43,0,0,0,1.71-.46L18.54,15a3.42,3.42,0,0,0,0-5.92Zm-1,4.19L7.88,18.81a1.44,1.44,0,0,1-1.42,0,1.42,1.42,0,0,1-.71-1.23V6.42a1.42,1.42,0,0,1,.71-1.23A1.51,1.51,0,0,1,7.17,5a1.54,1.54,0,0,1,.71.19l9.66,5.58a1.42,1.42,0,0,1,0,2.46Z" />
-                                    </svg>
-                                </span>
-                            </a>
-                            <div class="item__content">
-                                <h3 class="item__title"><a href="details1.html">Echoes of Yesterday</a></h3>
-                                <span class="item__category">
-                                    <a href="#">Action</a>
-                                    <a href="#">Triler</a>
-                                </span>
-                                <span class="item__rate">8.4</span>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- end item -->
-
-                    <!-- item -->
-                    <div class="col-6 col-sm-4 col-lg-3 col-xl-2">
-                        <div class="item">
-                            <a href="details1.html" class="item__cover">
-                                <img src="{{asset('assets')}}/main/img/covers/12.png" alt="">
-                                <span class="item__play">
-                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                                        <path d="M18.54,9,8.88,3.46a3.42,3.42,0,0,0-5.13,3V17.58A3.42,3.42,0,0,0,7.17,21a3.43,3.43,0,0,0,1.71-.46L18.54,15a3.42,3.42,0,0,0,0-5.92Zm-1,4.19L7.88,18.81a1.44,1.44,0,0,1-1.42,0,1.42,1.42,0,0,1-.71-1.23V6.42a1.42,1.42,0,0,1,.71-1.23A1.51,1.51,0,0,1,7.17,5a1.54,1.54,0,0,1,.71.19l9.66,5.58a1.42,1.42,0,0,1,0,2.46Z" />
-                                    </svg>
-                                </span>
-                            </a>
-                            <div class="item__content">
-                                <h3 class="item__title"><a href="details1.html">Into the Unknown</a></h3>
-                                <span class="item__category">
-                                    <a href="#">Comedy</a>
-                                </span>
-                                <span class="item__rate">7.1</span>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- end item -->
-
-                    <!-- item -->
-                    <div class="col-6 col-sm-4 col-lg-3 col-xl-2">
-                        <div class="item">
-                            <a href="details1.html" class="item__cover">
-                                <img src="{{asset('assets')}}/main/img/covers/13.png" alt="">
-                                <span class="item__play">
-                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                                        <path d="M18.54,9,8.88,3.46a3.42,3.42,0,0,0-5.13,3V17.58A3.42,3.42,0,0,0,7.17,21a3.43,3.43,0,0,0,1.71-.46L18.54,15a3.42,3.42,0,0,0,0-5.92Zm-1,4.19L7.88,18.81a1.44,1.44,0,0,1-1.42,0,1.42,1.42,0,0,1-.71-1.23V6.42a1.42,1.42,0,0,1,.71-1.23A1.51,1.51,0,0,1,7.17,5a1.54,1.54,0,0,1,.71.19l9.66,5.58a1.42,1.42,0,0,1,0,2.46Z" />
-                                    </svg>
-                                </span>
-                            </a>
-                            <div class="item__content">
-                                <h3 class="item__title"><a href="details1.html">The Broken Path</a></h3>
-                                <span class="item__category">
-                                    <a href="#">Romance</a>
-                                    <a href="#">Drama</a>
-                                    <a href="#">Music</a>
-                                </span>
-                                <span class="item__rate">6.3</span>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- end item -->
-
-                    <!-- item -->
-                    <div class="col-6 col-sm-4 col-lg-3 col-xl-2">
-                        <div class="item">
-                            <a href="details1.html" class="item__cover">
-                                <img src="{{asset('assets')}}/main/img/covers/14.png" alt="">
-                                <span class="item__play">
-                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                                        <path d="M18.54,9,8.88,3.46a3.42,3.42,0,0,0-5.13,3V17.58A3.42,3.42,0,0,0,7.17,21a3.43,3.43,0,0,0,1.71-.46L18.54,15a3.42,3.42,0,0,0,0-5.92Zm-1,4.19L7.88,18.81a1.44,1.44,0,0,1-1.42,0,1.42,1.42,0,0,1-.71-1.23V6.42a1.42,1.42,0,0,1,.71-1.23A1.51,1.51,0,0,1,7.17,5a1.54,1.54,0,0,1,.71.19l9.66,5.58a1.42,1.42,0,0,1,0,2.46Z" />
-                                    </svg>
-                                </span>
-                            </a>
-                            <div class="item__content">
-                                <h3 class="item__title"><a href="details1.html">A Light in the Darkness</a></h3>
-                                <span class="item__category">
-                                    <a href="#">Comedy</a>
-                                    <a href="#">Drama</a>
-                                </span>
-                                <span class="item__rate">7.9</span>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- end item -->
-
-                    <!-- item -->
-                    <div class="col-6 col-sm-4 col-lg-3 col-xl-2">
-                        <div class="item">
-                            <a href="details1.html" class="item__cover">
-                                <img src="{{asset('assets')}}/main/img/covers/15.png" alt="">
-                                <span class="item__play">
-                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                                        <path d="M18.54,9,8.88,3.46a3.42,3.42,0,0,0-5.13,3V17.58A3.42,3.42,0,0,0,7.17,21a3.43,3.43,0,0,0,1.71-.46L18.54,15a3.42,3.42,0,0,0,0-5.92Zm-1,4.19L7.88,18.81a1.44,1.44,0,0,1-1.42,0,1.42,1.42,0,0,1-.71-1.23V6.42a1.42,1.42,0,0,1,.71-1.23A1.51,1.51,0,0,1,7.17,5a1.54,1.54,0,0,1,.71.19l9.66,5.58a1.42,1.42,0,0,1,0,2.46Z" />
-                                    </svg>
-                                </span>
-                            </a>
-                            <div class="item__content">
-                                <h3 class="item__title"><a href="details1.html">Endless Horizon</a></h3>
-                                <span class="item__category">
-                                    <a href="#">Action</a>
-                                    <a href="#">Triler</a>
-                                </span>
-                                <span class="item__rate">8.4</span>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- end item -->
-
-                    <!-- item -->
-                    <div class="col-6 col-sm-4 col-lg-3 col-xl-2">
-                        <div class="item">
-                            <a href="details1.html" class="item__cover">
-                                <img src="{{asset('assets')}}/main/img/covers/16.png" alt="">
-                                <span class="item__play">
-                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                                        <path d="M18.54,9,8.88,3.46a3.42,3.42,0,0,0-5.13,3V17.58A3.42,3.42,0,0,0,7.17,21a3.43,3.43,0,0,0,1.71-.46L18.54,15a3.42,3.42,0,0,0,0-5.92Zm-1,4.19L7.88,18.81a1.44,1.44,0,0,1-1.42,0,1.42,1.42,0,0,1-.71-1.23V6.42a1.42,1.42,0,0,1,.71-1.23A1.51,1.51,0,0,1,7.17,5a1.54,1.54,0,0,1,.71.19l9.66,5.58a1.42,1.42,0,0,1,0,2.46Z" />
-                                    </svg>
-                                </span>
-                            </a>
-                            <div class="item__content">
-                                <h3 class="item__title"><a href="details1.html">The Unseen Journey</a></h3>
-                                <span class="item__category">
-                                    <a href="#">Comedy</a>
-                                </span>
-                                <span class="item__rate">7.1</span>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- end item -->
-
-                    <!-- item -->
-                    <div class="col-6 col-sm-4 col-lg-3 col-xl-2">
-                        <div class="item">
-                            <a href="details1.html" class="item__cover">
-                                <img src="{{asset('assets')}}/main/img/covers/17.png" alt="">
-                                <span class="item__play">
-                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                                        <path d="M18.54,9,8.88,3.46a3.42,3.42,0,0,0-5.13,3V17.58A3.42,3.42,0,0,0,7.17,21a3.43,3.43,0,0,0,1.71-.46L18.54,15a3.42,3.42,0,0,0,0-5.92Zm-1,4.19L7.88,18.81a1.44,1.44,0,0,1-1.42,0,1.42,1.42,0,0,1-.71-1.23V6.42a1.42,1.42,0,0,1,.71-1.23A1.51,1.51,0,0,1,7.17,5a1.54,1.54,0,0,1,.71.19l9.66,5.58a1.42,1.42,0,0,1,0,2.46Z" />
-                                    </svg>
-                                </span>
-                            </a>
-                            <div class="item__content">
-                                <h3 class="item__title"><a href="details1.html">Reckoning</a></h3>
-                                <span class="item__category">
-                                    <a href="#">Romance</a>
-                                    <a href="#">Drama</a>
-                                    <a href="#">Music</a>
-                                </span>
-                                <span class="item__rate">6.3</span>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- end item -->
-
-                    <!-- item -->
-                    <div class="col-6 col-sm-4 col-lg-3 col-xl-2">
-                        <div class="item">
-                            <a href="details1.html" class="item__cover">
-                                <img src="{{asset('assets')}}/main/img/covers/18.png" alt="">
-                                <span class="item__play">
-                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                                        <path d="M18.54,9,8.88,3.46a3.42,3.42,0,0,0-5.13,3V17.58A3.42,3.42,0,0,0,7.17,21a3.43,3.43,0,0,0,1.71-.46L18.54,15a3.42,3.42,0,0,0,0-5.92Zm-1,4.19L7.88,18.81a1.44,1.44,0,0,1-1.42,0,1.42,1.42,0,0,1-.71-1.23V6.42a1.42,1.42,0,0,1,.71-1.23A1.51,1.51,0,0,1,7.17,5a1.54,1.54,0,0,1,.71.19l9.66,5.58a1.42,1.42,0,0,1,0,2.46Z" />
-                                    </svg>
-                                </span>
-                            </a>
-                            <div class="item__content">
-                                <h3 class="item__title"><a href="details1.html">Savage Beauty</a></h3>
-                                <span class="item__category">
-                                    <a href="#">Comedy</a>
-                                    <a href="#">Drama</a>
-                                </span>
-                                <span class="item__rate">7.9</span>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- end item -->
-                </div>
-            </div>
-
-            <div class="tab-pane fade" id="tab-3" role="tabpanel" aria-labelledby="3-tab" tabindex="0">
-                <div class="row">
-                    <!-- item -->
-                    <div class="col-6 col-sm-4 col-lg-3 col-xl-2">
-                        <div class="item">
-                            <a href="details1.html" class="item__cover">
-                                <img src="{{asset('assets')}}/main/img/covers/1.png" alt="">
-                                <span class="item__play">
-                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                                        <path d="M18.54,9,8.88,3.46a3.42,3.42,0,0,0-5.13,3V17.58A3.42,3.42,0,0,0,7.17,21a3.43,3.43,0,0,0,1.71-.46L18.54,15a3.42,3.42,0,0,0,0-5.92Zm-1,4.19L7.88,18.81a1.44,1.44,0,0,1-1.42,0,1.42,1.42,0,0,1-.71-1.23V6.42a1.42,1.42,0,0,1,.71-1.23A1.51,1.51,0,0,1,7.17,5a1.54,1.54,0,0,1,.71.19l9.66,5.58a1.42,1.42,0,0,1,0,2.46Z" />
-                                    </svg>
-                                </span>
-                            </a>
-                            <div class="item__content">
-                                <h3 class="item__title"><a href="details1.html">Midnight Sun</a></h3>
-                                <span class="item__category">
-                                    <a href="#">Comedy</a>
-                                </span>
-                                <span class="item__rate">7.1</span>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- end item -->
-
-                    <!-- item -->
-                    <div class="col-6 col-sm-4 col-lg-3 col-xl-2">
-                        <div class="item">
-                            <a href="details1.html" class="item__cover">
-                                <img src="{{asset('assets')}}/main/img/covers/2.png" alt="">
-                                <span class="item__play">
-                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                                        <path d="M18.54,9,8.88,3.46a3.42,3.42,0,0,0-5.13,3V17.58A3.42,3.42,0,0,0,7.17,21a3.43,3.43,0,0,0,1.71-.46L18.54,15a3.42,3.42,0,0,0,0-5.92Zm-1,4.19L7.88,18.81a1.44,1.44,0,0,1-1.42,0,1.42,1.42,0,0,1-.71-1.23V6.42a1.42,1.42,0,0,1,.71-1.23A1.51,1.51,0,0,1,7.17,5a1.54,1.54,0,0,1,.71.19l9.66,5.58a1.42,1.42,0,0,1,0,2.46Z" />
-                                    </svg>
-                                </span>
-                            </a>
-                            <div class="item__content">
-                                <h3 class="item__title"><a href="details1.html">The Shadow Hunter</a></h3>
-                                <span class="item__category">
-                                    <a href="#">Romance</a>
-                                    <a href="#">Drama</a>
-                                    <a href="#">Music</a>
-                                </span>
-                                <span class="item__rate">6.3</span>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- end item -->
-
-                    <!-- item -->
-                    <div class="col-6 col-sm-4 col-lg-3 col-xl-2">
-                        <div class="item">
-                            <a href="details1.html" class="item__cover">
-                                <img src="{{asset('assets')}}/main/img/covers/3.png" alt="">
-                                <span class="item__play">
-                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                                        <path d="M18.54,9,8.88,3.46a3.42,3.42,0,0,0-5.13,3V17.58A3.42,3.42,0,0,0,7.17,21a3.43,3.43,0,0,0,1.71-.46L18.54,15a3.42,3.42,0,0,0,0-5.92Zm-1,4.19L7.88,18.81a1.44,1.44,0,0,1-1.42,0,1.42,1.42,0,0,1-.71-1.23V6.42a1.42,1.42,0,0,1,.71-1.23A1.51,1.51,0,0,1,7.17,5a1.54,1.54,0,0,1,.71.19l9.66,5.58a1.42,1.42,0,0,1,0,2.46Z" />
-                                    </svg>
-                                </span>
-                            </a>
-                            <div class="item__content">
-                                <h3 class="item__title"><a href="details1.html">Wild Hearts</a></h3>
-                                <span class="item__category">
-                                    <a href="#">Comedy</a>
-                                    <a href="#">Drama</a>
-                                </span>
-                                <span class="item__rate">7.9</span>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- end item -->
-
-                    <!-- item -->
-                    <div class="col-6 col-sm-4 col-lg-3 col-xl-2">
-                        <div class="item">
-                            <a href="details1.html" class="item__cover">
-                                <img src="{{asset('assets')}}/main/img/covers/4.png" alt="">
-                                <span class="item__play">
-                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                                        <path d="M18.54,9,8.88,3.46a3.42,3.42,0,0,0-5.13,3V17.58A3.42,3.42,0,0,0,7.17,21a3.43,3.43,0,0,0,1.71-.46L18.54,15a3.42,3.42,0,0,0,0-5.92Zm-1,4.19L7.88,18.81a1.44,1.44,0,0,1-1.42,0,1.42,1.42,0,0,1-.71-1.23V6.42a1.42,1.42,0,0,1,.71-1.23A1.51,1.51,0,0,1,7.17,5a1.54,1.54,0,0,1,.71.19l9.66,5.58a1.42,1.42,0,0,1,0,2.46Z" />
-                                    </svg>
-                                </span>
-                            </a>
-                            <div class="item__content">
-                                <h3 class="item__title"><a href="details1.html">Dark Horizons</a></h3>
-                                <span class="item__category">
-                                    <a href="#">Action</a>
-                                    <a href="#">Triler</a>
-                                </span>
-                                <span class="item__rate">8.4</span>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- end item -->
-
-                    <!-- item -->
-                    <div class="col-6 col-sm-4 col-lg-3 col-xl-2">
-                        <div class="item">
-                            <a href="details1.html" class="item__cover">
-                                <img src="{{asset('assets')}}/main/img/covers/5.png" alt="">
-                                <span class="item__play">
-                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                                        <path d="M18.54,9,8.88,3.46a3.42,3.42,0,0,0-5.13,3V17.58A3.42,3.42,0,0,0,7.17,21a3.43,3.43,0,0,0,1.71-.46L18.54,15a3.42,3.42,0,0,0,0-5.92Zm-1,4.19L7.88,18.81a1.44,1.44,0,0,1-1.42,0,1.42,1.42,0,0,1-.71-1.23V6.42a1.42,1.42,0,0,1,.71-1.23A1.51,1.51,0,0,1,7.17,5a1.54,1.54,0,0,1,.71.19l9.66,5.58a1.42,1.42,0,0,1,0,2.46Z" />
-                                    </svg>
-                                </span>
-                            </a>
-                            <div class="item__content">
-                                <h3 class="item__title"><a href="details1.html">Electric Dreams</a></h3>
-                                <span class="item__category">
-                                    <a href="#">Comedy</a>
-                                </span>
-                                <span class="item__rate">7.1</span>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- end item -->
-
-                    <!-- item -->
-                    <div class="col-6 col-sm-4 col-lg-3 col-xl-2">
-                        <div class="item">
-                            <a href="details1.html" class="item__cover">
-                                <img src="{{asset('assets')}}/main/img/covers/6.png" alt="">
-                                <span class="item__play">
-                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                                        <path d="M18.54,9,8.88,3.46a3.42,3.42,0,0,0-5.13,3V17.58A3.42,3.42,0,0,0,7.17,21a3.43,3.43,0,0,0,1.71-.46L18.54,15a3.42,3.42,0,0,0,0-5.92Zm-1,4.19L7.88,18.81a1.44,1.44,0,0,1-1.42,0,1.42,1.42,0,0,1-.71-1.23V6.42a1.42,1.42,0,0,1,.71-1.23A1.51,1.51,0,0,1,7.17,5a1.54,1.54,0,0,1,.71.19l9.66,5.58a1.42,1.42,0,0,1,0,2.46Z" />
-                                    </svg>
-                                </span>
-                            </a>
-                            <div class="item__content">
-                                <h3 class="item__title"><a href="details1.html">Broken Promises</a></h3>
-                                <span class="item__category">
-                                    <a href="#">Action</a>
-                                    <a href="#">Triler</a>
-                                </span>
-                                <span class="item__rate">8.4</span>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- end item -->
-
-                    <!-- item -->
-                    <div class="col-6 col-sm-4 col-lg-3 col-xl-2">
-                        <div class="item">
-                            <a href="details1.html" class="item__cover">
-                                <img src="{{asset('assets')}}/main/img/covers/7.png" alt="">
-                                <span class="item__play">
-                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                                        <path d="M18.54,9,8.88,3.46a3.42,3.42,0,0,0-5.13,3V17.58A3.42,3.42,0,0,0,7.17,21a3.43,3.43,0,0,0,1.71-.46L18.54,15a3.42,3.42,0,0,0,0-5.92Zm-1,4.19L7.88,18.81a1.44,1.44,0,0,1-1.42,0,1.42,1.42,0,0,1-.71-1.23V6.42a1.42,1.42,0,0,1,.71-1.23A1.51,1.51,0,0,1,7.17,5a1.54,1.54,0,0,1,.71.19l9.66,5.58a1.42,1.42,0,0,1,0,2.46Z" />
-                                    </svg>
-                                </span>
-                            </a>
-                            <div class="item__content">
-                                <h3 class="item__title"><a href="details1.html">Fierce Grace</a></h3>
-                                <span class="item__category">
-                                    <a href="#">Comedy</a>
-                                    <a href="#">Drama</a>
-                                </span>
-                                <span class="item__rate">7.9</span>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- end item -->
-
-                    <!-- item -->
-                    <div class="col-6 col-sm-4 col-lg-3 col-xl-2">
-                        <div class="item">
-                            <a href="details1.html" class="item__cover">
-                                <img src="{{asset('assets')}}/main/img/covers/8.png" alt="">
-                                <span class="item__play">
-                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                                        <path d="M18.54,9,8.88,3.46a3.42,3.42,0,0,0-5.13,3V17.58A3.42,3.42,0,0,0,7.17,21a3.43,3.43,0,0,0,1.71-.46L18.54,15a3.42,3.42,0,0,0,0-5.92Zm-1,4.19L7.88,18.81a1.44,1.44,0,0,1-1.42,0,1.42,1.42,0,0,1-.71-1.23V6.42a1.42,1.42,0,0,1,.71-1.23A1.51,1.51,0,0,1,7.17,5a1.54,1.54,0,0,1,.71.19l9.66,5.58a1.42,1.42,0,0,1,0,2.46Z" />
-                                    </svg>
-                                </span>
-                            </a>
-                            <div class="item__content">
-                                <h3 class="item__title"><a href="details1.html">Burning Bridges</a></h3>
-                                <span class="item__category">
-                                    <a href="#">Romance</a>
-                                    <a href="#">Drama</a>
-                                    <a href="#">Music</a>
-                                </span>
-                                <span class="item__rate">6.3</span>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- end item -->
-
-                    <!-- item -->
-                    <div class="col-6 col-sm-4 col-lg-3 col-xl-2">
-                        <div class="item">
-                            <a href="details1.html" class="item__cover">
-                                <img src="{{asset('assets')}}/main/img/covers/9.png" alt="">
-                                <span class="item__play">
-                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                                        <path d="M18.54,9,8.88,3.46a3.42,3.42,0,0,0-5.13,3V17.58A3.42,3.42,0,0,0,7.17,21a3.43,3.43,0,0,0,1.71-.46L18.54,15a3.42,3.42,0,0,0,0-5.92Zm-1,4.19L7.88,18.81a1.44,1.44,0,0,1-1.42,0,1.42,1.42,0,0,1-.71-1.23V6.42a1.42,1.42,0,0,1,.71-1.23A1.51,1.51,0,0,1,7.17,5a1.54,1.54,0,0,1,.71.19l9.66,5.58a1.42,1.42,0,0,1,0,2.46Z" />
-                                    </svg>
-                                </span>
-                            </a>
-                            <div class="item__content">
-                                <h3 class="item__title"><a href="details1.html">Forbidden Love</a></h3>
-                                <span class="item__category">
-                                    <a href="#">Comedy</a>
-                                    <a href="#">Drama</a>
-                                </span>
-                                <span class="item__rate">7.9</span>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- end item -->
-
-                    <!-- item -->
-                    <div class="col-6 col-sm-4 col-lg-3 col-xl-2">
-                        <div class="item">
-                            <a href="details1.html" class="item__cover">
-                                <img src="{{asset('assets')}}/main/img/covers/10.png" alt="">
-                                <span class="item__play">
-                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                                        <path d="M18.54,9,8.88,3.46a3.42,3.42,0,0,0-5.13,3V17.58A3.42,3.42,0,0,0,7.17,21a3.43,3.43,0,0,0,1.71-.46L18.54,15a3.42,3.42,0,0,0,0-5.92Zm-1,4.19L7.88,18.81a1.44,1.44,0,0,1-1.42,0,1.42,1.42,0,0,1-.71-1.23V6.42a1.42,1.42,0,0,1,.71-1.23A1.51,1.51,0,0,1,7.17,5a1.54,1.54,0,0,1,.71.19l9.66,5.58a1.42,1.42,0,0,1,0,2.46Z" />
-                                    </svg>
-                                </span>
-                            </a>
-                            <div class="item__content">
-                                <h3 class="item__title"><a href="details1.html">The Timekeeper's Daughter</a></h3>
-                                <span class="item__category">
-                                    <a href="#">Action</a>
-                                    <a href="#">Triler</a>
-                                </span>
-                                <span class="item__rate">8.4</span>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- end item -->
-
-                    <!-- item -->
-                    <div class="col-6 col-sm-4 col-lg-3 col-xl-2">
-                        <div class="item">
-                            <a href="details1.html" class="item__cover">
-                                <img src="{{asset('assets')}}/main/img/covers/11.png" alt="">
-                                <span class="item__play">
-                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                                        <path d="M18.54,9,8.88,3.46a3.42,3.42,0,0,0-5.13,3V17.58A3.42,3.42,0,0,0,7.17,21a3.43,3.43,0,0,0,1.71-.46L18.54,15a3.42,3.42,0,0,0,0-5.92Zm-1,4.19L7.88,18.81a1.44,1.44,0,0,1-1.42,0,1.42,1.42,0,0,1-.71-1.23V6.42a1.42,1.42,0,0,1,.71-1.23A1.51,1.51,0,0,1,7.17,5a1.54,1.54,0,0,1,.71.19l9.66,5.58a1.42,1.42,0,0,1,0,2.46Z" />
-                                    </svg>
-                                </span>
-                            </a>
-                            <div class="item__content">
-                                <h3 class="item__title"><a href="details1.html">The Enchanted Forest</a></h3>
-                                <span class="item__category">
-                                    <a href="#">Comedy</a>
-                                </span>
-                                <span class="item__rate">7.1</span>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- end item -->
-
-                    <!-- item -->
-                    <div class="col-6 col-sm-4 col-lg-3 col-xl-2">
-                        <div class="item">
-                            <a href="details1.html" class="item__cover">
-                                <img src="{{asset('assets')}}/main/img/covers/12.png" alt="">
-                                <span class="item__play">
-                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                                        <path d="M18.54,9,8.88,3.46a3.42,3.42,0,0,0-5.13,3V17.58A3.42,3.42,0,0,0,7.17,21a3.43,3.43,0,0,0,1.71-.46L18.54,15a3.42,3.42,0,0,0,0-5.92Zm-1,4.19L7.88,18.81a1.44,1.44,0,0,1-1.42,0,1.42,1.42,0,0,1-.71-1.23V6.42a1.42,1.42,0,0,1,.71-1.23A1.51,1.51,0,0,1,7.17,5a1.54,1.54,0,0,1,.71.19l9.66,5.58a1.42,1.42,0,0,1,0,2.46Z" />
-                                    </svg>
-                                </span>
-                            </a>
-                            <div class="item__content">
-                                <h3 class="item__title"><a href="details1.html">Relentless</a></h3>
-                                <span class="item__category">
-                                    <a href="#">Romance</a>
-                                    <a href="#">Drama</a>
-                                    <a href="#">Music</a>
-                                </span>
-                                <span class="item__rate">6.3</span>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- end item -->
-                </div>
-            </div>
-
-            <div class="tab-pane fade" id="tab-4" role="tabpanel" aria-labelledby="4-tab" tabindex="0">
-                <div class="row">
-                    <!-- item -->
-                    <div class="col-6 col-sm-4 col-lg-3 col-xl-2">
-                        <div class="item">
-                            <a href="details1.html" class="item__cover">
-                                <img src="{{asset('assets')}}/main/img/covers/13.png" alt="">
-                                <span class="item__play">
-                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                                        <path d="M18.54,9,8.88,3.46a3.42,3.42,0,0,0-5.13,3V17.58A3.42,3.42,0,0,0,7.17,21a3.43,3.43,0,0,0,1.71-.46L18.54,15a3.42,3.42,0,0,0,0-5.92Zm-1,4.19L7.88,18.81a1.44,1.44,0,0,1-1.42,0,1.42,1.42,0,0,1-.71-1.23V6.42a1.42,1.42,0,0,1,.71-1.23A1.51,1.51,0,0,1,7.17,5a1.54,1.54,0,0,1,.71.19l9.66,5.58a1.42,1.42,0,0,1,0,2.46Z" />
-                                    </svg>
-                                </span>
-                            </a>
-                            <div class="item__content">
-                                <h3 class="item__title"><a href="details1.html">Starlight Chronicles</a></h3>
-                                <span class="item__category">
-                                    <a href="#">Romance</a>
-                                    <a href="#">Drama</a>
-                                    <a href="#">Music</a>
-                                </span>
-                                <span class="item__rate">6.3</span>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- end item -->
-
-                    <!-- item -->
-                    <div class="col-6 col-sm-4 col-lg-3 col-xl-2">
-                        <div class="item">
-                            <a href="details1.html" class="item__cover">
-                                <img src="{{asset('assets')}}/main/img/covers/14.png" alt="">
-                                <span class="item__play">
-                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                                        <path d="M18.54,9,8.88,3.46a3.42,3.42,0,0,0-5.13,3V17.58A3.42,3.42,0,0,0,7.17,21a3.43,3.43,0,0,0,1.71-.46L18.54,15a3.42,3.42,0,0,0,0-5.92Zm-1,4.19L7.88,18.81a1.44,1.44,0,0,1-1.42,0,1.42,1.42,0,0,1-.71-1.23V6.42a1.42,1.42,0,0,1,.71-1.23A1.51,1.51,0,0,1,7.17,5a1.54,1.54,0,0,1,.71.19l9.66,5.58a1.42,1.42,0,0,1,0,2.46Z" />
-                                    </svg>
-                                </span>
-                            </a>
-                            <div class="item__content">
-                                <h3 class="item__title"><a href="details1.html">Rising Sun Academy</a></h3>
-                                <span class="item__category">
-                                    <a href="#">Comedy</a>
-                                    <a href="#">Drama</a>
-                                </span>
-                                <span class="item__rate">7.9</span>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- end item -->
-
-                    <!-- item -->
-                    <div class="col-6 col-sm-4 col-lg-3 col-xl-2">
-                        <div class="item">
-                            <a href="details1.html" class="item__cover">
-                                <img src="{{asset('assets')}}/main/img/covers/15.png" alt="">
-                                <span class="item__play">
-                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                                        <path d="M18.54,9,8.88,3.46a3.42,3.42,0,0,0-5.13,3V17.58A3.42,3.42,0,0,0,7.17,21a3.43,3.43,0,0,0,1.71-.46L18.54,15a3.42,3.42,0,0,0,0-5.92Zm-1,4.19L7.88,18.81a1.44,1.44,0,0,1-1.42,0,1.42,1.42,0,0,1-.71-1.23V6.42a1.42,1.42,0,0,1,.71-1.23A1.51,1.51,0,0,1,7.17,5a1.54,1.54,0,0,1,.71.19l9.66,5.58a1.42,1.42,0,0,1,0,2.46Z" />
-                                    </svg>
-                                </span>
-                            </a>
-                            <div class="item__content">
-                                <h3 class="item__title"><a href="details1.html">Eternal Bonds</a></h3>
-                                <span class="item__category">
-                                    <a href="#">Action</a>
-                                    <a href="#">Triler</a>
-                                </span>
-                                <span class="item__rate">8.4</span>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- end item -->
-
-                    <!-- item -->
-                    <div class="col-6 col-sm-4 col-lg-3 col-xl-2">
-                        <div class="item">
-                            <a href="details1.html" class="item__cover">
-                                <img src="{{asset('assets')}}/main/img/covers/16.png" alt="">
-                                <span class="item__play">
-                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                                        <path d="M18.54,9,8.88,3.46a3.42,3.42,0,0,0-5.13,3V17.58A3.42,3.42,0,0,0,7.17,21a3.43,3.43,0,0,0,1.71-.46L18.54,15a3.42,3.42,0,0,0,0-5.92Zm-1,4.19L7.88,18.81a1.44,1.44,0,0,1-1.42,0,1.42,1.42,0,0,1-.71-1.23V6.42a1.42,1.42,0,0,1,.71-1.23A1.51,1.51,0,0,1,7.17,5a1.54,1.54,0,0,1,.71.19l9.66,5.58a1.42,1.42,0,0,1,0,2.46Z" />
-                                    </svg>
-                                </span>
-                            </a>
-                            <div class="item__content">
-                                <h3 class="item__title"><a href="details1.html">Chronicles of the Elements</a></h3>
-                                <span class="item__category">
-                                    <a href="#">Comedy</a>
-                                </span>
-                                <span class="item__rate">7.1</span>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- end item -->
-
-                    <!-- item -->
-                    <div class="col-6 col-sm-4 col-lg-3 col-xl-2">
-                        <div class="item">
-                            <a href="details1.html" class="item__cover">
-                                <img src="{{asset('assets')}}/main/img/covers/17.png" alt="">
-                                <span class="item__play">
-                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                                        <path d="M18.54,9,8.88,3.46a3.42,3.42,0,0,0-5.13,3V17.58A3.42,3.42,0,0,0,7.17,21a3.43,3.43,0,0,0,1.71-.46L18.54,15a3.42,3.42,0,0,0,0-5.92Zm-1,4.19L7.88,18.81a1.44,1.44,0,0,1-1.42,0,1.42,1.42,0,0,1-.71-1.23V6.42a1.42,1.42,0,0,1,.71-1.23A1.51,1.51,0,0,1,7.17,5a1.54,1.54,0,0,1,.71.19l9.66,5.58a1.42,1.42,0,0,1,0,2.46Z" />
-                                    </svg>
-                                </span>
-                            </a>
-                            <div class="item__content">
-                                <h3 class="item__title"><a href="details1.html">Fantasia Journey</a></h3>
-                                <span class="item__category">
-                                    <a href="#">Action</a>
-                                    <a href="#">Triler</a>
-                                </span>
-                                <span class="item__rate">8.4</span>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- end item -->
-
-                    <!-- item -->
-                    <div class="col-6 col-sm-4 col-lg-3 col-xl-2">
-                        <div class="item">
-                            <a href="details1.html" class="item__cover">
-                                <img src="{{asset('assets')}}/main/img/covers/18.png" alt="">
-                                <span class="item__play">
-                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                                        <path d="M18.54,9,8.88,3.46a3.42,3.42,0,0,0-5.13,3V17.58A3.42,3.42,0,0,0,7.17,21a3.43,3.43,0,0,0,1.71-.46L18.54,15a3.42,3.42,0,0,0,0-5.92Zm-1,4.19L7.88,18.81a1.44,1.44,0,0,1-1.42,0,1.42,1.42,0,0,1-.71-1.23V6.42a1.42,1.42,0,0,1,.71-1.23A1.51,1.51,0,0,1,7.17,5a1.54,1.54,0,0,1,.71.19l9.66,5.58a1.42,1.42,0,0,1,0,2.46Z" />
-                                    </svg>
-                                </span>
-                            </a>
-                            <div class="item__content">
-                                <h3 class="item__title"><a href="details1.html">Phoenix's Destiny</a></h3>
-                                <span class="item__category">
-                                    <a href="#">Comedy</a>
-                                </span>
-                                <span class="item__rate">7.1</span>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- end item -->
-
-                    <!-- item -->
-                    <div class="col-6 col-sm-4 col-lg-3 col-xl-2">
-                        <div class="item">
-                            <a href="details1.html" class="item__cover">
-                                <img src="{{asset('assets')}}/main/img/covers/1.png" alt="">
-                                <span class="item__play">
-                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                                        <path d="M18.54,9,8.88,3.46a3.42,3.42,0,0,0-5.13,3V17.58A3.42,3.42,0,0,0,7.17,21a3.43,3.43,0,0,0,1.71-.46L18.54,15a3.42,3.42,0,0,0,0-5.92Zm-1,4.19L7.88,18.81a1.44,1.44,0,0,1-1.42,0,1.42,1.42,0,0,1-.71-1.23V6.42a1.42,1.42,0,0,1,.71-1.23A1.51,1.51,0,0,1,7.17,5a1.54,1.54,0,0,1,.71.19l9.66,5.58a1.42,1.42,0,0,1,0,2.46Z" />
-                                    </svg>
-                                </span>
-                            </a>
-                            <div class="item__content">
-                                <h3 class="item__title"><a href="details1.html">Guardians of the Lost City</a></h3>
-                                <span class="item__category">
-                                    <a href="#">Romance</a>
-                                    <a href="#">Drama</a>
-                                    <a href="#">Music</a>
-                                </span>
-                                <span class="item__rate">6.3</span>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- end item -->
-
-                    <!-- item -->
-                    <div class="col-6 col-sm-4 col-lg-3 col-xl-2">
-                        <div class="item">
-                            <a href="details1.html" class="item__cover">
-                                <img src="{{asset('assets')}}/main/img/covers/2.png" alt="">
-                                <span class="item__play">
-                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                                        <path d="M18.54,9,8.88,3.46a3.42,3.42,0,0,0-5.13,3V17.58A3.42,3.42,0,0,0,7.17,21a3.43,3.43,0,0,0,1.71-.46L18.54,15a3.42,3.42,0,0,0,0-5.92Zm-1,4.19L7.88,18.81a1.44,1.44,0,0,1-1.42,0,1.42,1.42,0,0,1-.71-1.23V6.42a1.42,1.42,0,0,1,.71-1.23A1.51,1.51,0,0,1,7.17,5a1.54,1.54,0,0,1,.71.19l9.66,5.58a1.42,1.42,0,0,1,0,2.46Z" />
-                                    </svg>
-                                </span>
-                            </a>
-                            <div class="item__content">
-                                <h3 class="item__title"><a href="details1.html">Divine Intervention</a></h3>
-                                <span class="item__category">
-                                    <a href="#">Comedy</a>
-                                    <a href="#">Drama</a>
-                                </span>
-                                <span class="item__rate">7.9</span>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- end item -->
-
-                    <!-- item -->
-                    <div class="col-6 col-sm-4 col-lg-3 col-xl-2">
-                        <div class="item">
-                            <a href="details1.html" class="item__cover">
-                                <img src="{{asset('assets')}}/main/img/covers/3.png" alt="">
-                                <span class="item__play">
-                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                                        <path d="M18.54,9,8.88,3.46a3.42,3.42,0,0,0-5.13,3V17.58A3.42,3.42,0,0,0,7.17,21a3.43,3.43,0,0,0,1.71-.46L18.54,15a3.42,3.42,0,0,0,0-5.92Zm-1,4.19L7.88,18.81a1.44,1.44,0,0,1-1.42,0,1.42,1.42,0,0,1-.71-1.23V6.42a1.42,1.42,0,0,1,.71-1.23A1.51,1.51,0,0,1,7.17,5a1.54,1.54,0,0,1,.71.19l9.66,5.58a1.42,1.42,0,0,1,0,2.46Z" />
-                                    </svg>
-                                </span>
-                            </a>
-                            <div class="item__content">
-                                <h3 class="item__title"><a href="details1.html">Infinite Horizon</a></h3>
-                                <span class="item__category">
-                                    <a href="#">Romance</a>
-                                    <a href="#">Drama</a>
-                                    <a href="#">Music</a>
-                                </span>
-                                <span class="item__rate">6.3</span>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- end item -->
-
-                    <!-- item -->
-                    <div class="col-6 col-sm-4 col-lg-3 col-xl-2">
-                        <div class="item">
-                            <a href="details1.html" class="item__cover">
-                                <img src="{{asset('assets')}}/main/img/covers/4.png" alt="">
-                                <span class="item__play">
-                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                                        <path d="M18.54,9,8.88,3.46a3.42,3.42,0,0,0-5.13,3V17.58A3.42,3.42,0,0,0,7.17,21a3.43,3.43,0,0,0,1.71-.46L18.54,15a3.42,3.42,0,0,0,0-5.92Zm-1,4.19L7.88,18.81a1.44,1.44,0,0,1-1.42,0,1.42,1.42,0,0,1-.71-1.23V6.42a1.42,1.42,0,0,1,.71-1.23A1.51,1.51,0,0,1,7.17,5a1.54,1.54,0,0,1,.71.19l9.66,5.58a1.42,1.42,0,0,1,0,2.46Z" />
-                                    </svg>
-                                </span>
-                            </a>
-                            <div class="item__content">
-                                <h3 class="item__title"><a href="details1.html">Beyond the Stars</a></h3>
-                                <span class="item__category">
-                                    <a href="#">Comedy</a>
-                                    <a href="#">Drama</a>
-                                </span>
-                                <span class="item__rate">7.9</span>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- end item -->
-
-                    <!-- item -->
-                    <div class="col-6 col-sm-4 col-lg-3 col-xl-2">
-                        <div class="item">
-                            <a href="details1.html" class="item__cover">
-                                <img src="{{asset('assets')}}/main/img/covers/5.png" alt="">
-                                <span class="item__play">
-                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                                        <path d="M18.54,9,8.88,3.46a3.42,3.42,0,0,0-5.13,3V17.58A3.42,3.42,0,0,0,7.17,21a3.43,3.43,0,0,0,1.71-.46L18.54,15a3.42,3.42,0,0,0,0-5.92Zm-1,4.19L7.88,18.81a1.44,1.44,0,0,1-1.42,0,1.42,1.42,0,0,1-.71-1.23V6.42a1.42,1.42,0,0,1,.71-1.23A1.51,1.51,0,0,1,7.17,5a1.54,1.54,0,0,1,.71.19l9.66,5.58a1.42,1.42,0,0,1,0,2.46Z" />
-                                    </svg>
-                                </span>
-                            </a>
-                            <div class="item__content">
-                                <h3 class="item__title"><a href="details1.html">Shadows of the Past</a></h3>
-                                <span class="item__category">
-                                    <a href="#">Action</a>
-                                    <a href="#">Triler</a>
-                                </span>
-                                <span class="item__rate">8.4</span>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- end item -->
-
-                    <!-- item -->
-                    <div class="col-6 col-sm-4 col-lg-3 col-xl-2">
-                        <div class="item">
-                            <a href="details1.html" class="item__cover">
-                                <img src="{{asset('assets')}}/main/img/covers/6.png" alt="">
-                                <span class="item__play">
-                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                                        <path d="M18.54,9,8.88,3.46a3.42,3.42,0,0,0-5.13,3V17.58A3.42,3.42,0,0,0,7.17,21a3.43,3.43,0,0,0,1.71-.46L18.54,15a3.42,3.42,0,0,0,0-5.92Zm-1,4.19L7.88,18.81a1.44,1.44,0,0,1-1.42,0,1.42,1.42,0,0,1-.71-1.23V6.42a1.42,1.42,0,0,1,.71-1.23A1.51,1.51,0,0,1,7.17,5a1.54,1.54,0,0,1,.71.19l9.66,5.58a1.42,1.42,0,0,1,0,2.46Z" />
-                                    </svg>
-                                </span>
-                            </a>
-                            <div class="item__content">
-                                <h3 class="item__title"><a href="details1.html">Wings of Freedom</a></h3>
-                                <span class="item__category">
-                                    <a href="#">Comedy</a>
-                                </span>
-                                <span class="item__rate">7.1</span>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- end item -->
-                </div>
-            </div>
-        </div>
-        <!-- end content tabs -->
-
-        <div class="row">
-            <div class="col-12">
-                <a href="catalog1.html" class="section__btn"><span>to catalog</span></a>
-            </div>
-        </div>
-    </div>
-</section>
-<!-- end content -->
-
-<!-- now watching -->
-<section class="section section--dark">
-    <div class="container">
-        <div class="row">
-            <!-- section title -->
-            <div class="col-12">
-                <h2 class="section__title section__title--carousel">Now Watching</h2>
-            </div>
-            <!-- end section title -->
-
-            <!-- carousel -->
-            <div class="col-12">
-                <div class="section__carousel splide splide--content">
-                    <div class="splide__arrows">
-                        <button class="splide__arrow splide__arrow--prev" type="button"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                                <path d="M17,11H9.41l3.3-3.29a1,1,0,1,0-1.42-1.42l-5,5a1,1,0,0,0-.21.33,1,1,0,0,0,0,.76,1,1,0,0,0,.21.33l5,5a1,1,0,0,0,1.42,0,1,1,0,0,0,0-1.42L9.41,13H17a1,1,0,0,0,0-2Z" />
-                            </svg></button>
-                        <button class="splide__arrow splide__arrow--next" type="button"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                                <path d="M17.92,11.62a1,1,0,0,0-.21-.33l-5-5a1,1,0,0,0-1.42,1.42L14.59,11H7a1,1,0,0,0,0,2h7.59l-3.3,3.29a1,1,0,0,0,0,1.42,1,1,0,0,0,1.42,0l5-5a1,1,0,0,0,.21-.33A1,1,0,0,0,17.92,11.62Z" />
-                            </svg></button>
-                    </div>
-
-                    <div class="splide__track">
-                        <ul class="splide__list">
-                            <li class="splide__slide">
-                                <div class="item item--carousel">
-                                    <a href="details1.html" class="item__cover">
-                                        <img src="{{asset('assets')}}/main/img/covers/7.png" alt="">
-                                        <span class="item__play">
-                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                                                <path d="M18.54,9,8.88,3.46a3.42,3.42,0,0,0-5.13,3V17.58A3.42,3.42,0,0,0,7.17,21a3.43,3.43,0,0,0,1.71-.46L18.54,15a3.42,3.42,0,0,0,0-5.92Zm-1,4.19L7.88,18.81a1.44,1.44,0,0,1-1.42,0,1.42,1.42,0,0,1-.71-1.23V6.42a1.42,1.42,0,0,1,.71-1.23A1.51,1.51,0,0,1,7.17,5a1.54,1.54,0,0,1,.71.19l9.66,5.58a1.42,1.42,0,0,1,0,2.46Z" />
-                                            </svg>
-                                        </span>
-                                    </a>
-                                    <div class="item__content">
-                                        <h3 class="item__title"><a href="details1.html">I Dream in Another Language</a></h3>
-                                        <span class="item__category">
-                                            <a href="#">Action</a>
-                                            <a href="#">Triler</a>
-                                        </span>
-                                        <span class="item__rate">8.4</span>
+            <div class="card-style-slider">
+                <div class="position-relative swiper swiper-card" data-slide="6" data-laptop="6" data-tab="3"
+                    data-mobile="2" data-mobile-sm="2" data-autoplay="false" data-loop="true" data-navigation="true"
+                    data-pagination="true">
+                    <ul class="p-0 swiper-wrapper m-0  list-inline">
+                        <li class="swiper-slide">
+                            <div class="iq-card card-hover iq-card-style-2">
+                                <div class="block-images position-relative w-100">
+                                    <div class="img-box w-100">
+                                        <a href="{{route('details')}}" class="position-absolute top-0 bottom-0 start-0 end-0"></a>
+                                        <img src="{{asset('assets')}}/main/img/movies/related/01.html" alt="movie-card" class="img-fluid object-cover w-100 d-block border-0">
+                                    </div>
+                                    <div class="card-description with-transition">
+                                        <div class="cart-content">
+                                            <div class="content-left">
+                                                <h5 class="iq-title text-capitalize">
+                                                    <a href="{{route('details')}}">giikre</a>
+                                                </h5>
+                                                <div class="movie-time d-flex align-items-center my-2">
+                                                    <span class="movie-time-text font-normal">2hr : 12mins</span>
+                                                </div>
+                                            </div>
+                                            <div class="watchlist">
+                                                <a class="watch-list-not" href="playlist.html">
+                                                    <svg width="10" height="10" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="icon-10">
+                                                        <path d="M12 4V20M20 12H4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                                                    </svg>
+                                                    <span class="watchlist-label"> Watchlist </span>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="block-social-info align-items-center">
+                                        <ul class="p-0 m-0 d-flex gap-2 music-play-lists">
+                                            <li class="share position-relative d-flex align-items-center text-center mb-0">
+                                                <span class="w-100 h-100 d-inline-block bg-transparent">
+                                                    <i class="fas fa-share-alt"></i>
+                                                </span>
+                                                <div class="share-wrapper">
+                                                    <div class="share-boxs d-inline-block">
+                                                        <svg width="15" height="40" class="share-shape" viewBox="0 0 15 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M14.8842 40C6.82983 37.2868 1 29.3582 1 20C1 10.6418 6.82983 2.71323 14.8842 0H0V40H14.8842Z" fill="#191919"></path>
+                                                        </svg>
+                                                        <div class=" overflow-hidden">
+                                                            <a href="#" target="_blank">
+                                                                <i class="fab fa-facebook-f"></i>
+                                                            </a>
+                                                            <a href="#" target="_blank">
+                                                                <i class="fab fa-twitter"></i>
+                                                            </a>
+                                                            <a href="#">
+                                                                <i class="fas fa-link"></i>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="share position-relative d-flex align-items-center text-center mb-0">
+                                                <span class="w-100 h-100 d-inline-block bg-transparent">
+                                                    <i class="fa-regular fa-heart"></i>
+                                                </span>
+                                                <div class="share-wrapper">
+                                                    <div class="share-boxs d-inline-block">
+                                                        <svg width="15" height="40" class="share-shape" viewBox="0 0 15 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M14.8842 40C6.82983 37.2868 1 29.3582 1 20C1 10.6418 6.82983 2.71323 14.8842 0H0V40H14.8842Z" fill="#191919"></path>
+                                                        </svg>
+                                                        <div class=" overflow-hidden">
+                                                            <span>+51</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                        <div class="iq-button">
+                                            <a href="{{route('details')}}" class="btn text-uppercase position-relative rounded-circle">
+                                                <i class="fa-solid fa-play ms-0"></i>
+                                            </a>
+                                        </div>
                                     </div>
                                 </div>
-                            </li>
+                            </div>
 
-                            <li class="splide__slide">
-                                <div class="item item--carousel">
-                                    <a href="details1.html" class="item__cover">
-                                        <img src="{{asset('assets')}}/main/img/covers/8.png" alt="">
-                                        <span class="item__play">
-                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                                                <path d="M18.54,9,8.88,3.46a3.42,3.42,0,0,0-5.13,3V17.58A3.42,3.42,0,0,0,7.17,21a3.43,3.43,0,0,0,1.71-.46L18.54,15a3.42,3.42,0,0,0,0-5.92Zm-1,4.19L7.88,18.81a1.44,1.44,0,0,1-1.42,0,1.42,1.42,0,0,1-.71-1.23V6.42a1.42,1.42,0,0,1,.71-1.23A1.51,1.51,0,0,1,7.17,5a1.54,1.54,0,0,1,.71.19l9.66,5.58a1.42,1.42,0,0,1,0,2.46Z" />
-                                            </svg>
-                                        </span>
-                                    </a>
-                                    <div class="item__content">
-                                        <h3 class="item__title"><a href="details1.html">Undercurrents</a></h3>
-                                        <span class="item__category">
-                                            <a href="#">Comedy</a>
-                                        </span>
-                                        <span class="item__rate">7.1</span>
+
+                        </li>
+                        <li class="swiper-slide">
+                            <div class="iq-card card-hover iq-card-style-2">
+                                <div class="block-images position-relative w-100">
+                                    <div class="img-box w-100">
+                                        <a href="{{route('details')}}" class="position-absolute top-0 bottom-0 start-0 end-0"></a>
+                                        <img src="{{asset('assets')}}/main/img/movies/related/02.html" alt="movie-card" class="img-fluid object-cover w-100 d-block border-0">
+                                    </div>
+                                    <div class="card-description with-transition">
+                                        <div class="cart-content">
+                                            <div class="content-left">
+                                                <h5 class="iq-title text-capitalize">
+                                                    <a href="{{route('details')}}">YoShi</a>
+                                                </h5>
+                                                <div class="movie-time d-flex align-items-center my-2">
+                                                    <span class="movie-time-text font-normal">1hr : 22mins</span>
+                                                </div>
+                                            </div>
+                                            <div class="watchlist">
+                                                <a class="watch-list-not" href="playlist.html">
+                                                    <svg width="10" height="10" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="icon-10">
+                                                        <path d="M12 4V20M20 12H4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                                                    </svg>
+                                                    <span class="watchlist-label"> Watchlist </span>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="block-social-info align-items-center">
+                                        <ul class="p-0 m-0 d-flex gap-2 music-play-lists">
+                                            <li class="share position-relative d-flex align-items-center text-center mb-0">
+                                                <span class="w-100 h-100 d-inline-block bg-transparent">
+                                                    <i class="fas fa-share-alt"></i>
+                                                </span>
+                                                <div class="share-wrapper">
+                                                    <div class="share-boxs d-inline-block">
+                                                        <svg width="15" height="40" class="share-shape" viewBox="0 0 15 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M14.8842 40C6.82983 37.2868 1 29.3582 1 20C1 10.6418 6.82983 2.71323 14.8842 0H0V40H14.8842Z" fill="#191919"></path>
+                                                        </svg>
+                                                        <div class=" overflow-hidden">
+                                                            <a href="#" target="_blank">
+                                                                <i class="fab fa-facebook-f"></i>
+                                                            </a>
+                                                            <a href="#" target="_blank">
+                                                                <i class="fab fa-twitter"></i>
+                                                            </a>
+                                                            <a href="#">
+                                                                <i class="fas fa-link"></i>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="share position-relative d-flex align-items-center text-center mb-0">
+                                                <span class="w-100 h-100 d-inline-block bg-transparent">
+                                                    <i class="fa-regular fa-heart"></i>
+                                                </span>
+                                                <div class="share-wrapper">
+                                                    <div class="share-boxs d-inline-block">
+                                                        <svg width="15" height="40" class="share-shape" viewBox="0 0 15 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M14.8842 40C6.82983 37.2868 1 29.3582 1 20C1 10.6418 6.82983 2.71323 14.8842 0H0V40H14.8842Z" fill="#191919"></path>
+                                                        </svg>
+                                                        <div class=" overflow-hidden">
+                                                            <span>+51</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                        <div class="iq-button">
+                                            <a href="{{route('details')}}" class="btn text-uppercase position-relative rounded-circle">
+                                                <i class="fa-solid fa-play ms-0"></i>
+                                            </a>
+                                        </div>
                                     </div>
                                 </div>
-                            </li>
+                            </div>
 
-                            <li class="splide__slide">
-                                <div class="item item--carousel">
-                                    <a href="details1.html" class="item__cover">
-                                        <img src="{{asset('assets')}}/main/img/covers/9.png" alt="">
-                                        <span class="item__play">
-                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                                                <path d="M18.54,9,8.88,3.46a3.42,3.42,0,0,0-5.13,3V17.58A3.42,3.42,0,0,0,7.17,21a3.43,3.43,0,0,0,1.71-.46L18.54,15a3.42,3.42,0,0,0,0-5.92Zm-1,4.19L7.88,18.81a1.44,1.44,0,0,1-1.42,0,1.42,1.42,0,0,1-.71-1.23V6.42a1.42,1.42,0,0,1,.71-1.23A1.51,1.51,0,0,1,7.17,5a1.54,1.54,0,0,1,.71.19l9.66,5.58a1.42,1.42,0,0,1,0,2.46Z" />
-                                            </svg>
-                                        </span>
-                                    </a>
-                                    <div class="item__content">
-                                        <h3 class="item__title"><a href="details1.html">Tales from the Underworld</a></h3>
-                                        <span class="item__category">
-                                            <a href="#">Romance</a>
-                                            <a href="#">Drama</a>
-                                            <a href="#">Music</a>
-                                        </span>
-                                        <span class="item__rate">6.3</span>
+
+                        </li>
+                        <li class="swiper-slide">
+                            <div class="iq-card card-hover iq-card-style-2">
+                                <div class="block-images position-relative w-100">
+                                    <div class="img-box w-100">
+                                        <a href="{{route('details')}}" class="position-absolute top-0 bottom-0 start-0 end-0"></a>
+                                        <img src="{{asset('assets')}}/main/img/movies/related/03.html" alt="movie-card" class="img-fluid object-cover w-100 d-block border-0">
+                                    </div>
+                                    <div class="card-description with-transition">
+                                        <div class="cart-content">
+                                            <div class="content-left">
+                                                <h5 class="iq-title text-capitalize">
+                                                    <a href="{{route('details')}}">We Gare</a>
+                                                </h5>
+                                                <div class="movie-time d-flex align-items-center my-2">
+                                                    <span class="movie-time-text font-normal">1hr : 30mins</span>
+                                                </div>
+                                            </div>
+                                            <div class="watchlist">
+                                                <a class="watch-list-not" href="playlist.html">
+                                                    <svg width="10" height="10" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="icon-10">
+                                                        <path d="M12 4V20M20 12H4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                                                    </svg>
+                                                    <span class="watchlist-label"> Watchlist </span>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="block-social-info align-items-center">
+                                        <ul class="p-0 m-0 d-flex gap-2 music-play-lists">
+                                            <li class="share position-relative d-flex align-items-center text-center mb-0">
+                                                <span class="w-100 h-100 d-inline-block bg-transparent">
+                                                    <i class="fas fa-share-alt"></i>
+                                                </span>
+                                                <div class="share-wrapper">
+                                                    <div class="share-boxs d-inline-block">
+                                                        <svg width="15" height="40" class="share-shape" viewBox="0 0 15 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M14.8842 40C6.82983 37.2868 1 29.3582 1 20C1 10.6418 6.82983 2.71323 14.8842 0H0V40H14.8842Z" fill="#191919"></path>
+                                                        </svg>
+                                                        <div class=" overflow-hidden">
+                                                            <a href="#" target="_blank">
+                                                                <i class="fab fa-facebook-f"></i>
+                                                            </a>
+                                                            <a href="#" target="_blank">
+                                                                <i class="fab fa-twitter"></i>
+                                                            </a>
+                                                            <a href="#">
+                                                                <i class="fas fa-link"></i>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="share position-relative d-flex align-items-center text-center mb-0">
+                                                <span class="w-100 h-100 d-inline-block bg-transparent">
+                                                    <i class="fa-regular fa-heart"></i>
+                                                </span>
+                                                <div class="share-wrapper">
+                                                    <div class="share-boxs d-inline-block">
+                                                        <svg width="15" height="40" class="share-shape" viewBox="0 0 15 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M14.8842 40C6.82983 37.2868 1 29.3582 1 20C1 10.6418 6.82983 2.71323 14.8842 0H0V40H14.8842Z" fill="#191919"></path>
+                                                        </svg>
+                                                        <div class=" overflow-hidden">
+                                                            <span>+51</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                        <div class="iq-button">
+                                            <a href="{{route('details')}}" class="btn text-uppercase position-relative rounded-circle">
+                                                <i class="fa-solid fa-play ms-0"></i>
+                                            </a>
+                                        </div>
                                     </div>
                                 </div>
-                            </li>
+                            </div>
 
-                            <li class="splide__slide">
-                                <div class="item item--carousel">
-                                    <a href="details1.html" class="item__cover">
-                                        <img src="{{asset('assets')}}/main/img/covers/10.png" alt="">
-                                        <span class="item__play">
-                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                                                <path d="M18.54,9,8.88,3.46a3.42,3.42,0,0,0-5.13,3V17.58A3.42,3.42,0,0,0,7.17,21a3.43,3.43,0,0,0,1.71-.46L18.54,15a3.42,3.42,0,0,0,0-5.92Zm-1,4.19L7.88,18.81a1.44,1.44,0,0,1-1.42,0,1.42,1.42,0,0,1-.71-1.23V6.42a1.42,1.42,0,0,1,.71-1.23A1.51,1.51,0,0,1,7.17,5a1.54,1.54,0,0,1,.71.19l9.66,5.58a1.42,1.42,0,0,1,0,2.46Z" />
-                                            </svg>
-                                        </span>
-                                    </a>
-                                    <div class="item__content">
-                                        <h3 class="item__title"><a href="details1.html">Savage Beauty</a></h3>
-                                        <span class="item__category">
-                                            <a href="#">Comedy</a>
-                                            <a href="#">Drama</a>
-                                        </span>
-                                        <span class="item__rate">7.9</span>
+
+                        </li>
+                        <li class="swiper-slide">
+                            <div class="iq-card card-hover iq-card-style-2">
+                                <div class="block-images position-relative w-100">
+                                    <div class="img-box w-100">
+                                        <a href="{{route('details')}}" class="position-absolute top-0 bottom-0 start-0 end-0"></a>
+                                        <img src="{{asset('assets')}}/main/img/movies/related/04.html" alt="movie-card" class="img-fluid object-cover w-100 d-block border-0">
+                                    </div>
+                                    <div class="card-description with-transition">
+                                        <div class="cart-content">
+                                            <div class="content-left">
+                                                <h5 class="iq-title text-capitalize">
+                                                    <a href="{{route('details')}}">Avengers</a>
+                                                </h5>
+                                                <div class="movie-time d-flex align-items-center my-2">
+                                                    <span class="movie-time-text font-normal">2hr : 38mins</span>
+                                                </div>
+                                            </div>
+                                            <div class="watchlist">
+                                                <a class="watch-list-not" href="playlist.html">
+                                                    <svg width="10" height="10" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="icon-10">
+                                                        <path d="M12 4V20M20 12H4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                                                    </svg>
+                                                    <span class="watchlist-label"> Watchlist </span>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="block-social-info align-items-center">
+                                        <ul class="p-0 m-0 d-flex gap-2 music-play-lists">
+                                            <li class="share position-relative d-flex align-items-center text-center mb-0">
+                                                <span class="w-100 h-100 d-inline-block bg-transparent">
+                                                    <i class="fas fa-share-alt"></i>
+                                                </span>
+                                                <div class="share-wrapper">
+                                                    <div class="share-boxs d-inline-block">
+                                                        <svg width="15" height="40" class="share-shape" viewBox="0 0 15 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M14.8842 40C6.82983 37.2868 1 29.3582 1 20C1 10.6418 6.82983 2.71323 14.8842 0H0V40H14.8842Z" fill="#191919"></path>
+                                                        </svg>
+                                                        <div class=" overflow-hidden">
+                                                            <a href="#" target="_blank">
+                                                                <i class="fab fa-facebook-f"></i>
+                                                            </a>
+                                                            <a href="#" target="_blank">
+                                                                <i class="fab fa-twitter"></i>
+                                                            </a>
+                                                            <a href="#">
+                                                                <i class="fas fa-link"></i>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="share position-relative d-flex align-items-center text-center mb-0">
+                                                <span class="w-100 h-100 d-inline-block bg-transparent">
+                                                    <i class="fa-regular fa-heart"></i>
+                                                </span>
+                                                <div class="share-wrapper">
+                                                    <div class="share-boxs d-inline-block">
+                                                        <svg width="15" height="40" class="share-shape" viewBox="0 0 15 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M14.8842 40C6.82983 37.2868 1 29.3582 1 20C1 10.6418 6.82983 2.71323 14.8842 0H0V40H14.8842Z" fill="#191919"></path>
+                                                        </svg>
+                                                        <div class=" overflow-hidden">
+                                                            <span>+51</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                        <div class="iq-button">
+                                            <a href="{{route('details')}}" class="btn text-uppercase position-relative rounded-circle">
+                                                <i class="fa-solid fa-play ms-0"></i>
+                                            </a>
+                                        </div>
                                     </div>
                                 </div>
-                            </li>
+                            </div>
 
-                            <li class="splide__slide">
-                                <div class="item item--carousel">
-                                    <a href="details1.html" class="item__cover">
-                                        <img src="{{asset('assets')}}/main/img/covers/11.png" alt="">
-                                        <span class="item__play">
-                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                                                <path d="M18.54,9,8.88,3.46a3.42,3.42,0,0,0-5.13,3V17.58A3.42,3.42,0,0,0,7.17,21a3.43,3.43,0,0,0,1.71-.46L18.54,15a3.42,3.42,0,0,0,0-5.92Zm-1,4.19L7.88,18.81a1.44,1.44,0,0,1-1.42,0,1.42,1.42,0,0,1-.71-1.23V6.42a1.42,1.42,0,0,1,.71-1.23A1.51,1.51,0,0,1,7.17,5a1.54,1.54,0,0,1,.71.19l9.66,5.58a1.42,1.42,0,0,1,0,2.46Z" />
-                                            </svg>
-                                        </span>
-                                    </a>
-                                    <div class="item__content">
-                                        <h3 class="item__title"><a href="details1.html">The Unseen Journey</a></h3>
-                                        <span class="item__category">
-                                            <a href="#">Action</a>
-                                            <a href="#">Triler</a>
-                                        </span>
-                                        <span class="item__rate">8.4</span>
+
+                        </li>
+                        <li class="swiper-slide">
+                            <div class="iq-card card-hover iq-card-style-2">
+                                <div class="block-images position-relative w-100">
+                                    <div class="img-box w-100">
+                                        <a href="{{route('details')}}" class="position-absolute top-0 bottom-0 start-0 end-0"></a>
+                                        <img src="{{asset('assets')}}/main/img/movies/related/05.html" alt="movie-card" class="img-fluid object-cover w-100 d-block border-0">
+                                    </div>
+                                    <div class="card-description with-transition">
+                                        <div class="cart-content">
+                                            <div class="content-left">
+                                                <h5 class="iq-title text-capitalize">
+                                                    <a href="{{route('details')}}">Chosfies</a>
+                                                </h5>
+                                                <div class="movie-time d-flex align-items-center my-2">
+                                                    <span class="movie-time-text font-normal">2hr : 10mins</span>
+                                                </div>
+                                            </div>
+                                            <div class="watchlist">
+                                                <a class="watch-list-not" href="playlist.html">
+                                                    <svg width="10" height="10" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="icon-10">
+                                                        <path d="M12 4V20M20 12H4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                                                    </svg>
+                                                    <span class="watchlist-label"> Watchlist </span>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="block-social-info align-items-center">
+                                        <ul class="p-0 m-0 d-flex gap-2 music-play-lists">
+                                            <li class="share position-relative d-flex align-items-center text-center mb-0">
+                                                <span class="w-100 h-100 d-inline-block bg-transparent">
+                                                    <i class="fas fa-share-alt"></i>
+                                                </span>
+                                                <div class="share-wrapper">
+                                                    <div class="share-boxs d-inline-block">
+                                                        <svg width="15" height="40" class="share-shape" viewBox="0 0 15 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M14.8842 40C6.82983 37.2868 1 29.3582 1 20C1 10.6418 6.82983 2.71323 14.8842 0H0V40H14.8842Z" fill="#191919"></path>
+                                                        </svg>
+                                                        <div class=" overflow-hidden">
+                                                            <a href="#" target="_blank">
+                                                                <i class="fab fa-facebook-f"></i>
+                                                            </a>
+                                                            <a href="#" target="_blank">
+                                                                <i class="fab fa-twitter"></i>
+                                                            </a>
+                                                            <a href="#">
+                                                                <i class="fas fa-link"></i>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="share position-relative d-flex align-items-center text-center mb-0">
+                                                <span class="w-100 h-100 d-inline-block bg-transparent">
+                                                    <i class="fa-regular fa-heart"></i>
+                                                </span>
+                                                <div class="share-wrapper">
+                                                    <div class="share-boxs d-inline-block">
+                                                        <svg width="15" height="40" class="share-shape" viewBox="0 0 15 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M14.8842 40C6.82983 37.2868 1 29.3582 1 20C1 10.6418 6.82983 2.71323 14.8842 0H0V40H14.8842Z" fill="#191919"></path>
+                                                        </svg>
+                                                        <div class=" overflow-hidden">
+                                                            <span>+51</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                        <div class="iq-button">
+                                            <a href="{{route('details')}}" class="btn text-uppercase position-relative rounded-circle">
+                                                <i class="fa-solid fa-play ms-0"></i>
+                                            </a>
+                                        </div>
                                     </div>
                                 </div>
-                            </li>
+                            </div>
 
-                            <li class="splide__slide">
-                                <div class="item item--carousel">
-                                    <a href="details1.html" class="item__cover">
-                                        <img src="{{asset('assets')}}/main/img/covers/12.png" alt="">
-                                        <span class="item__play">
-                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                                                <path d="M18.54,9,8.88,3.46a3.42,3.42,0,0,0-5.13,3V17.58A3.42,3.42,0,0,0,7.17,21a3.43,3.43,0,0,0,1.71-.46L18.54,15a3.42,3.42,0,0,0,0-5.92Zm-1,4.19L7.88,18.81a1.44,1.44,0,0,1-1.42,0,1.42,1.42,0,0,1-.71-1.23V6.42a1.42,1.42,0,0,1,.71-1.23A1.51,1.51,0,0,1,7.17,5a1.54,1.54,0,0,1,.71.19l9.66,5.58a1.42,1.42,0,0,1,0,2.46Z" />
-                                            </svg>
-                                        </span>
-                                    </a>
-                                    <div class="item__content">
-                                        <h3 class="item__title"><a href="details1.html">Endless Horizon</a></h3>
-                                        <span class="item__category">
-                                            <a href="#">Comedy</a>
-                                        </span>
-                                        <span class="item__rate">7.1</span>
+
+                        </li>
+                        <li class="swiper-slide">
+                            <div class="iq-card card-hover iq-card-style-2">
+                                <div class="block-images position-relative w-100">
+                                    <div class="img-box w-100">
+                                        <a href="{{route('details')}}" class="position-absolute top-0 bottom-0 start-0 end-0"></a>
+                                        <img src="{{asset('assets')}}/main/img/movies/related/06.html" alt="movie-card" class="img-fluid object-cover w-100 d-block border-0">
+                                    </div>
+                                    <div class="card-description with-transition">
+                                        <div class="cart-content">
+                                            <div class="content-left">
+                                                <h5 class="iq-title text-capitalize">
+                                                    <a href="{{route('details')}}">Tf Oaler</a>
+                                                </h5>
+                                                <div class="movie-time d-flex align-items-center my-2">
+                                                    <span class="movie-time-text font-normal">1hr : 40mins</span>
+                                                </div>
+                                            </div>
+                                            <div class="watchlist">
+                                                <a class="watch-list-not" href="playlist.html">
+                                                    <svg width="10" height="10" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="icon-10">
+                                                        <path d="M12 4V20M20 12H4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                                                    </svg>
+                                                    <span class="watchlist-label"> Watchlist </span>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="block-social-info align-items-center">
+                                        <ul class="p-0 m-0 d-flex gap-2 music-play-lists">
+                                            <li class="share position-relative d-flex align-items-center text-center mb-0">
+                                                <span class="w-100 h-100 d-inline-block bg-transparent">
+                                                    <i class="fas fa-share-alt"></i>
+                                                </span>
+                                                <div class="share-wrapper">
+                                                    <div class="share-boxs d-inline-block">
+                                                        <svg width="15" height="40" class="share-shape" viewBox="0 0 15 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M14.8842 40C6.82983 37.2868 1 29.3582 1 20C1 10.6418 6.82983 2.71323 14.8842 0H0V40H14.8842Z" fill="#191919"></path>
+                                                        </svg>
+                                                        <div class=" overflow-hidden">
+                                                            <a href="#" target="_blank">
+                                                                <i class="fab fa-facebook-f"></i>
+                                                            </a>
+                                                            <a href="#" target="_blank">
+                                                                <i class="fab fa-twitter"></i>
+                                                            </a>
+                                                            <a href="#">
+                                                                <i class="fas fa-link"></i>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="share position-relative d-flex align-items-center text-center mb-0">
+                                                <span class="w-100 h-100 d-inline-block bg-transparent">
+                                                    <i class="fa-regular fa-heart"></i>
+                                                </span>
+                                                <div class="share-wrapper">
+                                                    <div class="share-boxs d-inline-block">
+                                                        <svg width="15" height="40" class="share-shape" viewBox="0 0 15 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M14.8842 40C6.82983 37.2868 1 29.3582 1 20C1 10.6418 6.82983 2.71323 14.8842 0H0V40H14.8842Z" fill="#191919"></path>
+                                                        </svg>
+                                                        <div class=" overflow-hidden">
+                                                            <span>+51</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                        <div class="iq-button">
+                                            <a href="{{route('details')}}" class="btn text-uppercase position-relative rounded-circle">
+                                                <i class="fa-solid fa-play ms-0"></i>
+                                            </a>
+                                        </div>
                                     </div>
                                 </div>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <!-- end carousel -->
-        </div>
-    </div>
-</section>
-<!-- end now watching -->
+                            </div>
 
-<!-- pricing plans -->
-<section class="section">
-    <div class="container">
-        <div class="row">
-            <!-- section title -->
-            <div class="col-12">
-                <h2 class="section__title">Select Your Plan</h2>
-            </div>
-            <!-- end section title -->
-        </div>
 
-        <div class="row">
-            <!-- price -->
-            <div class="col-12 col-md-6 col-lg-4 order-md-2 order-lg-1">
-                <div class="plan">
-                    <h3 class="plan__title">Starter</h3>
-                    <span class="plan__price">Free</span>
-                    <ul class="plan__list">
-                        <li>7 days</li>
-                        <li>720p Resolution</li>
-                        <li>Limited Availability</li>
-                        <li>Desktop Only</li>
-                        <li>Limited Support</li>
+                        </li>
+                        <li class="swiper-slide">
+                            <div class="iq-card card-hover iq-card-style-2">
+                                <div class="block-images position-relative w-100">
+                                    <div class="img-box w-100">
+                                        <a href="{{route('details')}}" class="position-absolute top-0 bottom-0 start-0 end-0"></a>
+                                        <img src="{{asset('assets')}}/main/img/movies/related/07.html" alt="movie-card" class="img-fluid object-cover w-100 d-block border-0">
+                                    </div>
+                                    <div class="card-description with-transition">
+                                        <div class="cart-content">
+                                            <div class="content-left">
+                                                <h5 class="iq-title text-capitalize">
+                                                    <a href="{{route('details')}}">Another Danger</a>
+                                                </h5>
+                                                <div class="movie-time d-flex align-items-center my-2">
+                                                    <span class="movie-time-text font-normal">1hr : 40mins</span>
+                                                </div>
+                                            </div>
+                                            <div class="watchlist">
+                                                <a class="watch-list-not" href="playlist.html">
+                                                    <svg width="10" height="10" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="icon-10">
+                                                        <path d="M12 4V20M20 12H4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                                                    </svg>
+                                                    <span class="watchlist-label"> Watchlist </span>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="block-social-info align-items-center">
+                                        <ul class="p-0 m-0 d-flex gap-2 music-play-lists">
+                                            <li class="share position-relative d-flex align-items-center text-center mb-0">
+                                                <span class="w-100 h-100 d-inline-block bg-transparent">
+                                                    <i class="fas fa-share-alt"></i>
+                                                </span>
+                                                <div class="share-wrapper">
+                                                    <div class="share-boxs d-inline-block">
+                                                        <svg width="15" height="40" class="share-shape" viewBox="0 0 15 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M14.8842 40C6.82983 37.2868 1 29.3582 1 20C1 10.6418 6.82983 2.71323 14.8842 0H0V40H14.8842Z" fill="#191919"></path>
+                                                        </svg>
+                                                        <div class=" overflow-hidden">
+                                                            <a href="#" target="_blank">
+                                                                <i class="fab fa-facebook-f"></i>
+                                                            </a>
+                                                            <a href="#" target="_blank">
+                                                                <i class="fab fa-twitter"></i>
+                                                            </a>
+                                                            <a href="#">
+                                                                <i class="fas fa-link"></i>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="share position-relative d-flex align-items-center text-center mb-0">
+                                                <span class="w-100 h-100 d-inline-block bg-transparent">
+                                                    <i class="fa-regular fa-heart"></i>
+                                                </span>
+                                                <div class="share-wrapper">
+                                                    <div class="share-boxs d-inline-block">
+                                                        <svg width="15" height="40" class="share-shape" viewBox="0 0 15 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M14.8842 40C6.82983 37.2868 1 29.3582 1 20C1 10.6418 6.82983 2.71323 14.8842 0H0V40H14.8842Z" fill="#191919"></path>
+                                                        </svg>
+                                                        <div class=" overflow-hidden">
+                                                            <span>+51</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                        <div class="iq-button">
+                                            <a href="{{route('details')}}" class="btn text-uppercase position-relative rounded-circle">
+                                                <i class="fa-solid fa-play ms-0"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                        </li>
                     </ul>
-                    <a href="signin.html" class="plan__btn"><span>Register</span></a>
-                </div>
-            </div>
-            <!-- end price -->
-
-            <!-- price -->
-            <div class="col-12 col-lg-4 order-md-1 order-lg-2">
-                <div class="plan plan--premium">
-                    <h3 class="plan__title">Premium</h3>
-                    <span class="plan__price">$19.99</span>
-                    <ul class="plan__list">
-                        <li>1 Month</li>
-                        <li>Full HD</li>
-                        <li>Lifetime Availability</li>
-                        <li>TV & Desktop</li>
-                        <li>24/7 Support</li>
-                    </ul>
-                    <button type="button" data-bs-toggle="modal" class="plan__btn" data-bs-target="#plan-modal"><span>Choose plan</span></button>
-                </div>
-            </div>
-            <!-- end price -->
-
-            <!-- price -->
-            <div class="col-12 col-md-6 col-lg-4 order-md-3 order-lg-3">
-                <div class="plan">
-                    <h3 class="plan__title">Cinematic</h3>
-                    <span class="plan__price">$39.99</span>
-                    <ul class="plan__list">
-                        <li>2 Months</li>
-                        <li>Ultra HD</li>
-                        <li>Lifetime Availability</li>
-                        <li>Any Device</li>
-                        <li>24/7 Support</li>
-                    </ul>
-                    <button type="button" data-bs-toggle="modal" class="plan__btn" data-bs-target="#plan-modal"><span>Choose plan</span></button>
-                </div>
-            </div>
-            <!-- end price -->
-        </div>
-    </div>
-</section>
-<!-- end pricing plans -->
-
-<!-- partners -->
-<section class="section section--bt">
-    <div class="container">
-        <div class="row">
-            <!-- section title -->
-            <div class="col-12 col-xl-10">
-                <h2 class="section__title">Our Partners</h2>
-
-                <p class="section__text">We strive for long-term cooperation with our partners, and our team is always ready to meet and consider new opportunities for mutual benefits. If you would like to become our partner, we are always open to new offers and look forward to hearing from you. <a href="contacts.html">Become a partner</a></p>
-            </div>
-            <!-- end section text -->
-        </div>
-
-        <div class="row">
-            <div class="col-12">
-                <div class="partners">
-                    <a href="#" class="partners__item">
-                        <img src="{{asset('assets')}}/main/img/partners/themeforest-light-background.png" alt="">
-                    </a>
-
-                    <a href="#" class="partners__item">
-                        <img src="{{asset('assets')}}/main/img/partners/audiojungle-light-background.png" alt="">
-                    </a>
-
-                    <a href="#" class="partners__item">
-                        <img src="{{asset('assets')}}/main/img/partners/codecanyon-light-background.png" alt="">
-                    </a>
-
-                    <a href="#" class="partners__item">
-                        <img src="{{asset('assets')}}/main/img/partners/photodune-light-background.png" alt="">
-                    </a>
-
-                    <a href="#" class="partners__item partners__item--prelast">
-                        <img src="{{asset('assets')}}/main/img/partners/activeden-light-background.png" alt="">
-                    </a>
-
-                    <a href="#" class="partners__item partners__item--last">
-                        <img src="{{asset('assets')}}/main/img/partners/3docean-light-background.png" alt="">
-                    </a>
+                    <div class="swiper-button swiper-button-next"></div>
+                    <div class="swiper-button swiper-button-prev"></div>
                 </div>
             </div>
         </div>
     </div>
-</section>
-<!-- end partners -->
+</div>
+
+<div class="verticle-slider section-padding-bottom">
+    <div class="slider">
+        <div class="slider-flex position-relative">
+            <div class="slider--col position-relative">
+                <div class="vertical-slider-prev swiper-button"><i class="iconly-Arrow-Up-2 icli"></i></div>
+                <div class="slider-thumbs" data-swiper="slider-thumbs">
+                    <div class="swiper-container " data-swiper="slider-thumbs-inner">
+                        <div class="swiper-wrapper top-ten-slider-nav">
+                            <div class="swiper-slide swiper-bg">
+                                <div class="block-images position-relative ">
+                                    <div class="img-box slider--image">
+                                        <img src="{{asset('assets')}}/main/img/top-10/01.html" class="img-fluid" alt="" loading="lazy">
+                                    </div>
+                                    <div class="block-description">
+                                        <h6 class="iq-title"><a href="tv-show-detail.html">lostti n sacee</a></h6>
+                                        <div class="movie-time d-flex align-items-center my-2">
+                                            <span class="text-body">2hr : 30mins</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide swiper-bg">
+                                <div class="block-images position-relative ">
+                                    <div class="img-box slider--image">
+                                        <img src="{{asset('assets')}}/main/img/top-10/02.html" class="img-fluid" alt="" loading="lazy">
+                                    </div>
+                                    <div class="block-description">
+                                        <h6 class="iq-title"><a href="tv-show-detail.html">Ret Seap</a></h6>
+                                        <div class="movie-time d-flex align-items-center my-2">
+                                            <span class="text-body">3hr : 0min</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide swiper-bg">
+                                <div class="block-images position-relative">
+                                    <div class="img-box slider--image">
+                                        <img src="{{asset('assets')}}/main/img/top-10/03.html" class="img-fluid" alt="" loading="lazy">
+                                    </div>
+                                    <div class="block-description">
+                                        <h6 class="iq-title"><a href="tv-show-detail.html">X-Men</a></h6>
+                                        <div class="movie-time d-flex align-items-center my-2">
+                                            <span class="text-body">1hr : 45mins</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide swiper-bg">
+                                <div class="block-images position-relative">
+                                    <div class="img-box slider--image">
+                                        <img src="{{asset('assets')}}/main/img/top-10/04.html" class="img-fluid" alt="" loading="lazy">
+                                    </div>
+                                    <div class="block-description">
+                                        <h6 class="iq-title"><a href="tv-show-detail.html">Logan</a></h6>
+                                        <div class="movie-time d-flex align-items-center my-2">
+                                            <span class="text-body">1hr : 22mins</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide swiper-bg">
+                                <div class="block-images position-relative">
+                                    <div class="img-box slider--image">
+                                        <img src="{{asset('assets')}}/main/img/top-10/05.html" class="img-fluid" alt="" loading="lazy">
+                                    </div>
+                                    <div class="block-description">
+                                        <h6 class="iq-title"><a href="tv-show-detail.html">Black Queen</a></h6>
+                                        <div class="movie-time d-flex align-items-center my-2">
+                                            <span class="text-body">1hr : 45mins</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="vertical-slider-next swiper-button"><i class="iconly-Arrow-Down-2 icli"></i></div>
+            </div>
+            <div class="slider-images" data-swiper="slider-images">
+                <div class="swiper-container " data-swiper="slider-images-inner">
+                    <div class="swiper-wrapper ">
+                        <div class="swiper-slide">
+                            <div class="slider--image block-images"><img src="{{asset('assets')}}/main/img/top-10/01.html"
+                                    loading="lazy" alt="" /></div>
+                            <div class="description">
+                                <div class="block-description">
+                                    <ul class="ps-0 mb-0 mb-1 pb-1 list-inline d-flex flex-wrap align-items-center movie-tag">
+                                        <li class="position-relative text-capitalize font-size-14 letter-spacing-1">
+                                            <a href="{{route('allmovies')}}" class="text-white text-decoration-none">Comedy</a>
+                                        </li>
+                                        <li class="position-relative text-capitalize font-size-14 letter-spacing-1">
+                                            <a href="{{route('allmovies')}}" class="text-white text-decoration-none">Romance</a>
+                                        </li>
+                                        <li class="position-relative text-capitalize font-size-14 letter-spacing-1">
+                                            <a href="{{route('allmovies')}}" class="text-white text-decoration-none">Action</a>
+                                        </li>
+                                    </ul>
+                                    <h2 class="iq-title mb-3"><a href="tv-show-detail.html">lostti n sacee</a></h2>
+                                    <div class="d-flex align-items-center gap-3 mb-3">
+                                        <div class="slider-ratting d-flex align-items-center">
+                                            <ul
+                                                class="ratting-start p-0 m-0 list-inline text-warning d-flex align-items-center justify-content-left">
+                                                <li>
+                                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                                </li>
+                                            </ul>
+                                            <span class="text-white ms-2 font-size-14 fw-500">4.3/5</span>
+                                        </div>
+                                        <span class="text-body">2hr : 30mins</span>
+                                    </div>
+                                    <p class="mt-0 mb-3 line-count-2">The point of using Lorem Ipsum is that it has a
+                                        more-or-less normal distribution of letters, as opposed to using 'Content here.</p>
+                                    <div class="iq-button">
+                                        <a href="{{route('details')}}" class="btn text-uppercase position-relative">
+                                            <span class="button-text">play now</span>
+                                            <i class="fa-solid fa-play"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="slider--image block-images"><img src="{{asset('assets')}}/main/img/top-10/02.html"
+                                    loading="lazy" alt="" /></div>
+                            <div class="description">
+                                <div class="block-description">
+                                    <ul class="ps-0 mb-0 mb-1 pb-1 list-inline d-flex flex-wrap align-items-center movie-tag">
+                                        <li class="position-relative text-capitalize font-size-14 letter-spacing-1">
+                                            <a href="{{route('allmovies')}}" class="text-white text-decoration-none">Comedy</a>
+                                        </li>
+                                        <li class="position-relative text-capitalize font-size-14 letter-spacing-1">
+                                            <a href="{{route('allmovies')}}" class="text-white text-decoration-none">Romance</a>
+                                        </li>
+                                        <li class="position-relative text-capitalize font-size-14 letter-spacing-1">
+                                            <a href="{{route('allmovies')}}" class="text-white text-decoration-none">Action</a>
+                                        </li>
+                                    </ul>
+                                    <h2 class="iq-title mb-3"><a href="tv-show-detail.html">Ret Seap</a></h2>
+                                    <div class="d-flex align-items-center gap-3 mb-3">
+                                        <div class="slider-ratting d-flex align-items-center">
+                                            <ul
+                                                class="ratting-start p-0 m-0 list-inline text-warning d-flex align-items-center justify-content-left">
+                                                <li>
+                                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                                </li>
+                                            </ul>
+                                            <span class="text-white ms-2 font-size-14 fw-500">4.3/5</span>
+                                        </div>
+                                        <span class="text-body">3hr 0min</span>
+                                    </div>
+                                    <p class="mt-0 mb-3 line-count-2">The point of using Lorem Ipsum is that it has a
+                                        more-or-less normal distribution of letters, as opposed to using 'Content here.</p>
+                                    <div class="iq-button">
+                                        <a href="{{route('details')}}" class="btn text-uppercase position-relative">
+                                            <span class="button-text">play now</span>
+                                            <i class="fa-solid fa-play"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="slider--image block-images"><img src="{{asset('assets')}}/main/img/top-10/03.html"
+                                    loading="lazy" alt="" /></div>
+                            <div class="description">
+                                <div class="block-description">
+                                    <ul class="ps-0 mb-0 mb-1 pb-1 list-inline d-flex flex-wrap align-items-center movie-tag">
+                                        <li class="position-relative text-capitalize font-size-14 letter-spacing-1">
+                                            <a href="{{route('allmovies')}}" class="text-white text-decoration-none">Comedy</a>
+                                        </li>
+                                        <li class="position-relative text-capitalize font-size-14 letter-spacing-1">
+                                            <a href="{{route('allmovies')}}" class="text-white text-decoration-none">Romance</a>
+                                        </li>
+                                        <li class="position-relative text-capitalize font-size-14 letter-spacing-1">
+                                            <a href="{{route('allmovies')}}" class="text-white text-decoration-none">Action</a>
+                                        </li>
+                                    </ul>
+                                    <h2 class="iq-title mb-3"><a href="tv-show-detail.html">X Men</a></h2>
+                                    <div class="d-flex align-items-center gap-3 mb-3">
+                                        <div class="slider-ratting d-flex align-items-center">
+                                            <ul
+                                                class="ratting-start p-0 m-0 list-inline text-warning d-flex align-items-center justify-content-left">
+                                                <li>
+                                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                                </li>
+                                            </ul>
+                                            <span class="text-white ms-2 font-size-14 fw-500">4.3/5</span>
+                                        </div>
+                                        <span class="text-body">1hr : 45mins</span>
+                                    </div>
+                                    <p class="mt-0 mb-3 line-count-2">The point of using Lorem Ipsum is that it has a
+                                        more-or-less normal distribution of letters, as opposed to using 'Content here.</p>
+                                    <div class="iq-button">
+                                        <a href="{{route('details')}}" class="btn text-uppercase position-relative">
+                                            <span class="button-text">play now</span>
+                                            <i class="fa-solid fa-play"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="slider--image block-images"><img src="{{asset('assets')}}/main/img/top-10/04.html"
+                                    loading="lazy" alt="" /></div>
+                            <div class="description">
+                                <div class="block-description">
+                                    <ul class="ps-0 mb-0 mb-1 pb-1 list-inline d-flex flex-wrap align-items-center movie-tag">
+                                        <li class="position-relative text-capitalize font-size-14 letter-spacing-1">
+                                            <a href="{{route('allmovies')}}" class="text-white text-decoration-none">Comedy</a>
+                                        </li>
+                                        <li class="position-relative text-capitalize font-size-14 letter-spacing-1">
+                                            <a href="{{route('allmovies')}}" class="text-white text-decoration-none">Romance</a>
+                                        </li>
+                                        <li class="position-relative text-capitalize font-size-14 letter-spacing-1">
+                                            <a href="{{route('allmovies')}}" class="text-white text-decoration-none">Action</a>
+                                        </li>
+                                    </ul>
+                                    <h2 class="iq-title mb-3"><a href="tv-show-detail.html">Logan</a></h2>
+                                    <div class="d-flex align-items-center gap-3 mb-3">
+                                        <div class="slider-ratting d-flex align-items-center">
+                                            <ul
+                                                class="ratting-start p-0 m-0 list-inline text-warning d-flex align-items-center justify-content-left">
+                                                <li>
+                                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                                </li>
+                                            </ul>
+                                            <span class="text-white ms-2 font-size-14 fw-500">4.3/5</span>
+                                        </div>
+                                        <span class="text-body">1hr : 22mins</span>
+                                    </div>
+                                    <p class="mt-0 mb-3 line-count-2">The point of using Lorem Ipsum is that it has a
+                                        more-or-less normal distribution of letters, as opposed to using 'Content here.</p>
+                                    <div class="iq-button">
+                                        <a href="#" class="btn text-uppercase position-relative">
+                                            <span class="button-text">play now</span>
+                                            <i class="fa-solid fa-play"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="slider--image block-images"><img src="{{asset('assets')}}/main/img/top-10/05.html"
+                                    loading="lazy" alt="" /></div>
+                            <div class="description">
+                                <div class="block-description">
+                                    <ul class="ps-0 mb-0 mb-1 pb-1 list-inline d-flex flex-wrap align-items-center movie-tag">
+                                        <li class="position-relative text-capitalize font-size-14 letter-spacing-1">
+                                            <a href="{{route('allmovies')}}" class="text-white text-decoration-none">Comedy</a>
+                                        </li>
+                                        <li class="position-relative text-capitalize font-size-14 letter-spacing-1">
+                                            <a href="{{route('allmovies')}}" class="text-white text-decoration-none">Romance</a>
+                                        </li>
+                                        <li class="position-relative text-capitalize font-size-14 letter-spacing-1">
+                                            <a href="{{route('allmovies')}}" class="text-white text-decoration-none">Action</a>
+                                        </li>
+                                    </ul>
+                                    <h2 class="iq-title mb-3"><a href="tv-show-detail.html">Black Queen</a></h2>
+                                    <div class="d-flex align-items-center gap-3 mb-3">
+                                        <div class="slider-ratting d-flex align-items-center">
+                                            <ul
+                                                class="ratting-start p-0 m-0 list-inline text-warning d-flex align-items-center justify-content-left">
+                                                <li>
+                                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                                </li>
+                                            </ul>
+                                            <span class="text-white ms-2 font-size-14 fw-500">4.3/5</span>
+                                        </div>
+                                        <span class="text-body">1hr : 45mins</span>
+                                    </div>
+                                    <p class="mt-0 mb-3 line-count-2">The point of using Lorem Ipsum is that it has a
+                                        more-or-less normal distribution of letters, as opposed to using 'Content here.</p>
+                                    <div class="iq-button">
+                                        <a href="video-detail.html" class="btn text-uppercase position-relative">
+                                            <span class="button-text">play now</span>
+                                            <i class="fa-solid fa-play"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="favourite-person-block">
+    <div class="container-fluid">
+        <section class="overflow-hidden">
+            <div class="d-flex align-items-center justify-content-between px-md-3 px-1 my-4">
+                <h5 class="main-title text-capitalize mb-0">your favourite personality</h5>
+                <a href="all-personality.html" class="text-primary iq-view-all text-decoration-none">View All</a>
+            </div>
+            <div class="position-relative swiper swiper-card" data-slide="11" data-laptop="11" data-tab="4" data-mobile="2"
+                data-mobile-sm="2" data-autoplay="false" data-loop="true" data-navigation="true" data-pagination="true">
+                <ul class="p-0 swiper-wrapper m-0  list-inline personality-card">
+                    <li class="swiper-slide">
+                        <img src="{{asset('assets')}}/main/img/cast/01.html" alt="personality" class="img-fluid object-cover mb-4 rounded">
+                        <div class="text-center">
+                            <h6 class="mb-0">
+                                <a href="person-detail.html" class="font-size-14 text-decoration-none cast-title text-capitalize">john Abraham</a>
+                            </h6>
+                            <a href="cast-category.html" class="font-size-14 text-decoration-none text-capitalize text-body">actor</a>
+                        </div>
+                    </li>
+                    <li class="swiper-slide">
+                        <img src="{{asset('assets')}}/main/img/cast/02.html" alt="personality" class="img-fluid object-cover mb-4 rounded">
+                        <div class="text-center">
+                            <h6 class="mb-0">
+                                <a href="person-detail.html" class="font-size-14 text-decoration-none cast-title text-capitalize">Leena burton</a>
+                            </h6>
+                            <a href="cast-category.html" class="font-size-14 text-decoration-none text-capitalize text-body">actress</a>
+                        </div>
+                    </li>
+                    <li class="swiper-slide">
+                        <img src="{{asset('assets')}}/main/img/cast/03.html" alt="personality" class="img-fluid object-cover mb-4 rounded">
+                        <div class="text-center">
+                            <h6 class="mb-0">
+                                <a href="person-detail.html" class="font-size-14 text-decoration-none cast-title text-capitalize">Lorina williams </a>
+                            </h6>
+                            <a href="cast-category.html" class="font-size-14 text-decoration-none text-capitalize text-body">actress</a>
+                        </div>
+                    </li>
+                    <li class="swiper-slide">
+                        <img src="{{asset('assets')}}/main/img/cast/04.html" alt="personality" class="img-fluid object-cover mb-4 rounded">
+                        <div class="text-center">
+                            <h6 class="mb-0">
+                                <a href="person-detail.html" class="font-size-14 text-decoration-none cast-title text-capitalize">Davina decorous</a>
+                            </h6>
+                            <a href="cast-category.html" class="font-size-14 text-decoration-none text-capitalize text-body">actress</a>
+                        </div>
+                    </li>
+                    <li class="swiper-slide">
+                        <img src="{{asset('assets')}}/main/img/cast/05.html" alt="personality" class="img-fluid object-cover mb-4 rounded">
+                        <div class="text-center">
+                            <h6 class="mb-0">
+                                <a href="person-detail.html" class="font-size-14 text-decoration-none cast-title text-capitalize">Thomas bailey</a>
+                            </h6>
+                            <a href="cast-category.html" class="font-size-14 text-decoration-none text-capitalize text-body">producer</a>
+                        </div>
+                    </li>
+                    <li class="swiper-slide">
+                        <img src="{{asset('assets')}}/main/img/cast/06.html" alt="personality" class="img-fluid object-cover mb-4 rounded">
+                        <div class="text-center">
+                            <h6 class="mb-0">
+                                <a href="person-detail.html" class="font-size-14 text-decoration-none cast-title text-capitalize">Kelly Reilly</a>
+                            </h6>
+                            <a href="cast-category.html" class="font-size-14 text-decoration-none text-capitalize text-body">actress</a>
+                        </div>
+                    </li>
+                    <li class="swiper-slide">
+                        <img src="{{asset('assets')}}/main/img/cast/07.html" alt="personality" class="img-fluid object-cover mb-4 rounded">
+                        <div class="text-center">
+                            <h6 class="mb-0">
+                                <a href="person-detail.html" class="font-size-14 text-decoration-none cast-title text-capitalize">smith Jonas</a>
+                            </h6>
+                            <a href="cast-category.html" class="font-size-14 text-decoration-none text-capitalize text-body">director</a>
+                        </div>
+                    </li>
+                    <li class="swiper-slide">
+                        <img src="{{asset('assets')}}/main/img/cast/08.html" alt="personality" class="img-fluid object-cover mb-4 rounded">
+                        <div class="text-center">
+                            <h6 class="mb-0">
+                                <a href="person-detail.html" class="font-size-14 text-decoration-none cast-title text-capitalize">angel louis</a>
+                            </h6>
+                            <a href="cast-category.html" class="font-size-14 text-decoration-none text-capitalize text-body">producer</a>
+                        </div>
+                    </li>
+                    <li class="swiper-slide">
+                        <img src="{{asset('assets')}}/main/img/cast/09.html" alt="personality" class="img-fluid object-cover mb-4 rounded">
+                        <div class="text-center">
+                            <h6 class="mb-0">
+                                <a href="person-detail.html" class="font-size-14 text-decoration-none cast-title text-capitalize">Millar joseph</a>
+                            </h6>
+                            <a href="cast-category.html" class="font-size-14 text-decoration-none text-capitalize text-body">actor</a>
+                        </div>
+                    </li>
+                    <li class="swiper-slide">
+                        <img src="{{asset('assets')}}/main/img/cast/10.html" alt="personality" class="img-fluid object-cover mb-4 rounded">
+                        <div class="text-center">
+                            <h6 class="mb-0">
+                                <a href="person-detail.html" class="font-size-14 text-decoration-none cast-title text-capitalize">mark wilson</a>
+                            </h6>
+                            <a href="cast-category.html" class="font-size-14 text-decoration-none text-capitalize text-body">actor</a>
+                        </div>
+                    </li>
+                    <li class="swiper-slide">
+                        <img src="{{asset('assets')}}/main/img/cast/11.html" alt="personality" class="img-fluid object-cover mb-4 rounded">
+                        <div class="text-center">
+                            <h6 class="mb-0">
+                                <a href="person-detail.html" class="font-size-14 text-decoration-none cast-title text-capitalize">Kelley walker</a>
+                            </h6>
+                            <a href="cast-category.html" class="font-size-14 text-decoration-none text-capitalize text-body">director</a>
+                        </div>
+                    </li>
+                    <li class="swiper-slide">
+                        <img src="{{asset('assets')}}/main/img/cast/12.html" alt="personality" class="img-fluid object-cover mb-4 rounded">
+                        <div class="text-center">
+                            <h6 class="mb-0">
+                                <a href="person-detail.html" class="font-size-14 text-decoration-none cast-title text-capitalize">Amy Sedaris</a>
+                            </h6>
+                            <a href="cast-category.html" class="font-size-14 text-decoration-none text-capitalize text-body">actress</a>
+                        </div>
+                    </li>
+                </ul>
+                <div class="swiper-button swiper-button-next"></div>
+                <div class="swiper-button swiper-button-prev"></div>
+            </div>
+        </section>
+    </div>
+</div>
+
+<div class="popular-movies-block">
+    <div class="container-fluid">
+        <section class="overflow-hidden">
+            <div class="d-flex align-items-center justify-content-between px-md-3 px-1 my-4">
+                <h5 class="main-title text-capitalize mb-0">popular movies</h5>
+                <a href="{{route('allmovies')}}" class="text-primary iq-view-all text-decoration-none flex-none">View All</a>
+            </div>
+            <div class="card-style-slider">
+                <div class="position-relative swiper swiper-card" data-slide="6" data-laptop="6" data-tab="3"
+                    data-mobile="2" data-mobile-sm="2" data-autoplay="false" data-loop="true" data-navigation="true"
+                    data-pagination="true">
+                    <ul class="p-0 swiper-wrapper m-0  list-inline">
+                        <li class="swiper-slide">
+                            <div class="iq-card card-hover">
+                                <div class="block-images position-relative w-100">
+                                    <div class="img-box w-100">
+                                        <a href="{{route('details')}}" class="position-absolute top-0 bottom-0 start-0 end-0"></a>
+                                        <img src="{{asset('assets')}}/main/img/movies/popular/01.html" alt="movie-card" class="img-fluid object-cover w-100 d-block border-0">
+                                    </div>
+                                    <div class="card-description with-transition">
+                                        <div class="cart-content">
+                                            <div class="content-left">
+                                                <h5 class="iq-title text-capitalize">
+                                                    <a href="{{route('details')}}">CRW</a>
+                                                </h5>
+                                                <div class="movie-time d-flex align-items-center my-2">
+                                                    <span class="movie-time-text font-normal">2hr : 12mins</span>
+                                                </div>
+                                            </div>
+                                            <div class="watchlist">
+                                                <a class="watch-list-not" href="playlist.html">
+                                                    <svg width="10" height="10" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="icon-10">
+                                                        <path d="M12 4V20M20 12H4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                                                    </svg>
+                                                    <span class="watchlist-label"> Watchlist </span>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="block-social-info align-items-center">
+                                        <ul class="p-0 m-0 d-flex gap-2 music-play-lists">
+                                            <li class="share position-relative d-flex align-items-center text-center mb-0">
+                                                <span class="w-100 h-100 d-inline-block bg-transparent">
+                                                    <i class="fas fa-share-alt"></i>
+                                                </span>
+                                                <div class="share-wrapper">
+                                                    <div class="share-boxs d-inline-block">
+                                                        <svg width="15" height="40" class="share-shape" viewBox="0 0 15 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M14.8842 40C6.82983 37.2868 1 29.3582 1 20C1 10.6418 6.82983 2.71323 14.8842 0H0V40H14.8842Z" fill="#191919"></path>
+                                                        </svg>
+                                                        <div class=" overflow-hidden">
+                                                            <a href="#" target="_blank">
+                                                                <i class="fab fa-facebook-f"></i>
+                                                            </a>
+                                                            <a href="#" target="_blank">
+                                                                <i class="fab fa-twitter"></i>
+                                                            </a>
+                                                            <a href="#">
+                                                                <i class="fas fa-link"></i>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="share position-relative d-flex align-items-center text-center mb-0">
+                                                <span class="w-100 h-100 d-inline-block bg-transparent">
+                                                    <i class="fa-regular fa-heart"></i>
+                                                </span>
+                                                <div class="share-wrapper">
+                                                    <div class="share-boxs d-inline-block">
+                                                        <svg width="15" height="40" class="share-shape" viewBox="0 0 15 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M14.8842 40C6.82983 37.2868 1 29.3582 1 20C1 10.6418 6.82983 2.71323 14.8842 0H0V40H14.8842Z" fill="#191919"></path>
+                                                        </svg>
+                                                        <div class=" overflow-hidden">
+                                                            <span>+51</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                        <div class="iq-button">
+                                            <a href="{{route('details')}}" class="btn text-uppercase position-relative rounded-circle">
+                                                <i class="fa-solid fa-play ms-0"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                        </li>
+                        <li class="swiper-slide">
+                            <div class="iq-card card-hover">
+                                <div class="block-images position-relative w-100">
+                                    <div class="img-box w-100">
+                                        <a href="{{route('details')}}" class="position-absolute top-0 bottom-0 start-0 end-0"></a>
+                                        <img src="{{asset('assets')}}/main/img/movies/popular/02.html" alt="movie-card" class="img-fluid object-cover w-100 d-block border-0">
+                                    </div>
+                                    <div class="card-description with-transition">
+                                        <div class="cart-content">
+                                            <div class="content-left">
+                                                <h5 class="iq-title text-capitalize">
+                                                    <a href="{{route('details')}}">Batte Wiire</a>
+                                                </h5>
+                                                <div class="movie-time d-flex align-items-center my-2">
+                                                    <span class="movie-time-text font-normal">1hr : 22mins</span>
+                                                </div>
+                                            </div>
+                                            <div class="watchlist">
+                                                <a class="watch-list-not" href="playlist.html">
+                                                    <svg width="10" height="10" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="icon-10">
+                                                        <path d="M12 4V20M20 12H4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                                                    </svg>
+                                                    <span class="watchlist-label"> Watchlist </span>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="block-social-info align-items-center">
+                                        <ul class="p-0 m-0 d-flex gap-2 music-play-lists">
+                                            <li class="share position-relative d-flex align-items-center text-center mb-0">
+                                                <span class="w-100 h-100 d-inline-block bg-transparent">
+                                                    <i class="fas fa-share-alt"></i>
+                                                </span>
+                                                <div class="share-wrapper">
+                                                    <div class="share-boxs d-inline-block">
+                                                        <svg width="15" height="40" class="share-shape" viewBox="0 0 15 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M14.8842 40C6.82983 37.2868 1 29.3582 1 20C1 10.6418 6.82983 2.71323 14.8842 0H0V40H14.8842Z" fill="#191919"></path>
+                                                        </svg>
+                                                        <div class=" overflow-hidden">
+                                                            <a href="#" target="_blank">
+                                                                <i class="fab fa-facebook-f"></i>
+                                                            </a>
+                                                            <a href="#" target="_blank">
+                                                                <i class="fab fa-twitter"></i>
+                                                            </a>
+                                                            <a href="#">
+                                                                <i class="fas fa-link"></i>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="share position-relative d-flex align-items-center text-center mb-0">
+                                                <span class="w-100 h-100 d-inline-block bg-transparent">
+                                                    <i class="fa-regular fa-heart"></i>
+                                                </span>
+                                                <div class="share-wrapper">
+                                                    <div class="share-boxs d-inline-block">
+                                                        <svg width="15" height="40" class="share-shape" viewBox="0 0 15 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M14.8842 40C6.82983 37.2868 1 29.3582 1 20C1 10.6418 6.82983 2.71323 14.8842 0H0V40H14.8842Z" fill="#191919"></path>
+                                                        </svg>
+                                                        <div class=" overflow-hidden">
+                                                            <span>+51</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                        <div class="iq-button">
+                                            <a href="{{route('details')}}" class="btn text-uppercase position-relative rounded-circle">
+                                                <i class="fa-solid fa-play ms-0"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                        </li>
+                        <li class="swiper-slide">
+                            <div class="iq-card card-hover">
+                                <div class="block-images position-relative w-100">
+                                    <div class="img-box w-100">
+                                        <a href="{{route('details')}}" class="position-absolute top-0 bottom-0 start-0 end-0"></a>
+                                        <img src="{{asset('assets')}}/main/img/movies/popular/03.html" alt="movie-card" class="img-fluid object-cover w-100 d-block border-0">
+                                    </div>
+                                    <div class="card-description with-transition">
+                                        <div class="cart-content">
+                                            <div class="content-left">
+                                                <h5 class="iq-title text-capitalize">
+                                                    <a href="{{route('details')}}">Goal</a>
+                                                </h5>
+                                                <div class="movie-time d-flex align-items-center my-2">
+                                                    <span class="movie-time-text font-normal">2hr : 30mins</span>
+                                                </div>
+                                            </div>
+                                            <div class="watchlist">
+                                                <a class="watch-list-not" href="playlist.html">
+                                                    <svg width="10" height="10" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="icon-10">
+                                                        <path d="M12 4V20M20 12H4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                                                    </svg>
+                                                    <span class="watchlist-label"> Watchlist </span>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="block-social-info align-items-center">
+                                        <ul class="p-0 m-0 d-flex gap-2 music-play-lists">
+                                            <li class="share position-relative d-flex align-items-center text-center mb-0">
+                                                <span class="w-100 h-100 d-inline-block bg-transparent">
+                                                    <i class="fas fa-share-alt"></i>
+                                                </span>
+                                                <div class="share-wrapper">
+                                                    <div class="share-boxs d-inline-block">
+                                                        <svg width="15" height="40" class="share-shape" viewBox="0 0 15 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M14.8842 40C6.82983 37.2868 1 29.3582 1 20C1 10.6418 6.82983 2.71323 14.8842 0H0V40H14.8842Z" fill="#191919"></path>
+                                                        </svg>
+                                                        <div class=" overflow-hidden">
+                                                            <a href="#" target="_blank">
+                                                                <i class="fab fa-facebook-f"></i>
+                                                            </a>
+                                                            <a href="#" target="_blank">
+                                                                <i class="fab fa-twitter"></i>
+                                                            </a>
+                                                            <a href="#">
+                                                                <i class="fas fa-link"></i>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="share position-relative d-flex align-items-center text-center mb-0">
+                                                <span class="w-100 h-100 d-inline-block bg-transparent">
+                                                    <i class="fa-regular fa-heart"></i>
+                                                </span>
+                                                <div class="share-wrapper">
+                                                    <div class="share-boxs d-inline-block">
+                                                        <svg width="15" height="40" class="share-shape" viewBox="0 0 15 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M14.8842 40C6.82983 37.2868 1 29.3582 1 20C1 10.6418 6.82983 2.71323 14.8842 0H0V40H14.8842Z" fill="#191919"></path>
+                                                        </svg>
+                                                        <div class=" overflow-hidden">
+                                                            <span>+51</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                        <div class="iq-button">
+                                            <a href="{{route('details')}}" class="btn text-uppercase position-relative rounded-circle">
+                                                <i class="fa-solid fa-play ms-0"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                        </li>
+                        <li class="swiper-slide">
+                            <div class="iq-card card-hover">
+                                <div class="block-images position-relative w-100">
+                                    <div class="img-box w-100">
+                                        <a href="{{route('details')}}" class="position-absolute top-0 bottom-0 start-0 end-0"></a>
+                                        <img src="{{asset('assets')}}/main/img/movies/popular/04.html" alt="movie-card" class="img-fluid object-cover w-100 d-block border-0">
+                                    </div>
+                                    <div class="card-description with-transition">
+                                        <div class="cart-content">
+                                            <div class="content-left">
+                                                <h5 class="iq-title text-capitalize">
+                                                    <a href="{{route('details')}}">Dandacg</a>
+                                                </h5>
+                                                <div class="movie-time d-flex align-items-center my-2">
+                                                    <span class="movie-time-text font-normal">1hr : 30mins</span>
+                                                </div>
+                                            </div>
+                                            <div class="watchlist">
+                                                <a class="watch-list-not" href="playlist.html">
+                                                    <svg width="10" height="10" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="icon-10">
+                                                        <path d="M12 4V20M20 12H4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                                                    </svg>
+                                                    <span class="watchlist-label"> Watchlist </span>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="block-social-info align-items-center">
+                                        <ul class="p-0 m-0 d-flex gap-2 music-play-lists">
+                                            <li class="share position-relative d-flex align-items-center text-center mb-0">
+                                                <span class="w-100 h-100 d-inline-block bg-transparent">
+                                                    <i class="fas fa-share-alt"></i>
+                                                </span>
+                                                <div class="share-wrapper">
+                                                    <div class="share-boxs d-inline-block">
+                                                        <svg width="15" height="40" class="share-shape" viewBox="0 0 15 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M14.8842 40C6.82983 37.2868 1 29.3582 1 20C1 10.6418 6.82983 2.71323 14.8842 0H0V40H14.8842Z" fill="#191919"></path>
+                                                        </svg>
+                                                        <div class=" overflow-hidden">
+                                                            <a href="#" target="_blank">
+                                                                <i class="fab fa-facebook-f"></i>
+                                                            </a>
+                                                            <a href="#" target="_blank">
+                                                                <i class="fab fa-twitter"></i>
+                                                            </a>
+                                                            <a href="#">
+                                                                <i class="fas fa-link"></i>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="share position-relative d-flex align-items-center text-center mb-0">
+                                                <span class="w-100 h-100 d-inline-block bg-transparent">
+                                                    <i class="fa-regular fa-heart"></i>
+                                                </span>
+                                                <div class="share-wrapper">
+                                                    <div class="share-boxs d-inline-block">
+                                                        <svg width="15" height="40" class="share-shape" viewBox="0 0 15 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M14.8842 40C6.82983 37.2868 1 29.3582 1 20C1 10.6418 6.82983 2.71323 14.8842 0H0V40H14.8842Z" fill="#191919"></path>
+                                                        </svg>
+                                                        <div class=" overflow-hidden">
+                                                            <span>+51</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                        <div class="iq-button">
+                                            <a href="{{route('details')}}" class="btn text-uppercase position-relative rounded-circle">
+                                                <i class="fa-solid fa-play ms-0"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                        </li>
+                        <li class="swiper-slide">
+                            <div class="iq-card card-hover">
+                                <div class="block-images position-relative w-100">
+                                    <div class="img-box w-100">
+                                        <a href="{{route('details')}}" class="position-absolute top-0 bottom-0 start-0 end-0"></a>
+                                        <img src="{{asset('assets')}}/main/img/movies/popular/05.html" alt="movie-card" class="img-fluid object-cover w-100 d-block border-0">
+                                    </div>
+                                    <div class="card-description with-transition">
+                                        <div class="cart-content">
+                                            <div class="content-left">
+                                                <h5 class="iq-title text-capitalize">
+                                                    <a href="{{route('details')}}">mexcan</a>
+                                                </h5>
+                                                <div class="movie-time d-flex align-items-center my-2">
+                                                    <span class="movie-time-text font-normal">1hr : 30mins</span>
+                                                </div>
+                                            </div>
+                                            <div class="watchlist">
+                                                <a class="watch-list-not" href="playlist.html">
+                                                    <svg width="10" height="10" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="icon-10">
+                                                        <path d="M12 4V20M20 12H4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                                                    </svg>
+                                                    <span class="watchlist-label"> Watchlist </span>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="block-social-info align-items-center">
+                                        <ul class="p-0 m-0 d-flex gap-2 music-play-lists">
+                                            <li class="share position-relative d-flex align-items-center text-center mb-0">
+                                                <span class="w-100 h-100 d-inline-block bg-transparent">
+                                                    <i class="fas fa-share-alt"></i>
+                                                </span>
+                                                <div class="share-wrapper">
+                                                    <div class="share-boxs d-inline-block">
+                                                        <svg width="15" height="40" class="share-shape" viewBox="0 0 15 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M14.8842 40C6.82983 37.2868 1 29.3582 1 20C1 10.6418 6.82983 2.71323 14.8842 0H0V40H14.8842Z" fill="#191919"></path>
+                                                        </svg>
+                                                        <div class=" overflow-hidden">
+                                                            <a href="#" target="_blank">
+                                                                <i class="fab fa-facebook-f"></i>
+                                                            </a>
+                                                            <a href="#" target="_blank">
+                                                                <i class="fab fa-twitter"></i>
+                                                            </a>
+                                                            <a href="#">
+                                                                <i class="fas fa-link"></i>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="share position-relative d-flex align-items-center text-center mb-0">
+                                                <span class="w-100 h-100 d-inline-block bg-transparent">
+                                                    <i class="fa-regular fa-heart"></i>
+                                                </span>
+                                                <div class="share-wrapper">
+                                                    <div class="share-boxs d-inline-block">
+                                                        <svg width="15" height="40" class="share-shape" viewBox="0 0 15 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M14.8842 40C6.82983 37.2868 1 29.3582 1 20C1 10.6418 6.82983 2.71323 14.8842 0H0V40H14.8842Z" fill="#191919"></path>
+                                                        </svg>
+                                                        <div class=" overflow-hidden">
+                                                            <span>+51</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                        <div class="iq-button">
+                                            <a href="{{route('details')}}" class="btn text-uppercase position-relative rounded-circle">
+                                                <i class="fa-solid fa-play ms-0"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                        </li>
+                        <li class="swiper-slide">
+                            <div class="iq-card card-hover">
+                                <div class="block-images position-relative w-100">
+                                    <div class="img-box w-100">
+                                        <a href="{{route('details')}}" class="position-absolute top-0 bottom-0 start-0 end-0"></a>
+                                        <img src="{{asset('assets')}}/main/img/movies/popular/06.html" alt="movie-card" class="img-fluid object-cover w-100 d-block border-0">
+                                    </div>
+                                    <div class="card-description with-transition">
+                                        <div class="cart-content">
+                                            <div class="content-left">
+                                                <h5 class="iq-title text-capitalize">
+                                                    <a href="{{route('details')}}">oit moleld</a>
+                                                </h5>
+                                                <div class="movie-time d-flex align-items-center my-2">
+                                                    <span class="movie-time-text font-normal">1hr : 30mins</span>
+                                                </div>
+                                            </div>
+                                            <div class="watchlist">
+                                                <a class="watch-list-not" href="playlist.html">
+                                                    <svg width="10" height="10" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="icon-10">
+                                                        <path d="M12 4V20M20 12H4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                                                    </svg>
+                                                    <span class="watchlist-label"> Watchlist </span>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="block-social-info align-items-center">
+                                        <ul class="p-0 m-0 d-flex gap-2 music-play-lists">
+                                            <li class="share position-relative d-flex align-items-center text-center mb-0">
+                                                <span class="w-100 h-100 d-inline-block bg-transparent">
+                                                    <i class="fas fa-share-alt"></i>
+                                                </span>
+                                                <div class="share-wrapper">
+                                                    <div class="share-boxs d-inline-block">
+                                                        <svg width="15" height="40" class="share-shape" viewBox="0 0 15 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M14.8842 40C6.82983 37.2868 1 29.3582 1 20C1 10.6418 6.82983 2.71323 14.8842 0H0V40H14.8842Z" fill="#191919"></path>
+                                                        </svg>
+                                                        <div class=" overflow-hidden">
+                                                            <a href="#" target="_blank">
+                                                                <i class="fab fa-facebook-f"></i>
+                                                            </a>
+                                                            <a href="#" target="_blank">
+                                                                <i class="fab fa-twitter"></i>
+                                                            </a>
+                                                            <a href="#">
+                                                                <i class="fas fa-link"></i>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="share position-relative d-flex align-items-center text-center mb-0">
+                                                <span class="w-100 h-100 d-inline-block bg-transparent">
+                                                    <i class="fa-regular fa-heart"></i>
+                                                </span>
+                                                <div class="share-wrapper">
+                                                    <div class="share-boxs d-inline-block">
+                                                        <svg width="15" height="40" class="share-shape" viewBox="0 0 15 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M14.8842 40C6.82983 37.2868 1 29.3582 1 20C1 10.6418 6.82983 2.71323 14.8842 0H0V40H14.8842Z" fill="#191919"></path>
+                                                        </svg>
+                                                        <div class=" overflow-hidden">
+                                                            <span>+51</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                        <div class="iq-button">
+                                            <a href="{{route('details')}}" class="btn text-uppercase position-relative rounded-circle">
+                                                <i class="fa-solid fa-play ms-0"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                        </li>
+                        <li class="swiper-slide">
+                            <div class="iq-card card-hover">
+                                <div class="block-images position-relative w-100">
+                                    <div class="img-box w-100">
+                                        <a href="{{route('details')}}" class="position-absolute top-0 bottom-0 start-0 end-0"></a>
+                                        <img src="{{asset('assets')}}/main/img/movies/popular/07.html" alt="movie-card" class="img-fluid object-cover w-100 d-block border-0">
+                                    </div>
+                                    <div class="card-description with-transition">
+                                        <div class="cart-content">
+                                            <div class="content-left">
+                                                <h5 class="iq-title text-capitalize">
+                                                    <a href="{{route('details')}}">Dragon Fire</a>
+                                                </h5>
+                                                <div class="movie-time d-flex align-items-center my-2">
+                                                    <span class="movie-time-text font-normal">1hr : 30mins</span>
+                                                </div>
+                                            </div>
+                                            <div class="watchlist">
+                                                <a class="watch-list-not" href="playlist.html">
+                                                    <svg width="10" height="10" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="icon-10">
+                                                        <path d="M12 4V20M20 12H4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                                                    </svg>
+                                                    <span class="watchlist-label"> Watchlist </span>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="block-social-info align-items-center">
+                                        <ul class="p-0 m-0 d-flex gap-2 music-play-lists">
+                                            <li class="share position-relative d-flex align-items-center text-center mb-0">
+                                                <span class="w-100 h-100 d-inline-block bg-transparent">
+                                                    <i class="fas fa-share-alt"></i>
+                                                </span>
+                                                <div class="share-wrapper">
+                                                    <div class="share-boxs d-inline-block">
+                                                        <svg width="15" height="40" class="share-shape" viewBox="0 0 15 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M14.8842 40C6.82983 37.2868 1 29.3582 1 20C1 10.6418 6.82983 2.71323 14.8842 0H0V40H14.8842Z" fill="#191919"></path>
+                                                        </svg>
+                                                        <div class=" overflow-hidden">
+                                                            <a href="#" target="_blank">
+                                                                <i class="fab fa-facebook-f"></i>
+                                                            </a>
+                                                            <a href="#" target="_blank">
+                                                                <i class="fab fa-twitter"></i>
+                                                            </a>
+                                                            <a href="#">
+                                                                <i class="fas fa-link"></i>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="share position-relative d-flex align-items-center text-center mb-0">
+                                                <span class="w-100 h-100 d-inline-block bg-transparent">
+                                                    <i class="fa-regular fa-heart"></i>
+                                                </span>
+                                                <div class="share-wrapper">
+                                                    <div class="share-boxs d-inline-block">
+                                                        <svg width="15" height="40" class="share-shape" viewBox="0 0 15 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M14.8842 40C6.82983 37.2868 1 29.3582 1 20C1 10.6418 6.82983 2.71323 14.8842 0H0V40H14.8842Z" fill="#191919"></path>
+                                                        </svg>
+                                                        <div class=" overflow-hidden">
+                                                            <span>+51</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                        <div class="iq-button">
+                                            <a href="{{route('details')}}" class="btn text-uppercase position-relative rounded-circle">
+                                                <i class="fa-solid fa-play ms-0"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                        </li>
+                    </ul>
+                    <div class="swiper-button swiper-button-next"></div>
+                    <div class="swiper-button swiper-button-prev"></div>
+                </div>
+            </div>
+        </section>
+    </div>
+</div>
+
+<div class="tab-slider">
+    <div class="slider">
+        <div class="position-relative swiper swiper-card" data-slide="1" data-laptop="1" data-tab="1" data-mobile="1"
+            data-mobile-sm="1" data-autoplay="false" data-loop="false" data-navigation="true" data-pagination="true"
+            data-effect="fade">
+            <ul class="p-0 swiper-wrapper m-0 list-inline">
+                <li class="swiper-slide tab-slider-banner p-0">
+                    <div class="tab-slider-banner-images">
+                        <img src="{{asset('assets')}}/main/img/tab-slider/01.html" alt="tab-slider-background">
+                    </div>
+                    <div class="block-images position-relative w-100">
+                        <div class="container-fluid">
+                            <div class="row align-items-center min-vh-100 h-100 my-4">
+                                <div class="col-md-5 col-lg-5 col-xxl-5">
+                                    <div class="tab-left-details">
+                                        <div class="d-flex align-items-center gap-3 mb-4">
+                                            <a href="javascriptvoid(0)%3b.html"><img
+                                                    src="{{asset('assets')}}/main/img/movies/trending-label.html" class="img-fluid"
+                                                    alt=""></a>
+                                            <h5 class="text-gold"><span class="text-primary">#4</span> in Series Today</h5>
+                                        </div>
+                                        <h1 class="mb-2 fw-500 text-capitalize texture-text">The hunter</h1>
+                                        <p class="mb-0 font-size-14 line-count-2">Sand and dust storms (SDS), also known as
+                                            sirocco, haboob, yellow dust, white storms, and the harmattan, are a natural phenomenon
+                                            linked with land</p>
+                                        <ul class="d-flex align-items-center list-inline gap-2 movie-tag p-0 mt-3 mb-40">
+                                            <li class="font-size-18">Nov 2022</li>
+                                            <li class="font-size-18">Season 1</li>
+                                        </ul>
+                                        <div class="iq-button">
+                                            <a href="{{route('details')}}" class="btn text-uppercase position-relative">
+                                                <span class="button-text">stream
+                                                    now</span>
+                                                <i class="fa-solid fa-play"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-1 col-lg-2 col-xxl-3">
+                                </div>
+                                <div class="col-md-6 col-lg-5 col-xxl-4 mt-5 mt-md-0">
+                                    <div class="tab-block">
+                                        <h4 class="tab-title text-capitalize mb-0">All Episode</h4>
+                                        <div class="tab-bottom-bordered border-0">
+                                            <ul class="nav nav-tabs nav-pills mb-3 overflow-x-scroll" role="tablist">
+                                                <li class="nav-item" role="presentation">
+                                                    <button class="nav-link active" data-bs-toggle="pill"
+                                                        data-bs-target="#pills-series1-season-one" type="button" role="tab"
+                                                        aria-selected="false">Season 1</button>
+                                                </li>
+                                                <li class="nav-item" role="presentation">
+                                                    <button class="nav-link" data-bs-toggle="pill"
+                                                        data-bs-target="#pills-series1-season-two" type="button" role="tab"
+                                                        aria-selected="false">Season 2</button>
+                                                </li>
+                                                <li class="nav-item" role="presentation">
+                                                    <button class="nav-link" data-bs-toggle="pill"
+                                                        data-bs-target="#pills-series1-season-three" type="button" role="tab"
+                                                        aria-selected="false">Season 3</button>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="tab-content iq-tab-fade-up">
+                                            <div class="tab-pane fade show active" id="pills-series1-season-one" role="tabpanel"
+                                                tabindex="0">
+                                                <ul class="list-inline m-0 p-0">
+                                                    <li class="d-flex align-items-center gap-3">
+                                                        <div class="image-box flex-shrink-0">
+                                                            <img src="{{asset('assets')}}/main/img/tv-show/season/01.html" alt="image-icon"
+                                                                class="img-fluid rounded">
+                                                        </div>
+                                                        <div class="image-details">
+                                                            <h6 class="mb-1 text-capitalize"><span class="text-primary">E1</span> -
+                                                                Fire and Blood</h6>
+                                                            <small>45 mins</small>
+                                                        </div>
+                                                    </li>
+                                                    <li class="d-flex align-items-center gap-3">
+                                                        <div class="image-box flex-shrink-0">
+                                                            <img src="{{asset('assets')}}/main/img/tv-show/season/02.html" alt="image-icon"
+                                                                class="img-fluid rounded">
+                                                        </div>
+                                                        <div class="image-details">
+                                                            <h6 class="mb-1 text-capitalize"><span class="text-primary">E2</span> - The
+                                                                Pointy Endr</h6>
+                                                            <small>45 mins</small>
+                                                        </div>
+                                                    </li>
+                                                    <li class="d-flex align-items-center gap-3">
+                                                        <div class="image-box flex-shrink-0">
+                                                            <img src="{{asset('assets')}}/main/img/tv-show/season/03.html" alt="image-icon"
+                                                                class="img-fluid rounded">
+                                                        </div>
+                                                        <div class="image-details">
+                                                            <h6 class="mb-1 text-capitalize"><span class="text-primary">E3</span> - You
+                                                                Win or You Die</h6>
+                                                            <small>45 mins</small>
+                                                        </div>
+                                                    </li>
+                                                    <li class="d-flex align-items-center gap-3">
+                                                        <div class="image-box flex-shrink-0">
+                                                            <img src="{{asset('assets')}}/main/img/tv-show/season/04.html" alt="image-icon"
+                                                                class="img-fluid rounded">
+                                                        </div>
+                                                        <div class="image-details">
+                                                            <h6 class="mb-1 text-capitalize"><span class="text-primary">E4</span> - The
+                                                                Black Queen</h6>
+                                                            <small>45 mins</small>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <div class="tab-pane fade" id="pills-series1-season-two" role="tabpanel" tabindex="0">
+                                                <ul class="list-inline m-0 p-0">
+                                                    <li class="d-flex align-items-center gap-3">
+                                                        <div class="image-box flex-shrink-0">
+                                                            <img src="{{asset('assets')}}/main/img/tv-show/season/05.html" alt="image-icon"
+                                                                class="img-fluid rounded">
+                                                        </div>
+                                                        <div class="image-details">
+                                                            <h6 class="mb-1 text-capitalize"><span class="text-primary">E1</span> -
+                                                                Valar Morghulis</h6>
+                                                            <small>45 mins</small>
+                                                        </div>
+                                                    </li>
+                                                    <li class="d-flex align-items-center gap-3">
+                                                        <div class="image-box flex-shrink-0">
+                                                            <img src="{{asset('assets')}}/main/img/tv-show/season/06.html" alt="image-icon"
+                                                                class="img-fluid rounded">
+                                                        </div>
+                                                        <div class="image-details">
+                                                            <h6 class="mb-1 text-capitalize"><span class="text-primary">E2</span> -
+                                                                Blackwater</h6>
+                                                            <small>45 mins</small>
+                                                        </div>
+                                                    </li>
+                                                    <li class="d-flex align-items-center gap-3">
+                                                        <div class="image-box flex-shrink-0">
+                                                            <img src="{{asset('assets')}}/main/img/tv-show/season/07.html" alt="image-icon"
+                                                                class="img-fluid rounded">
+                                                        </div>
+                                                        <div class="image-details">
+                                                            <h6 class="mb-1 text-capitalize"><span class="text-primary">E3</span> - The
+                                                                Ghost of Harrenhal</h6>
+                                                            <small>45 mins</small>
+                                                        </div>
+                                                    </li>
+                                                    <li class="d-flex align-items-center gap-3">
+                                                        <div class="image-box flex-shrink-0">
+                                                            <img src="{{asset('assets')}}/main/img/tv-show/season/08.html" alt="image-icon"
+                                                                class="img-fluid rounded">
+                                                        </div>
+                                                        <div class="image-details">
+                                                            <h6 class="mb-1 text-capitalize"><span class="text-primary">E4</span> -
+                                                                Garden of Bones</h6>
+                                                            <small>45 mins</small>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <div class="tab-pane fade" id="pills-series1-season-three" role="tabpanel"
+                                                tabindex="0">
+                                                <ul class="list-inline m-0 p-0">
+                                                    <li class="d-flex align-items-center gap-3">
+                                                        <div class="image-box flex-shrink-0">
+                                                            <img src="{{asset('assets')}}/main/img/tv-show/season/09.html" alt="image-icon"
+                                                                class="img-fluid rounded">
+                                                        </div>
+                                                        <div class="image-details">
+                                                            <h6 class="mb-1 text-capitalize"><span class="text-primary">E1</span> -
+                                                                Mhysa</h6>
+                                                            <small>45 mins</small>
+                                                        </div>
+                                                    </li>
+                                                    <li class="d-flex align-items-center gap-3">
+                                                        <div class="image-box flex-shrink-0">
+                                                            <img src="{{asset('assets')}}/main/img/tv-show/season/10.html" alt="image-icon"
+                                                                class="img-fluid rounded">
+                                                        </div>
+                                                        <div class="image-details">
+                                                            <h6 class="mb-1 text-capitalize"><span class="text-primary">E2</span> -
+                                                                Second Sons</h6>
+                                                            <small>45 mins</small>
+                                                        </div>
+                                                    </li>
+                                                    <li class="d-flex align-items-center gap-3">
+                                                        <div class="image-box flex-shrink-0">
+                                                            <img src="{{asset('assets')}}/main/img/tv-show/season/11.html" alt="image-icon"
+                                                                class="img-fluid rounded">
+                                                        </div>
+                                                        <div class="image-details">
+                                                            <h6 class="mb-1 text-capitalize"><span class="text-primary">E3</span> - The
+                                                                Climb</h6>
+                                                            <small>45 mins</small>
+                                                        </div>
+                                                    </li>
+                                                    <li class="d-flex align-items-center gap-3">
+                                                        <div class="image-box flex-shrink-0">
+                                                            <img src="{{asset('assets')}}/main/img/tv-show/season/12.html" alt="image-icon"
+                                                                class="img-fluid rounded">
+                                                        </div>
+                                                        <div class="image-details">
+                                                            <h6 class="mb-1 text-capitalize"><span class="text-primary">E4</span> -
+                                                                Kissed by Fire</h6>
+                                                            <small>45 mins</small>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="swiper-slide tab-slider-banner p-0">
+                    <div class="tab-slider-banner-images">
+                        <img src="{{asset('assets')}}/main/img/tab-slider/02.html" alt="tab-slider-background">
+                    </div>
+                    <div class="block-images position-relative w-100">
+                        <div class="container-fluid">
+                            <div class="row align-items-center min-vh-100 h-100 my-4">
+                                <div class="col-md-5 col-lg-5 col-xxl-5">
+                                    <div class="tab-left-details">
+                                        <div class="d-flex align-items-center gap-3 mb-4">
+                                            <a href="javascriptvoid(0)%3b.html"><img
+                                                    src="{{asset('assets')}}/main/img/movies/trending-label.html" class="img-fluid"
+                                                    alt=""></a>
+                                            <h5 class="text-gold"><span class="text-primary">#4</span> in Series Yesterday</h5>
+                                        </div>
+                                        <h1 class="mb-2 fw-500 text-capitalize texture-text">Pirates of Dayones</h1>
+                                        <p class="mb-0 font-size-14 line-count-2">Sand and dust storms (SDS), also known as
+                                            sirocco, haboob, yellow dust, white storms, and the harmattan, are a natural phenomenon
+                                            linked with land</p>
+                                        <ul class="d-flex align-items-center list-inline gap-2 movie-tag p-0 mt-3 mb-40">
+                                            <li class="font-size-18">Nov 2022</li>
+                                            <li class="font-size-18">Season 1</li>
+                                        </ul>
+                                        <div class="iq-button">
+                                            <a href="{{route('details')}}" class="btn text-uppercase position-relative">
+                                                <span class="button-text">stream
+                                                    now</span>
+                                                <i class="fa-solid fa-play"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-1 col-lg-2 col-xxl-3">
+                                </div>
+                                <div class="col-md-6 col-lg-5 col-xxl-4 mt-5 mt-md-0">
+                                    <div class="tab-block">
+                                        <h4 class="tab-title text-capitalize mb-0">All Episode</h4>
+                                        <div class="tab-bottom-bordered border-0">
+                                            <ul class="nav nav-tabs nav-pills mb-3 overflow-x-scroll" role="tablist">
+                                                <li class="nav-item" role="presentation">
+                                                    <button class="nav-link active" data-bs-toggle="pill"
+                                                        data-bs-target="#pills-series2-season-one" type="button" role="tab"
+                                                        aria-selected="false">Season 1</button>
+                                                </li>
+                                                <li class="nav-item" role="presentation">
+                                                    <button class="nav-link" data-bs-toggle="pill"
+                                                        data-bs-target="#pills-series2-season-two" type="button" role="tab"
+                                                        aria-selected="false">Season 2</button>
+                                                </li>
+                                                <li class="nav-item" role="presentation">
+                                                    <button class="nav-link" data-bs-toggle="pill"
+                                                        data-bs-target="#pills-series2-season-three" type="button" role="tab"
+                                                        aria-selected="false">Season 3</button>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="tab-content iq-tab-fade-up">
+                                            <div class="tab-pane fade show active" id="pills-series2-season-one" role="tabpanel"
+                                                tabindex="0">
+                                                <ul class="list-inline m-0 p-0">
+                                                    <li class="d-flex align-items-center gap-3">
+                                                        <div class="image-box flex-shrink-0">
+                                                            <img src="{{asset('assets')}}/main/img/tv-show/season/13.html" alt="image-icon"
+                                                                class="img-fluid rounded">
+                                                        </div>
+                                                        <div class="image-details">
+                                                            <h6 class="mb-1 text-capitalize"><span class="text-primary">E1</span> - The
+                                                                Curse of the Black Pearl</h6>
+                                                            <small>45 mins</small>
+                                                        </div>
+                                                    </li>
+                                                    <li class="d-flex align-items-center gap-3">
+                                                        <div class="image-box flex-shrink-0">
+                                                            <img src="{{asset('assets')}}/main/img/tv-show/season/14.html" alt="image-icon"
+                                                                class="img-fluid rounded">
+                                                        </div>
+                                                        <div class="image-details">
+                                                            <h6 class="mb-1 text-capitalize"><span class="text-primary">E2</span> -
+                                                                Dead Man's Chest</h6>
+                                                            <small>45 mins</small>
+                                                        </div>
+                                                    </li>
+                                                    <li class="d-flex align-items-center gap-3">
+                                                        <div class="image-box flex-shrink-0">
+                                                            <img src="{{asset('assets')}}/main/img/tv-show/season/15.html" alt="image-icon"
+                                                                class="img-fluid rounded">
+                                                        </div>
+                                                        <div class="image-details">
+                                                            <h6 class="mb-1 text-capitalize"><span class="text-primary">E3</span> - At
+                                                                World's End</h6>
+                                                            <small>45 mins</small>
+                                                        </div>
+                                                    </li>
+                                                    <li class="d-flex align-items-center gap-3">
+                                                        <div class="image-box flex-shrink-0">
+                                                            <img src="{{asset('assets')}}/main/img/tv-show/season/16.html" alt="image-icon"
+                                                                class="img-fluid rounded">
+                                                        </div>
+                                                        <div class="image-details">
+                                                            <h6 class="mb-1 text-capitalize"><span class="text-primary">E4</span> - On
+                                                                Stranger Tides</h6>
+                                                            <small>45 mins</small>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <div class="tab-pane fade" id="pills-series2-season-two" role="tabpanel" tabindex="0">
+                                                <ul class="list-inline m-0 p-0">
+                                                    <li class="d-flex align-items-center gap-3">
+                                                        <div class="image-box flex-shrink-0">
+                                                            <img src="{{asset('assets')}}/main/img/tv-show/season/17.html" alt="image-icon"
+                                                                class="img-fluid rounded">
+                                                        </div>
+                                                        <div class="image-details">
+                                                            <h6 class="mb-1 text-capitalize"><span class="text-primary">E1</span> -
+                                                                Dead Men Tell No Tales</h6>
+                                                            <small>45 mins</small>
+                                                        </div>
+                                                    </li>
+                                                    <li class="d-flex align-items-center gap-3">
+                                                        <div class="image-box flex-shrink-0">
+                                                            <img src="{{asset('assets')}}/main/img/tv-show/season/18.html" alt="image-icon"
+                                                                class="img-fluid rounded">
+                                                        </div>
+                                                        <div class="image-details">
+                                                            <h6 class="mb-1 text-capitalize"><span class="text-primary">E2</span> -
+                                                                Tales of the Code</h6>
+                                                            <small>45 mins</small>
+                                                        </div>
+                                                    </li>
+                                                    <li class="d-flex align-items-center gap-3">
+                                                        <div class="image-box flex-shrink-0">
+                                                            <img src="{{asset('assets')}}/main/img/tv-show/season/19.html" alt="image-icon"
+                                                                class="img-fluid rounded">
+                                                        </div>
+                                                        <div class="image-details">
+                                                            <h6 class="mb-1 text-capitalize"><span class="text-primary">E3</span> -
+                                                                Romance Dawn</h6>
+                                                            <small>45 mins</small>
+                                                        </div>
+                                                    </li>
+                                                    <li class="d-flex align-items-center gap-3">
+                                                        <div class="image-box flex-shrink-0">
+                                                            <img src="{{asset('assets')}}/main/img/tv-show/season/20.html" alt="image-icon"
+                                                                class="img-fluid rounded">
+                                                        </div>
+                                                        <div class="image-details">
+                                                            <h6 class="mb-1 text-capitalize"><span class="text-primary">E4</span> - The
+                                                                Man in the Straw Hat</h6>
+                                                            <small>45 mins</small>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <div class="tab-pane fade" id="pills-series2-season-three" role="tabpanel"
+                                                tabindex="0">
+                                                <ul class="list-inline m-0 p-0">
+                                                    <li class="d-flex align-items-center gap-3">
+                                                        <div class="image-box flex-shrink-0">
+                                                            <img src="{{asset('assets')}}/main/img/tv-show/season/21.html" alt="image-icon"
+                                                                class="img-fluid rounded">
+                                                        </div>
+                                                        <div class="image-details">
+                                                            <h6 class="mb-1 text-capitalize"><span class="text-primary">E1</span> -
+                                                                Tell No Tales</h6>
+                                                            <small>45 mins</small>
+                                                        </div>
+                                                    </li>
+                                                    <li class="d-flex align-items-center gap-3">
+                                                        <div class="image-box flex-shrink-0">
+                                                            <img src="{{asset('assets')}}/main/img/tv-show/season/22.html" alt="image-icon"
+                                                                class="img-fluid rounded">
+                                                        </div>
+                                                        <div class="image-details">
+                                                            <h6 class="mb-1 text-capitalize"><span class="text-primary">E2</span> - The
+                                                                Pirates Are Coming</h6>
+                                                            <small>45 mins</small>
+                                                        </div>
+                                                    </li>
+                                                    <li class="d-flex align-items-center gap-3">
+                                                        <div class="image-box flex-shrink-0">
+                                                            <img src="{{asset('assets')}}/main/img/tv-show/season/23.html" alt="image-icon"
+                                                                class="img-fluid rounded">
+                                                        </div>
+                                                        <div class="image-details">
+                                                            <h6 class="mb-1 text-capitalize"><span class="text-primary">E3</span> - Eat
+                                                                at Baratie!</h6>
+                                                            <small>45 mins</small>
+                                                        </div>
+                                                    </li>
+                                                    <li class="d-flex align-items-center gap-3">
+                                                        <div class="image-box flex-shrink-0">
+                                                            <img src="{{asset('assets')}}/main/img/tv-show/season/24.html" alt="image-icon"
+                                                                class="img-fluid rounded">
+                                                        </div>
+                                                        <div class="image-details">
+                                                            <h6 class="mb-1 text-capitalize"><span class="text-primary">E4</span> - The
+                                                                Chef and the Chore Boy</h6>
+                                                            <small>45 mins</small>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="swiper-slide tab-slider-banner p-0">
+                    <div class="tab-slider-banner-images">
+                        <img src="{{asset('assets')}}/main/img/tab-slider/03.html" alt="tab-slider-background">
+                    </div>
+                    <div class="block-images position-relative w-100">
+                        <div class="container-fluid">
+                            <div class="row align-items-center min-vh-100 h-100 my-4">
+                                <div class="col-md-5 col-lg-5 col-xxl-5">
+                                    <div class="tab-left-details">
+                                        <div class="d-flex align-items-center gap-3 mb-4">
+                                            <a href="javascriptvoid(0)%3b.html"><img
+                                                    src="{{asset('assets')}}/main/img/movies/trending-label.html" class="img-fluid"
+                                                    alt=""></a>
+                                            <h5 class="text-gold"><span class="text-primary">#4</span> in Series tomorrow</h5>
+                                        </div>
+                                        <h1 class="mb-2 fw-500 text-capitalize texture-text">peaky blinders</h1>
+                                        <p class="mb-0 font-size-14 line-count-2">Sand and dust storms (SDS), also known as
+                                            sirocco, haboob, yellow dust, white storms, and the harmattan, are a natural phenomenon
+                                            linked with land</p>
+                                        <ul class="d-flex align-items-center list-inline gap-2 movie-tag p-0 mt-3 mb-40">
+                                            <li class="font-size-18">Nov 2022</li>
+                                            <li class="font-size-18">Season 1</li>
+                                        </ul>
+                                        <div class="iq-button">
+                                            <a href="{{route('details')}}" class="btn text-uppercase position-relative">
+                                                <span class="button-text">stream
+                                                    now</span>
+                                                <i class="fa-solid fa-play"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-1 col-lg-2 col-xxl-3">
+                                </div>
+                                <div class="col-md-6 col-lg-5 col-xxl-4 mt-5 mt-md-0">
+                                    <div class="tab-block">
+                                        <h4 class="tab-title text-capitalize mb-0">All Episode</h4>
+                                        <div class="tab-bottom-bordered border-0">
+                                            <ul class="nav nav-tabs nav-pills mb-3 overflow-x-scroll" role="tablist">
+                                                <li class="nav-item" role="presentation">
+                                                    <button class="nav-link active" data-bs-toggle="pill"
+                                                        data-bs-target="#pills-series3-season-one" type="button" role="tab"
+                                                        aria-selected="false">Season 1</button>
+                                                </li>
+                                                <li class="nav-item" role="presentation">
+                                                    <button class="nav-link" data-bs-toggle="pill"
+                                                        data-bs-target="#pills-series3-season-two" type="button" role="tab"
+                                                        aria-selected="false">Season 2</button>
+                                                </li>
+                                                <li class="nav-item" role="presentation">
+                                                    <button class="nav-link" data-bs-toggle="pill"
+                                                        data-bs-target="#pills-series3-season-three" type="button" role="tab"
+                                                        aria-selected="false">Season 3</button>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="tab-content iq-tab-fade-up">
+                                            <div class="tab-pane fade show active" id="pills-series3-season-one" role="tabpanel"
+                                                tabindex="0">
+                                                <ul class="list-inline m-0 p-0">
+                                                    <li class="d-flex align-items-center gap-3">
+                                                        <div class="image-box flex-shrink-0">
+                                                            <img src="{{asset('assets')}}/main/img/tv-show/season/25.html" alt="image-icon"
+                                                                class="img-fluid rounded">
+                                                        </div>
+                                                        <div class="image-details">
+                                                            <h6 class="mb-1 text-capitalize"><span class="text-primary">E1</span> -
+                                                                Episode 1</h6>
+                                                            <small>45 mins</small>
+                                                        </div>
+                                                    </li>
+                                                    <li class="d-flex align-items-center gap-3">
+                                                        <div class="image-box flex-shrink-0">
+                                                            <img src="{{asset('assets')}}/main/img/tv-show/season/26.html" alt="image-icon"
+                                                                class="img-fluid rounded">
+                                                        </div>
+                                                        <div class="image-details">
+                                                            <h6 class="mb-1 text-capitalize"><span class="text-primary">E2</span> -
+                                                                Episode 2</h6>
+                                                            <small>45 mins</small>
+                                                        </div>
+                                                    </li>
+                                                    <li class="d-flex align-items-center gap-3">
+                                                        <div class="image-box flex-shrink-0">
+                                                            <img src="{{asset('assets')}}/main/img/tv-show/season/27.html" alt="image-icon"
+                                                                class="img-fluid rounded">
+                                                        </div>
+                                                        <div class="image-details">
+                                                            <h6 class="mb-1 text-capitalize"><span class="text-primary">E3</span> -
+                                                                Episode 3</h6>
+                                                            <small>45 mins</small>
+                                                        </div>
+                                                    </li>
+                                                    <li class="d-flex align-items-center gap-3">
+                                                        <div class="image-box flex-shrink-0">
+                                                            <img src="{{asset('assets')}}/main/img/tv-show/season/28.html" alt="image-icon"
+                                                                class="img-fluid rounded">
+                                                        </div>
+                                                        <div class="image-details">
+                                                            <h6 class="mb-1 text-capitalize"><span class="text-primary">E4</span> -
+                                                                Episode 4</h6>
+                                                            <small>45 mins</small>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <div class="tab-pane fade" id="pills-series3-season-two" role="tabpanel" tabindex="0">
+                                                <ul class="list-inline m-0 p-0">
+                                                    <li class="d-flex align-items-center gap-3">
+                                                        <div class="image-box flex-shrink-0">
+                                                            <img src="{{asset('assets')}}/main/img/tv-show/season/29.html" alt="image-icon"
+                                                                class="img-fluid rounded">
+                                                        </div>
+                                                        <div class="image-details">
+                                                            <h6 class="mb-1 text-capitalize"><span class="text-primary">E1</span> -
+                                                                Episode 1</h6>
+                                                            <small>45 mins</small>
+                                                        </div>
+                                                    </li>
+                                                    <li class="d-flex align-items-center gap-3">
+                                                        <div class="image-box flex-shrink-0">
+                                                            <img src="{{asset('assets')}}/main/img/tv-show/season/30.html" alt="image-icon"
+                                                                class="img-fluid rounded">
+                                                        </div>
+                                                        <div class="image-details">
+                                                            <h6 class="mb-1 text-capitalize"><span class="text-primary">E2</span> -
+                                                                Episode 2</h6>
+                                                            <small>45 mins</small>
+                                                        </div>
+                                                    </li>
+                                                    <li class="d-flex align-items-center gap-3">
+                                                        <div class="image-box flex-shrink-0">
+                                                            <img src="{{asset('assets')}}/main/img/tv-show/season/31.html" alt="image-icon"
+                                                                class="img-fluid rounded">
+                                                        </div>
+                                                        <div class="image-details">
+                                                            <h6 class="mb-1 text-capitalize"><span class="text-primary">E3</span> -
+                                                                Episode 3</h6>
+                                                            <small>45 mins</small>
+                                                        </div>
+                                                    </li>
+                                                    <li class="d-flex align-items-center gap-3">
+                                                        <div class="image-box flex-shrink-0">
+                                                            <img src="{{asset('assets')}}/main/img/tv-show/season/32.html" alt="image-icon"
+                                                                class="img-fluid rounded">
+                                                        </div>
+                                                        <div class="image-details">
+                                                            <h6 class="mb-1 text-capitalize"><span class="text-primary">E4</span> -
+                                                                Episode 4</h6>
+                                                            <small>45 mins</small>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <div class="tab-pane fade" id="pills-series3-season-three" role="tabpanel"
+                                                tabindex="0">
+                                                <ul class="list-inline m-0 p-0">
+                                                    <li class="d-flex align-items-center gap-3">
+                                                        <div class="image-box flex-shrink-0">
+                                                            <img src="{{asset('assets')}}/main/img/tv-show/season/33.html" alt="image-icon"
+                                                                class="img-fluid rounded">
+                                                        </div>
+                                                        <div class="image-details">
+                                                            <h6 class="mb-1 text-capitalize"><span class="text-primary">E1</span> -
+                                                                Episode 1</h6>
+                                                            <small>45 mins</small>
+                                                        </div>
+                                                    </li>
+                                                    <li class="d-flex align-items-center gap-3">
+                                                        <div class="image-box flex-shrink-0">
+                                                            <img src="{{asset('assets')}}/main/img/tv-show/season/34.html" alt="image-icon"
+                                                                class="img-fluid rounded">
+                                                        </div>
+                                                        <div class="image-details">
+                                                            <h6 class="mb-1 text-capitalize"><span class="text-primary">E2</span> -
+                                                                Episode 2</h6>
+                                                            <small>45 mins</small>
+                                                        </div>
+                                                    </li>
+                                                    <li class="d-flex align-items-center gap-3">
+                                                        <div class="image-box flex-shrink-0">
+                                                            <img src="{{asset('assets')}}/main/img/tv-show/season/35.html" alt="image-icon"
+                                                                class="img-fluid rounded">
+                                                        </div>
+                                                        <div class="image-details">
+                                                            <h6 class="mb-1 text-capitalize"><span class="text-primary">E3</span> -
+                                                                Episode 3</h6>
+                                                            <small>45 mins</small>
+                                                        </div>
+                                                    </li>
+                                                    <li class="d-flex align-items-center gap-3">
+                                                        <div class="image-box flex-shrink-0">
+                                                            <img src="{{asset('assets')}}/main/img/tv-show/season/36.html" alt="image-icon"
+                                                                class="img-fluid rounded">
+                                                        </div>
+                                                        <div class="image-details">
+                                                            <h6 class="mb-1 text-capitalize"><span class="text-primary">E4</span> -
+                                                                Episode 4</h6>
+                                                            <small>45 mins</small>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+            <div class="joint-arrows">
+                <div class="swiper-button swiper-button-next"></div>
+                <div class="swiper-button swiper-button-prev"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="movie-geners-block">
+    <div class="container-fluid">
+        <div class="overflow-hidden">
+            <div class="d-flex align-items-center justify-content-between px-md-3 px-1 my-4">
+                <h5 class="main-title text-capitalize mb-0">movie geners</h5>
+                <a href="all-geners.html" class="text-primary iq-view-all text-decoration-none flex-none">View All</a>
+            </div>
+            <div class="card-style-slider">
+                <div class="position-relative swiper swiper-card" data-slide="6" data-laptop="6" data-tab="3"
+                    data-mobile="2" data-mobile-sm="2" data-autoplay="false" data-loop="true" data-navigation="true"
+                    data-pagination="true">
+                    <ul class="p-0 swiper-wrapper m-0  list-inline geners-card">
+                        <li class="swiper-slide">
+                            <div class="iq-card-geners card-hover-style-two">
+                                <div class="block-images position-relative w-100">
+                                    <div class="img-box rounded position-relative">
+                                        <img src="{{asset('assets')}}/main/img/genre/01.html" alt="geners-img" class="img-fluid object-cover w-100 rounded">
+                                        <div class="blog-description">
+                                            <h6 class="mb-0 iq-title"><a href="#" class="text-decoration-none text-capitalize line-count-2 p-2">action</a></h6>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="swiper-slide">
+                            <div class="iq-card-geners card-hover-style-two">
+                                <div class="block-images position-relative w-100">
+                                    <div class="img-box rounded position-relative">
+                                        <img src="{{asset('assets')}}/main/img/genre/02.html" alt="geners-img" class="img-fluid object-cover w-100 rounded">
+                                        <div class="blog-description">
+                                            <h6 class="mb-0 iq-title"><a href="#" class="text-decoration-none text-capitalize line-count-2 p-2">adventure</a></h6>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="swiper-slide">
+                            <div class="iq-card-geners card-hover-style-two">
+                                <div class="block-images position-relative w-100">
+                                    <div class="img-box rounded position-relative">
+                                        <img src="{{asset('assets')}}/main/img/genre/03.html" alt="geners-img" class="img-fluid object-cover w-100 rounded">
+                                        <div class="blog-description">
+                                            <h6 class="mb-0 iq-title"><a href="#" class="text-decoration-none text-capitalize line-count-2 p-2">animation</a></h6>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="swiper-slide">
+                            <div class="iq-card-geners card-hover-style-two">
+                                <div class="block-images position-relative w-100">
+                                    <div class="img-box rounded position-relative">
+                                        <img src="{{asset('assets')}}/main/img/genre/04.html" alt="geners-img" class="img-fluid object-cover w-100 rounded">
+                                        <div class="blog-description">
+                                            <h6 class="mb-0 iq-title"><a href="#" class="text-decoration-none text-capitalize line-count-2 p-2">Crime</a></h6>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="swiper-slide">
+                            <div class="iq-card-geners card-hover-style-two">
+                                <div class="block-images position-relative w-100">
+                                    <div class="img-box rounded position-relative">
+                                        <img src="{{asset('assets')}}/main/img/genre/05.html" alt="geners-img" class="img-fluid object-cover w-100 rounded">
+                                        <div class="blog-description">
+                                            <h6 class="mb-0 iq-title"><a href="#" class="text-decoration-none text-capitalize line-count-2 p-2">horror</a></h6>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="swiper-slide">
+                            <div class="iq-card-geners card-hover-style-two">
+                                <div class="block-images position-relative w-100">
+                                    <div class="img-box rounded position-relative">
+                                        <img src="{{asset('assets')}}/main/img/genre/06.html" alt="geners-img" class="img-fluid object-cover w-100 rounded">
+                                        <div class="blog-description">
+                                            <h6 class="mb-0 iq-title"><a href="#" class="text-decoration-none text-capitalize line-count-2 p-2">mystery</a></h6>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="swiper-slide">
+                            <div class="iq-card-geners card-hover-style-two">
+                                <div class="block-images position-relative w-100">
+                                    <div class="img-box rounded position-relative">
+                                        <img src="{{asset('assets')}}/main/img/genre/07.html" alt="geners-img" class="img-fluid object-cover w-100 rounded">
+                                        <div class="blog-description">
+                                            <h6 class="mb-0 iq-title"><a href="#" class="text-decoration-none text-capitalize line-count-2 p-2">romance</a></h6>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                    <div class="swiper-button swiper-button-next"></div>
+                    <div class="swiper-button swiper-button-prev"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="recommended-block">
+    <div class="container-fluid">
+        <section class="overflow-hidden">
+            <div class="d-flex align-items-center justify-content-between px-md-3 px-1 my-4">
+                <h5 class="main-title text-capitalize mb-0">recommended for you</h5>
+                <a href="{{route('allmovies')}}" class="text-primary iq-view-all text-decoration-none flex-none">View All</a>
+            </div>
+            <div class="card-style-slider">
+                <div class="position-relative swiper swiper-card" data-slide="6" data-laptop="6" data-tab="3"
+                    data-mobile="2" data-mobile-sm="2" data-autoplay="false" data-loop="true" data-navigation="true"
+                    data-pagination="true">
+                    <ul class="p-0 swiper-wrapper m-0  list-inline">
+                        <li class="swiper-slide">
+                            <div class="iq-card card-hover">
+                                <div class="block-images position-relative w-100">
+                                    <div class="img-box w-100">
+                                        <a href="{{route('details')}}" class="position-absolute top-0 bottom-0 start-0 end-0"></a>
+                                        <img src="{{asset('assets')}}/main/img/movies/recommended/01.html" alt="movie-card" class="img-fluid object-cover w-100 d-block border-0">
+                                    </div>
+                                    <div class="card-description with-transition">
+                                        <div class="cart-content">
+                                            <div class="content-left">
+                                                <h5 class="iq-title text-capitalize">
+                                                    <a href="{{route('details')}}">Giikre</a>
+                                                </h5>
+                                                <div class="movie-time d-flex align-items-center my-2">
+                                                    <span class="movie-time-text font-normal">2hr : 12mins</span>
+                                                </div>
+                                            </div>
+                                            <div class="watchlist">
+                                                <a class="watch-list-not" href="playlist.html">
+                                                    <svg width="10" height="10" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="icon-10">
+                                                        <path d="M12 4V20M20 12H4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                                                    </svg>
+                                                    <span class="watchlist-label"> Watchlist </span>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="block-social-info align-items-center">
+                                        <ul class="p-0 m-0 d-flex gap-2 music-play-lists">
+                                            <li class="share position-relative d-flex align-items-center text-center mb-0">
+                                                <span class="w-100 h-100 d-inline-block bg-transparent">
+                                                    <i class="fas fa-share-alt"></i>
+                                                </span>
+                                                <div class="share-wrapper">
+                                                    <div class="share-boxs d-inline-block">
+                                                        <svg width="15" height="40" class="share-shape" viewBox="0 0 15 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M14.8842 40C6.82983 37.2868 1 29.3582 1 20C1 10.6418 6.82983 2.71323 14.8842 0H0V40H14.8842Z" fill="#191919"></path>
+                                                        </svg>
+                                                        <div class=" overflow-hidden">
+                                                            <a href="#" target="_blank">
+                                                                <i class="fab fa-facebook-f"></i>
+                                                            </a>
+                                                            <a href="#" target="_blank">
+                                                                <i class="fab fa-twitter"></i>
+                                                            </a>
+                                                            <a href="#">
+                                                                <i class="fas fa-link"></i>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="share position-relative d-flex align-items-center text-center mb-0">
+                                                <span class="w-100 h-100 d-inline-block bg-transparent">
+                                                    <i class="fa-regular fa-heart"></i>
+                                                </span>
+                                                <div class="share-wrapper">
+                                                    <div class="share-boxs d-inline-block">
+                                                        <svg width="15" height="40" class="share-shape" viewBox="0 0 15 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M14.8842 40C6.82983 37.2868 1 29.3582 1 20C1 10.6418 6.82983 2.71323 14.8842 0H0V40H14.8842Z" fill="#191919"></path>
+                                                        </svg>
+                                                        <div class=" overflow-hidden">
+                                                            <span>+51</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                        <div class="iq-button">
+                                            <a href="{{route('details')}}" class="btn text-uppercase position-relative rounded-circle">
+                                                <i class="fa-solid fa-play ms-0"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                        </li>
+                        <li class="swiper-slide">
+                            <div class="iq-card card-hover">
+                                <div class="block-images position-relative w-100">
+                                    <div class="img-box w-100">
+                                        <a href="{{route('details')}}" class="position-absolute top-0 bottom-0 start-0 end-0"></a>
+                                        <img src="{{asset('assets')}}/main/img/movies/recommended/02.html" alt="movie-card" class="img-fluid object-cover w-100 d-block border-0">
+                                    </div>
+                                    <div class="card-description with-transition">
+                                        <div class="cart-content">
+                                            <div class="content-left">
+                                                <h5 class="iq-title text-capitalize">
+                                                    <a href="{{route('details')}}">Arrival</a>
+                                                </h5>
+                                                <div class="movie-time d-flex align-items-center my-2">
+                                                    <span class="movie-time-text font-normal">1hr : 22mins</span>
+                                                </div>
+                                            </div>
+                                            <div class="watchlist">
+                                                <a class="watch-list-not" href="playlist.html">
+                                                    <svg width="10" height="10" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="icon-10">
+                                                        <path d="M12 4V20M20 12H4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                                                    </svg>
+                                                    <span class="watchlist-label"> Watchlist </span>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="block-social-info align-items-center">
+                                        <ul class="p-0 m-0 d-flex gap-2 music-play-lists">
+                                            <li class="share position-relative d-flex align-items-center text-center mb-0">
+                                                <span class="w-100 h-100 d-inline-block bg-transparent">
+                                                    <i class="fas fa-share-alt"></i>
+                                                </span>
+                                                <div class="share-wrapper">
+                                                    <div class="share-boxs d-inline-block">
+                                                        <svg width="15" height="40" class="share-shape" viewBox="0 0 15 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M14.8842 40C6.82983 37.2868 1 29.3582 1 20C1 10.6418 6.82983 2.71323 14.8842 0H0V40H14.8842Z" fill="#191919"></path>
+                                                        </svg>
+                                                        <div class=" overflow-hidden">
+                                                            <a href="#" target="_blank">
+                                                                <i class="fab fa-facebook-f"></i>
+                                                            </a>
+                                                            <a href="#" target="_blank">
+                                                                <i class="fab fa-twitter"></i>
+                                                            </a>
+                                                            <a href="#">
+                                                                <i class="fas fa-link"></i>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="share position-relative d-flex align-items-center text-center mb-0">
+                                                <span class="w-100 h-100 d-inline-block bg-transparent">
+                                                    <i class="fa-regular fa-heart"></i>
+                                                </span>
+                                                <div class="share-wrapper">
+                                                    <div class="share-boxs d-inline-block">
+                                                        <svg width="15" height="40" class="share-shape" viewBox="0 0 15 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M14.8842 40C6.82983 37.2868 1 29.3582 1 20C1 10.6418 6.82983 2.71323 14.8842 0H0V40H14.8842Z" fill="#191919"></path>
+                                                        </svg>
+                                                        <div class=" overflow-hidden">
+                                                            <span>+51</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                        <div class="iq-button">
+                                            <a href="{{route('details')}}" class="btn text-uppercase position-relative rounded-circle">
+                                                <i class="fa-solid fa-play ms-0"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                        </li>
+                        <li class="swiper-slide">
+                            <div class="iq-card card-hover">
+                                <div class="block-images position-relative w-100">
+                                    <div class="img-box w-100">
+                                        <a href="{{route('details')}}" class="position-absolute top-0 bottom-0 start-0 end-0"></a>
+                                        <img src="{{asset('assets')}}/main/img/movies/recommended/03.html" alt="movie-card" class="img-fluid object-cover w-100 d-block border-0">
+                                    </div>
+                                    <div class="card-description with-transition">
+                                        <div class="cart-content">
+                                            <div class="content-left">
+                                                <h5 class="iq-title text-capitalize">
+                                                    <a href="{{route('details')}}">Pricess</a>
+                                                </h5>
+                                                <div class="movie-time d-flex align-items-center my-2">
+                                                    <span class="movie-time-text font-normal">1hr : 30mins</span>
+                                                </div>
+                                            </div>
+                                            <div class="watchlist">
+                                                <a class="watch-list-not" href="playlist.html">
+                                                    <svg width="10" height="10" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="icon-10">
+                                                        <path d="M12 4V20M20 12H4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                                                    </svg>
+                                                    <span class="watchlist-label"> Watchlist </span>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="block-social-info align-items-center">
+                                        <ul class="p-0 m-0 d-flex gap-2 music-play-lists">
+                                            <li class="share position-relative d-flex align-items-center text-center mb-0">
+                                                <span class="w-100 h-100 d-inline-block bg-transparent">
+                                                    <i class="fas fa-share-alt"></i>
+                                                </span>
+                                                <div class="share-wrapper">
+                                                    <div class="share-boxs d-inline-block">
+                                                        <svg width="15" height="40" class="share-shape" viewBox="0 0 15 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M14.8842 40C6.82983 37.2868 1 29.3582 1 20C1 10.6418 6.82983 2.71323 14.8842 0H0V40H14.8842Z" fill="#191919"></path>
+                                                        </svg>
+                                                        <div class=" overflow-hidden">
+                                                            <a href="#" target="_blank">
+                                                                <i class="fab fa-facebook-f"></i>
+                                                            </a>
+                                                            <a href="#" target="_blank">
+                                                                <i class="fab fa-twitter"></i>
+                                                            </a>
+                                                            <a href="#">
+                                                                <i class="fas fa-link"></i>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="share position-relative d-flex align-items-center text-center mb-0">
+                                                <span class="w-100 h-100 d-inline-block bg-transparent">
+                                                    <i class="fa-regular fa-heart"></i>
+                                                </span>
+                                                <div class="share-wrapper">
+                                                    <div class="share-boxs d-inline-block">
+                                                        <svg width="15" height="40" class="share-shape" viewBox="0 0 15 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M14.8842 40C6.82983 37.2868 1 29.3582 1 20C1 10.6418 6.82983 2.71323 14.8842 0H0V40H14.8842Z" fill="#191919"></path>
+                                                        </svg>
+                                                        <div class=" overflow-hidden">
+                                                            <span>+51</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                        <div class="iq-button">
+                                            <a href="{{route('details')}}" class="btn text-uppercase position-relative rounded-circle">
+                                                <i class="fa-solid fa-play ms-0"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                        </li>
+                        <li class="swiper-slide">
+                            <div class="iq-card card-hover">
+                                <div class="block-images position-relative w-100">
+                                    <div class="img-box w-100">
+                                        <a href="{{route('details')}}" class="position-absolute top-0 bottom-0 start-0 end-0"></a>
+                                        <img src="{{asset('assets')}}/main/img/movies/recommended/04.html" alt="movie-card" class="img-fluid object-cover w-100 d-block border-0">
+                                    </div>
+                                    <div class="card-description with-transition">
+                                        <div class="cart-content">
+                                            <div class="content-left">
+                                                <h5 class="iq-title text-capitalize">
+                                                    <a href="{{route('details')}}">Soull Meate</a>
+                                                </h5>
+                                                <div class="movie-time d-flex align-items-center my-2">
+                                                    <span class="movie-time-text font-normal">2hr : 30mins</span>
+                                                </div>
+                                            </div>
+                                            <div class="watchlist">
+                                                <a class="watch-list-not" href="playlist.html">
+                                                    <svg width="10" height="10" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="icon-10">
+                                                        <path d="M12 4V20M20 12H4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                                                    </svg>
+                                                    <span class="watchlist-label"> Watchlist </span>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="block-social-info align-items-center">
+                                        <ul class="p-0 m-0 d-flex gap-2 music-play-lists">
+                                            <li class="share position-relative d-flex align-items-center text-center mb-0">
+                                                <span class="w-100 h-100 d-inline-block bg-transparent">
+                                                    <i class="fas fa-share-alt"></i>
+                                                </span>
+                                                <div class="share-wrapper">
+                                                    <div class="share-boxs d-inline-block">
+                                                        <svg width="15" height="40" class="share-shape" viewBox="0 0 15 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M14.8842 40C6.82983 37.2868 1 29.3582 1 20C1 10.6418 6.82983 2.71323 14.8842 0H0V40H14.8842Z" fill="#191919"></path>
+                                                        </svg>
+                                                        <div class=" overflow-hidden">
+                                                            <a href="#" target="_blank">
+                                                                <i class="fab fa-facebook-f"></i>
+                                                            </a>
+                                                            <a href="#" target="_blank">
+                                                                <i class="fab fa-twitter"></i>
+                                                            </a>
+                                                            <a href="#">
+                                                                <i class="fas fa-link"></i>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="share position-relative d-flex align-items-center text-center mb-0">
+                                                <span class="w-100 h-100 d-inline-block bg-transparent">
+                                                    <i class="fa-regular fa-heart"></i>
+                                                </span>
+                                                <div class="share-wrapper">
+                                                    <div class="share-boxs d-inline-block">
+                                                        <svg width="15" height="40" class="share-shape" viewBox="0 0 15 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M14.8842 40C6.82983 37.2868 1 29.3582 1 20C1 10.6418 6.82983 2.71323 14.8842 0H0V40H14.8842Z" fill="#191919"></path>
+                                                        </svg>
+                                                        <div class=" overflow-hidden">
+                                                            <span>+51</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                        <div class="iq-button">
+                                            <a href="{{route('details')}}" class="btn text-uppercase position-relative rounded-circle">
+                                                <i class="fa-solid fa-play ms-0"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                        </li>
+                        <li class="swiper-slide">
+                            <div class="iq-card card-hover">
+                                <div class="block-images position-relative w-100">
+                                    <div class="img-box w-100">
+                                        <a href="{{route('details')}}" class="position-absolute top-0 bottom-0 start-0 end-0"></a>
+                                        <img src="{{asset('assets')}}/main/img/movies/recommended/05.html" alt="movie-card" class="img-fluid object-cover w-100 d-block border-0">
+                                    </div>
+                                    <div class="card-description with-transition">
+                                        <div class="cart-content">
+                                            <div class="content-left">
+                                                <h5 class="iq-title text-capitalize">
+                                                    <a href="{{route('details')}}">Dangacg</a>
+                                                </h5>
+                                                <div class="movie-time d-flex align-items-center my-2">
+                                                    <span class="movie-time-text font-normal">1hr : 45mins</span>
+                                                </div>
+                                            </div>
+                                            <div class="watchlist">
+                                                <a class="watch-list-not" href="playlist.html">
+                                                    <svg width="10" height="10" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="icon-10">
+                                                        <path d="M12 4V20M20 12H4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                                                    </svg>
+                                                    <span class="watchlist-label"> Watchlist </span>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="block-social-info align-items-center">
+                                        <ul class="p-0 m-0 d-flex gap-2 music-play-lists">
+                                            <li class="share position-relative d-flex align-items-center text-center mb-0">
+                                                <span class="w-100 h-100 d-inline-block bg-transparent">
+                                                    <i class="fas fa-share-alt"></i>
+                                                </span>
+                                                <div class="share-wrapper">
+                                                    <div class="share-boxs d-inline-block">
+                                                        <svg width="15" height="40" class="share-shape" viewBox="0 0 15 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M14.8842 40C6.82983 37.2868 1 29.3582 1 20C1 10.6418 6.82983 2.71323 14.8842 0H0V40H14.8842Z" fill="#191919"></path>
+                                                        </svg>
+                                                        <div class=" overflow-hidden">
+                                                            <a href="#" target="_blank">
+                                                                <i class="fab fa-facebook-f"></i>
+                                                            </a>
+                                                            <a href="#" target="_blank">
+                                                                <i class="fab fa-twitter"></i>
+                                                            </a>
+                                                            <a href="#">
+                                                                <i class="fas fa-link"></i>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="share position-relative d-flex align-items-center text-center mb-0">
+                                                <span class="w-100 h-100 d-inline-block bg-transparent">
+                                                    <i class="fa-regular fa-heart"></i>
+                                                </span>
+                                                <div class="share-wrapper">
+                                                    <div class="share-boxs d-inline-block">
+                                                        <svg width="15" height="40" class="share-shape" viewBox="0 0 15 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M14.8842 40C6.82983 37.2868 1 29.3582 1 20C1 10.6418 6.82983 2.71323 14.8842 0H0V40H14.8842Z" fill="#191919"></path>
+                                                        </svg>
+                                                        <div class=" overflow-hidden">
+                                                            <span>+51</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                        <div class="iq-button">
+                                            <a href="{{route('details')}}" class="btn text-uppercase position-relative rounded-circle">
+                                                <i class="fa-solid fa-play ms-0"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                        </li>
+                        <li class="swiper-slide">
+                            <div class="iq-card card-hover">
+                                <div class="block-images position-relative w-100">
+                                    <div class="img-box w-100">
+                                        <a href="{{route('details')}}" class="position-absolute top-0 bottom-0 start-0 end-0"></a>
+                                        <img src="{{asset('assets')}}/main/img/movies/recommended/06.html" alt="movie-card" class="img-fluid object-cover w-100 d-block border-0">
+                                    </div>
+                                    <div class="card-description with-transition">
+                                        <div class="cart-content">
+                                            <div class="content-left">
+                                                <h5 class="iq-title text-capitalize">
+                                                    <a href="{{route('details')}}">crcikeft</a>
+                                                </h5>
+                                                <div class="movie-time d-flex align-items-center my-2">
+                                                    <span class="movie-time-text font-normal">2hr : 25mins</span>
+                                                </div>
+                                            </div>
+                                            <div class="watchlist">
+                                                <a class="watch-list-not" href="playlist.html">
+                                                    <svg width="10" height="10" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="icon-10">
+                                                        <path d="M12 4V20M20 12H4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                                                    </svg>
+                                                    <span class="watchlist-label"> Watchlist </span>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="block-social-info align-items-center">
+                                        <ul class="p-0 m-0 d-flex gap-2 music-play-lists">
+                                            <li class="share position-relative d-flex align-items-center text-center mb-0">
+                                                <span class="w-100 h-100 d-inline-block bg-transparent">
+                                                    <i class="fas fa-share-alt"></i>
+                                                </span>
+                                                <div class="share-wrapper">
+                                                    <div class="share-boxs d-inline-block">
+                                                        <svg width="15" height="40" class="share-shape" viewBox="0 0 15 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M14.8842 40C6.82983 37.2868 1 29.3582 1 20C1 10.6418 6.82983 2.71323 14.8842 0H0V40H14.8842Z" fill="#191919"></path>
+                                                        </svg>
+                                                        <div class=" overflow-hidden">
+                                                            <a href="#" target="_blank">
+                                                                <i class="fab fa-facebook-f"></i>
+                                                            </a>
+                                                            <a href="#" target="_blank">
+                                                                <i class="fab fa-twitter"></i>
+                                                            </a>
+                                                            <a href="#">
+                                                                <i class="fas fa-link"></i>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="share position-relative d-flex align-items-center text-center mb-0">
+                                                <span class="w-100 h-100 d-inline-block bg-transparent">
+                                                    <i class="fa-regular fa-heart"></i>
+                                                </span>
+                                                <div class="share-wrapper">
+                                                    <div class="share-boxs d-inline-block">
+                                                        <svg width="15" height="40" class="share-shape" viewBox="0 0 15 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M14.8842 40C6.82983 37.2868 1 29.3582 1 20C1 10.6418 6.82983 2.71323 14.8842 0H0V40H14.8842Z" fill="#191919"></path>
+                                                        </svg>
+                                                        <div class=" overflow-hidden">
+                                                            <span>+51</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                        <div class="iq-button">
+                                            <a href="{{route('details')}}" class="btn text-uppercase position-relative rounded-circle">
+                                                <i class="fa-solid fa-play ms-0"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                        </li>
+                        <li class="swiper-slide">
+                            <div class="iq-card card-hover">
+                                <div class="block-images position-relative w-100">
+                                    <div class="img-box w-100">
+                                        <a href="{{route('details')}}" class="position-absolute top-0 bottom-0 start-0 end-0"></a>
+                                        <img src="{{asset('assets')}}/main/img/movies/recommended/07.html" alt="movie-card" class="img-fluid object-cover w-100 d-block border-0">
+                                    </div>
+                                    <div class="card-description with-transition">
+                                        <div class="cart-content">
+                                            <div class="content-left">
+                                                <h5 class="iq-title text-capitalize">
+                                                    <a href="{{route('details')}}">Avengrs</a>
+                                                </h5>
+                                                <div class="movie-time d-flex align-items-center my-2">
+                                                    <span class="movie-time-text font-normal">1hr : 45mins</span>
+                                                </div>
+                                            </div>
+                                            <div class="watchlist">
+                                                <a class="watch-list-not" href="playlist.html">
+                                                    <svg width="10" height="10" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="icon-10">
+                                                        <path d="M12 4V20M20 12H4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                                                    </svg>
+                                                    <span class="watchlist-label"> Watchlist </span>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="block-social-info align-items-center">
+                                        <ul class="p-0 m-0 d-flex gap-2 music-play-lists">
+                                            <li class="share position-relative d-flex align-items-center text-center mb-0">
+                                                <span class="w-100 h-100 d-inline-block bg-transparent">
+                                                    <i class="fas fa-share-alt"></i>
+                                                </span>
+                                                <div class="share-wrapper">
+                                                    <div class="share-boxs d-inline-block">
+                                                        <svg width="15" height="40" class="share-shape" viewBox="0 0 15 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M14.8842 40C6.82983 37.2868 1 29.3582 1 20C1 10.6418 6.82983 2.71323 14.8842 0H0V40H14.8842Z" fill="#191919"></path>
+                                                        </svg>
+                                                        <div class=" overflow-hidden">
+                                                            <a href="#" target="_blank">
+                                                                <i class="fab fa-facebook-f"></i>
+                                                            </a>
+                                                            <a href="#" target="_blank">
+                                                                <i class="fab fa-twitter"></i>
+                                                            </a>
+                                                            <a href="#">
+                                                                <i class="fas fa-link"></i>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="share position-relative d-flex align-items-center text-center mb-0">
+                                                <span class="w-100 h-100 d-inline-block bg-transparent">
+                                                    <i class="fa-regular fa-heart"></i>
+                                                </span>
+                                                <div class="share-wrapper">
+                                                    <div class="share-boxs d-inline-block">
+                                                        <svg width="15" height="40" class="share-shape" viewBox="0 0 15 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M14.8842 40C6.82983 37.2868 1 29.3582 1 20C1 10.6418 6.82983 2.71323 14.8842 0H0V40H14.8842Z" fill="#191919"></path>
+                                                        </svg>
+                                                        <div class=" overflow-hidden">
+                                                            <span>+51</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                        <div class="iq-button">
+                                            <a href="{{route('details')}}" class="btn text-uppercase position-relative rounded-circle">
+                                                <i class="fa-solid fa-play ms-0"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                        </li>
+                    </ul>
+                    <div class="swiper-button swiper-button-next"></div>
+                    <div class="swiper-button swiper-button-prev"></div>
+                </div>
+            </div>
+        </section>
+    </div>
+</div>
+
+<div class="top-pics-block">
+    <div class="container-fluid">
+        <section class="overflow-hidden">
+            <div class="d-flex align-items-center justify-content-between px-md-3 px-1 my-4">
+                <h5 class="main-title text-capitalize mb-0">Top pics for you</h5>
+                <a href="{{route('allmovies')}}" class="text-primary iq-view-all text-decoration-none flex-none">View All</a>
+            </div>
+            <div class="card-style-slider">
+                <div class="position-relative swiper swiper-card" data-slide="6" data-laptop="6" data-tab="3"
+                    data-mobile="2" data-mobile-sm="2" data-autoplay="false" data-loop="true" data-navigation="true"
+                    data-pagination="true">
+                    <ul class="p-0 swiper-wrapper m-0  list-inline">
+                        <li class="swiper-slide">
+                            <div class="iq-card card-hover">
+                                <div class="block-images position-relative w-100">
+                                    <div class="img-box w-100">
+                                        <a href="{{route('details')}}" class="position-absolute top-0 bottom-0 start-0 end-0"></a>
+                                        <img src="{{asset('assets')}}/main/img/movies/top-picks/01.html" alt="movie-card" class="img-fluid object-cover w-100 d-block border-0">
+                                    </div>
+                                    <div class="card-description with-transition">
+                                        <div class="cart-content">
+                                            <div class="content-left">
+                                                <h5 class="iq-title text-capitalize">
+                                                    <a href="{{route('details')}}">Frzzen</a>
+                                                </h5>
+                                                <div class="movie-time d-flex align-items-center my-2">
+                                                    <span class="movie-time-text font-normal">2hr : 12mins</span>
+                                                </div>
+                                            </div>
+                                            <div class="watchlist">
+                                                <a class="watch-list-not" href="playlist.html">
+                                                    <svg width="10" height="10" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="icon-10">
+                                                        <path d="M12 4V20M20 12H4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                                                    </svg>
+                                                    <span class="watchlist-label"> Watchlist </span>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="block-social-info align-items-center">
+                                        <ul class="p-0 m-0 d-flex gap-2 music-play-lists">
+                                            <li class="share position-relative d-flex align-items-center text-center mb-0">
+                                                <span class="w-100 h-100 d-inline-block bg-transparent">
+                                                    <i class="fas fa-share-alt"></i>
+                                                </span>
+                                                <div class="share-wrapper">
+                                                    <div class="share-boxs d-inline-block">
+                                                        <svg width="15" height="40" class="share-shape" viewBox="0 0 15 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M14.8842 40C6.82983 37.2868 1 29.3582 1 20C1 10.6418 6.82983 2.71323 14.8842 0H0V40H14.8842Z" fill="#191919"></path>
+                                                        </svg>
+                                                        <div class=" overflow-hidden">
+                                                            <a href="#" target="_blank">
+                                                                <i class="fab fa-facebook-f"></i>
+                                                            </a>
+                                                            <a href="#" target="_blank">
+                                                                <i class="fab fa-twitter"></i>
+                                                            </a>
+                                                            <a href="#">
+                                                                <i class="fas fa-link"></i>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="share position-relative d-flex align-items-center text-center mb-0">
+                                                <span class="w-100 h-100 d-inline-block bg-transparent">
+                                                    <i class="fa-regular fa-heart"></i>
+                                                </span>
+                                                <div class="share-wrapper">
+                                                    <div class="share-boxs d-inline-block">
+                                                        <svg width="15" height="40" class="share-shape" viewBox="0 0 15 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M14.8842 40C6.82983 37.2868 1 29.3582 1 20C1 10.6418 6.82983 2.71323 14.8842 0H0V40H14.8842Z" fill="#191919"></path>
+                                                        </svg>
+                                                        <div class=" overflow-hidden">
+                                                            <span>+51</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                        <div class="iq-button">
+                                            <a href="{{route('details')}}" class="btn text-uppercase position-relative rounded-circle">
+                                                <i class="fa-solid fa-play ms-0"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+
+                        </li>
+                        <li class="swiper-slide">
+                            <div class="iq-card card-hover">
+                                <div class="block-images position-relative w-100">
+                                    <div class="img-box w-100">
+                                        <a href="{{route('details')}}" class="position-absolute top-0 bottom-0 start-0 end-0"></a>
+                                        <img src="{{asset('assets')}}/main/img/movies/top-picks/02.html" alt="movie-card" class="img-fluid object-cover w-100 d-block border-0">
+                                    </div>
+                                    <div class="card-description with-transition">
+                                        <div class="cart-content">
+                                            <div class="content-left">
+                                                <h5 class="iq-title text-capitalize">
+                                                    <a href="{{route('details')}}">The Crew</a>
+                                                </h5>
+                                                <div class="movie-time d-flex align-items-center my-2">
+                                                    <span class="movie-time-text font-normal">1hr : 22mins</span>
+                                                </div>
+                                            </div>
+                                            <div class="watchlist">
+                                                <a class="watch-list-not" href="playlist.html">
+                                                    <svg width="10" height="10" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="icon-10">
+                                                        <path d="M12 4V20M20 12H4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                                                    </svg>
+                                                    <span class="watchlist-label"> Watchlist </span>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="block-social-info align-items-center">
+                                        <ul class="p-0 m-0 d-flex gap-2 music-play-lists">
+                                            <li class="share position-relative d-flex align-items-center text-center mb-0">
+                                                <span class="w-100 h-100 d-inline-block bg-transparent">
+                                                    <i class="fas fa-share-alt"></i>
+                                                </span>
+                                                <div class="share-wrapper">
+                                                    <div class="share-boxs d-inline-block">
+                                                        <svg width="15" height="40" class="share-shape" viewBox="0 0 15 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M14.8842 40C6.82983 37.2868 1 29.3582 1 20C1 10.6418 6.82983 2.71323 14.8842 0H0V40H14.8842Z" fill="#191919"></path>
+                                                        </svg>
+                                                        <div class=" overflow-hidden">
+                                                            <a href="#" target="_blank">
+                                                                <i class="fab fa-facebook-f"></i>
+                                                            </a>
+                                                            <a href="#" target="_blank">
+                                                                <i class="fab fa-twitter"></i>
+                                                            </a>
+                                                            <a href="#">
+                                                                <i class="fas fa-link"></i>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="share position-relative d-flex align-items-center text-center mb-0">
+                                                <span class="w-100 h-100 d-inline-block bg-transparent">
+                                                    <i class="fa-regular fa-heart"></i>
+                                                </span>
+                                                <div class="share-wrapper">
+                                                    <div class="share-boxs d-inline-block">
+                                                        <svg width="15" height="40" class="share-shape" viewBox="0 0 15 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M14.8842 40C6.82983 37.2868 1 29.3582 1 20C1 10.6418 6.82983 2.71323 14.8842 0H0V40H14.8842Z" fill="#191919"></path>
+                                                        </svg>
+                                                        <div class=" overflow-hidden">
+                                                            <span>+51</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                        <div class="iq-button">
+                                            <a href="{{route('details')}}" class="btn text-uppercase position-relative rounded-circle">
+                                                <i class="fa-solid fa-play ms-0"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+
+                        </li>
+                        <li class="swiper-slide">
+                            <div class="iq-card card-hover">
+                                <div class="block-images position-relative w-100">
+                                    <div class="img-box w-100">
+                                        <a href="{{route('details')}}" class="position-absolute top-0 bottom-0 start-0 end-0"></a>
+                                        <img src="{{asset('assets')}}/main/img/movies/top-picks/03.html" alt="movie-card" class="img-fluid object-cover w-100 d-block border-0">
+                                    </div>
+                                    <div class="card-description with-transition">
+                                        <div class="cart-content">
+                                            <div class="content-left">
+                                                <h5 class="iq-title text-capitalize">
+                                                    <a href="{{route('details')}}">Cromeus</a>
+                                                </h5>
+                                                <div class="movie-time d-flex align-items-center my-2">
+                                                    <span class="movie-time-text font-normal">1hr : 30mins</span>
+                                                </div>
+                                            </div>
+                                            <div class="watchlist">
+                                                <a class="watch-list-not" href="playlist.html">
+                                                    <svg width="10" height="10" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="icon-10">
+                                                        <path d="M12 4V20M20 12H4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                                                    </svg>
+                                                    <span class="watchlist-label"> Watchlist </span>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="block-social-info align-items-center">
+                                        <ul class="p-0 m-0 d-flex gap-2 music-play-lists">
+                                            <li class="share position-relative d-flex align-items-center text-center mb-0">
+                                                <span class="w-100 h-100 d-inline-block bg-transparent">
+                                                    <i class="fas fa-share-alt"></i>
+                                                </span>
+                                                <div class="share-wrapper">
+                                                    <div class="share-boxs d-inline-block">
+                                                        <svg width="15" height="40" class="share-shape" viewBox="0 0 15 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M14.8842 40C6.82983 37.2868 1 29.3582 1 20C1 10.6418 6.82983 2.71323 14.8842 0H0V40H14.8842Z" fill="#191919"></path>
+                                                        </svg>
+                                                        <div class=" overflow-hidden">
+                                                            <a href="#" target="_blank">
+                                                                <i class="fab fa-facebook-f"></i>
+                                                            </a>
+                                                            <a href="#" target="_blank">
+                                                                <i class="fab fa-twitter"></i>
+                                                            </a>
+                                                            <a href="#">
+                                                                <i class="fas fa-link"></i>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="share position-relative d-flex align-items-center text-center mb-0">
+                                                <span class="w-100 h-100 d-inline-block bg-transparent">
+                                                    <i class="fa-regular fa-heart"></i>
+                                                </span>
+                                                <div class="share-wrapper">
+                                                    <div class="share-boxs d-inline-block">
+                                                        <svg width="15" height="40" class="share-shape" viewBox="0 0 15 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M14.8842 40C6.82983 37.2868 1 29.3582 1 20C1 10.6418 6.82983 2.71323 14.8842 0H0V40H14.8842Z" fill="#191919"></path>
+                                                        </svg>
+                                                        <div class=" overflow-hidden">
+                                                            <span>+51</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                        <div class="iq-button">
+                                            <a href="{{route('details')}}" class="btn text-uppercase position-relative rounded-circle">
+                                                <i class="fa-solid fa-play ms-0"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+
+                        </li>
+                        <li class="swiper-slide">
+                            <div class="iq-card card-hover">
+                                <div class="block-images position-relative w-100">
+                                    <div class="img-box w-100">
+                                        <a href="{{route('details')}}" class="position-absolute top-0 bottom-0 start-0 end-0"></a>
+                                        <img src="{{asset('assets')}}/main/img/movies/top-picks/04.html" alt="movie-card" class="img-fluid object-cover w-100 d-block border-0">
+                                    </div>
+                                    <div class="card-description with-transition">
+                                        <div class="cart-content">
+                                            <div class="content-left">
+                                                <h5 class="iq-title text-capitalize">
+                                                    <a href="{{route('details')}}">Reodg</a>
+                                                </h5>
+                                                <div class="movie-time d-flex align-items-center my-2">
+                                                    <span class="movie-time-text font-normal">1hr : 30mins</span>
+                                                </div>
+                                            </div>
+                                            <div class="watchlist">
+                                                <a class="watch-list-not" href="playlist.html">
+                                                    <svg width="10" height="10" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="icon-10">
+                                                        <path d="M12 4V20M20 12H4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                                                    </svg>
+                                                    <span class="watchlist-label"> Watchlist </span>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="block-social-info align-items-center">
+                                        <ul class="p-0 m-0 d-flex gap-2 music-play-lists">
+                                            <li class="share position-relative d-flex align-items-center text-center mb-0">
+                                                <span class="w-100 h-100 d-inline-block bg-transparent">
+                                                    <i class="fas fa-share-alt"></i>
+                                                </span>
+                                                <div class="share-wrapper">
+                                                    <div class="share-boxs d-inline-block">
+                                                        <svg width="15" height="40" class="share-shape" viewBox="0 0 15 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M14.8842 40C6.82983 37.2868 1 29.3582 1 20C1 10.6418 6.82983 2.71323 14.8842 0H0V40H14.8842Z" fill="#191919"></path>
+                                                        </svg>
+                                                        <div class=" overflow-hidden">
+                                                            <a href="#" target="_blank">
+                                                                <i class="fab fa-facebook-f"></i>
+                                                            </a>
+                                                            <a href="#" target="_blank">
+                                                                <i class="fab fa-twitter"></i>
+                                                            </a>
+                                                            <a href="#">
+                                                                <i class="fas fa-link"></i>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="share position-relative d-flex align-items-center text-center mb-0">
+                                                <span class="w-100 h-100 d-inline-block bg-transparent">
+                                                    <i class="fa-regular fa-heart"></i>
+                                                </span>
+                                                <div class="share-wrapper">
+                                                    <div class="share-boxs d-inline-block">
+                                                        <svg width="15" height="40" class="share-shape" viewBox="0 0 15 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M14.8842 40C6.82983 37.2868 1 29.3582 1 20C1 10.6418 6.82983 2.71323 14.8842 0H0V40H14.8842Z" fill="#191919"></path>
+                                                        </svg>
+                                                        <div class=" overflow-hidden">
+                                                            <span>+51</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                        <div class="iq-button">
+                                            <a href="{{route('details')}}" class="btn text-uppercase position-relative rounded-circle">
+                                                <i class="fa-solid fa-play ms-0"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+
+                        </li>
+                        <li class="swiper-slide">
+                            <div class="iq-card card-hover">
+                                <div class="block-images position-relative w-100">
+                                    <div class="img-box w-100">
+                                        <a href="{{route('details')}}" class="position-absolute top-0 bottom-0 start-0 end-0"></a>
+                                        <img src="{{asset('assets')}}/main/img/movies/top-picks/05.html" alt="movie-card" class="img-fluid object-cover w-100 d-block border-0">
+                                    </div>
+                                    <div class="card-description with-transition">
+                                        <div class="cart-content">
+                                            <div class="content-left">
+                                                <h5 class="iq-title text-capitalize">
+                                                    <a href="{{route('details')}}">guiility</a>
+                                                </h5>
+                                                <div class="movie-time d-flex align-items-center my-2">
+                                                    <span class="movie-time-text font-normal">1hr : 30mins</span>
+                                                </div>
+                                            </div>
+                                            <div class="watchlist">
+                                                <a class="watch-list-not" href="playlist.html">
+                                                    <svg width="10" height="10" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="icon-10">
+                                                        <path d="M12 4V20M20 12H4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                                                    </svg>
+                                                    <span class="watchlist-label"> Watchlist </span>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="block-social-info align-items-center">
+                                        <ul class="p-0 m-0 d-flex gap-2 music-play-lists">
+                                            <li class="share position-relative d-flex align-items-center text-center mb-0">
+                                                <span class="w-100 h-100 d-inline-block bg-transparent">
+                                                    <i class="fas fa-share-alt"></i>
+                                                </span>
+                                                <div class="share-wrapper">
+                                                    <div class="share-boxs d-inline-block">
+                                                        <svg width="15" height="40" class="share-shape" viewBox="0 0 15 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M14.8842 40C6.82983 37.2868 1 29.3582 1 20C1 10.6418 6.82983 2.71323 14.8842 0H0V40H14.8842Z" fill="#191919"></path>
+                                                        </svg>
+                                                        <div class=" overflow-hidden">
+                                                            <a href="#" target="_blank">
+                                                                <i class="fab fa-facebook-f"></i>
+                                                            </a>
+                                                            <a href="#" target="_blank">
+                                                                <i class="fab fa-twitter"></i>
+                                                            </a>
+                                                            <a href="#">
+                                                                <i class="fas fa-link"></i>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="share position-relative d-flex align-items-center text-center mb-0">
+                                                <span class="w-100 h-100 d-inline-block bg-transparent">
+                                                    <i class="fa-regular fa-heart"></i>
+                                                </span>
+                                                <div class="share-wrapper">
+                                                    <div class="share-boxs d-inline-block">
+                                                        <svg width="15" height="40" class="share-shape" viewBox="0 0 15 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M14.8842 40C6.82983 37.2868 1 29.3582 1 20C1 10.6418 6.82983 2.71323 14.8842 0H0V40H14.8842Z" fill="#191919"></path>
+                                                        </svg>
+                                                        <div class=" overflow-hidden">
+                                                            <span>+51</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                        <div class="iq-button">
+                                            <a href="{{route('details')}}" class="btn text-uppercase position-relative rounded-circle">
+                                                <i class="fa-solid fa-play ms-0"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+
+                        </li>
+                        <li class="swiper-slide">
+                            <div class="iq-card card-hover">
+                                <div class="block-images position-relative w-100">
+                                    <div class="img-box w-100">
+                                        <a href="{{route('details')}}" class="position-absolute top-0 bottom-0 start-0 end-0"></a>
+                                        <img src="{{asset('assets')}}/main/img/movies/top-picks/06.html" alt="movie-card" class="img-fluid object-cover w-100 d-block border-0">
+                                    </div>
+                                    <div class="card-description with-transition">
+                                        <div class="cart-content">
+                                            <div class="content-left">
+                                                <h5 class="iq-title text-capitalize">
+                                                    <a href="{{route('details')}}">syyvcihonic</a>
+                                                </h5>
+                                                <div class="movie-time d-flex align-items-center my-2">
+                                                    <span class="movie-time-text font-normal">1hr : 30mins</span>
+                                                </div>
+                                            </div>
+                                            <div class="watchlist">
+                                                <a class="watch-list-not" href="playlist.html">
+                                                    <svg width="10" height="10" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="icon-10">
+                                                        <path d="M12 4V20M20 12H4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                                                    </svg>
+                                                    <span class="watchlist-label"> Watchlist </span>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="block-social-info align-items-center">
+                                        <ul class="p-0 m-0 d-flex gap-2 music-play-lists">
+                                            <li class="share position-relative d-flex align-items-center text-center mb-0">
+                                                <span class="w-100 h-100 d-inline-block bg-transparent">
+                                                    <i class="fas fa-share-alt"></i>
+                                                </span>
+                                                <div class="share-wrapper">
+                                                    <div class="share-boxs d-inline-block">
+                                                        <svg width="15" height="40" class="share-shape" viewBox="0 0 15 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M14.8842 40C6.82983 37.2868 1 29.3582 1 20C1 10.6418 6.82983 2.71323 14.8842 0H0V40H14.8842Z" fill="#191919"></path>
+                                                        </svg>
+                                                        <div class=" overflow-hidden">
+                                                            <a href="#" target="_blank">
+                                                                <i class="fab fa-facebook-f"></i>
+                                                            </a>
+                                                            <a href="#" target="_blank">
+                                                                <i class="fab fa-twitter"></i>
+                                                            </a>
+                                                            <a href="#">
+                                                                <i class="fas fa-link"></i>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="share position-relative d-flex align-items-center text-center mb-0">
+                                                <span class="w-100 h-100 d-inline-block bg-transparent">
+                                                    <i class="fa-regular fa-heart"></i>
+                                                </span>
+                                                <div class="share-wrapper">
+                                                    <div class="share-boxs d-inline-block">
+                                                        <svg width="15" height="40" class="share-shape" viewBox="0 0 15 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M14.8842 40C6.82983 37.2868 1 29.3582 1 20C1 10.6418 6.82983 2.71323 14.8842 0H0V40H14.8842Z" fill="#191919"></path>
+                                                        </svg>
+                                                        <div class=" overflow-hidden">
+                                                            <span>+51</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                        <div class="iq-button">
+                                            <a href="{{route('details')}}" class="btn text-uppercase position-relative rounded-circle">
+                                                <i class="fa-solid fa-play ms-0"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+
+                        </li>
+                        <li class="swiper-slide">
+                            <div class="iq-card card-hover">
+                                <div class="block-images position-relative w-100">
+                                    <div class="img-box w-100">
+                                        <a href="{{route('details')}}" class="position-absolute top-0 bottom-0 start-0 end-0"></a>
+                                        <img src="{{asset('assets')}}/main/img/movies/top-picks/07.html" alt="movie-card" class="img-fluid object-cover w-100 d-block border-0">
+                                    </div>
+                                    <div class="card-description with-transition">
+                                        <div class="cart-content">
+                                            <div class="content-left">
+                                                <h5 class="iq-title text-capitalize">
+                                                    <a href="{{route('details')}}">tittanc</a>
+                                                </h5>
+                                                <div class="movie-time d-flex align-items-center my-2">
+                                                    <span class="movie-time-text font-normal">1hr : 30mins</span>
+                                                </div>
+                                            </div>
+                                            <div class="watchlist">
+                                                <a class="watch-list-not" href="playlist.html">
+                                                    <svg width="10" height="10" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="icon-10">
+                                                        <path d="M12 4V20M20 12H4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                                                    </svg>
+                                                    <span class="watchlist-label"> Watchlist </span>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="block-social-info align-items-center">
+                                        <ul class="p-0 m-0 d-flex gap-2 music-play-lists">
+                                            <li class="share position-relative d-flex align-items-center text-center mb-0">
+                                                <span class="w-100 h-100 d-inline-block bg-transparent">
+                                                    <i class="fas fa-share-alt"></i>
+                                                </span>
+                                                <div class="share-wrapper">
+                                                    <div class="share-boxs d-inline-block">
+                                                        <svg width="15" height="40" class="share-shape" viewBox="0 0 15 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M14.8842 40C6.82983 37.2868 1 29.3582 1 20C1 10.6418 6.82983 2.71323 14.8842 0H0V40H14.8842Z" fill="#191919"></path>
+                                                        </svg>
+                                                        <div class=" overflow-hidden">
+                                                            <a href="#" target="_blank">
+                                                                <i class="fab fa-facebook-f"></i>
+                                                            </a>
+                                                            <a href="#" target="_blank">
+                                                                <i class="fab fa-twitter"></i>
+                                                            </a>
+                                                            <a href="#">
+                                                                <i class="fas fa-link"></i>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="share position-relative d-flex align-items-center text-center mb-0">
+                                                <span class="w-100 h-100 d-inline-block bg-transparent">
+                                                    <i class="fa-regular fa-heart"></i>
+                                                </span>
+                                                <div class="share-wrapper">
+                                                    <div class="share-boxs d-inline-block">
+                                                        <svg width="15" height="40" class="share-shape" viewBox="0 0 15 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M14.8842 40C6.82983 37.2868 1 29.3582 1 20C1 10.6418 6.82983 2.71323 14.8842 0H0V40H14.8842Z" fill="#191919"></path>
+                                                        </svg>
+                                                        <div class=" overflow-hidden">
+                                                            <span>+51</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                        <div class="iq-button">
+                                            <a href="{{route('details')}}" class="btn text-uppercase position-relative rounded-circle">
+                                                <i class="fa-solid fa-play ms-0"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+
+                        </li>
+                    </ul>
+                    <div class="swiper-button swiper-button-next"></div>
+                    <div class="swiper-button swiper-button-prev"></div>
+                </div>
+            </div>
+        </section>
+    </div>
+</div>
 @endsection

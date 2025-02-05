@@ -3587,11 +3587,15 @@ body::-webkit-scrollbar-thumb {
   margin-right: 20px;
   padding: 0 20px;
   border-radius: 8px;
-  border: 1px solid rgba(255,255,255,0.02);
-  background: linear-gradient(90deg, rgba(255,85,165,0.05) 0%, rgba(255,88,96,0.05) 100%);
+  border: none;
+  background: linear-gradient(90deg, rgba(0, 0, 0, 0.092) 0%, rgb(255, 65, 74) 100%);
+}
+.filter__select>option{
+  color: black;
 }
 .filter__select:focus {
   box-shadow: none;
+  cursor: pointer;
 }
 .filter__select:last-child {
   margin-right: 0;
@@ -3604,7 +3608,7 @@ body::-webkit-scrollbar-thumb {
   height: 44px;
   padding: 0;
   margin: 0 !important;
-  color: #fff;
+  color: #000000;
   font-size: 14px;
   font-family: 'Open Sans', sans-serif;
 }
@@ -3614,7 +3618,7 @@ body::-webkit-scrollbar-thumb {
   margin: 3px 0 0 6px;
 }
 .filter__select .ss-arrow path {
-  stroke: #fff;
+  stroke: #ff1313;
 }
 .filter__select .ss-search {
   padding: 0;
@@ -3649,7 +3653,7 @@ body::-webkit-scrollbar-thumb {
 .filter__select .ss-list .ss-option {
   font-size: 14px;
   font-family: 'Open Sans', sans-serif;
-  color: #fff;
+  color: #000000 !important;
   line-height: 38px;
   padding: 0;
   transition: 0.5s ease;
