@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\main\HomeController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,9 +14,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('main.index');
-});
+Route::get('/', [HomeController::class, 'index'])->name('index');
 Route::prefix('mvr')->group(function () {
     Route::get('/', function () {
         return view('main.index');
@@ -80,7 +79,6 @@ Route::prefix('mvr')->group(function () {
     Route::get('/reset-password', function () {
         return view('main.forgot_password');
     })->name('resetpassword');
-
 
     Route::get('/not-found', function () {
         return view('main.404');
