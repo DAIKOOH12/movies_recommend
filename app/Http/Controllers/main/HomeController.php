@@ -18,25 +18,26 @@ class HomeController extends Controller
     }
     public function index()
     {
-        // $new_user=new User();
-        // $new_user->user_id="user2";
-        // $new_user->username="truongpham";
-        // $new_user->email="abc@gmail.com";
-        // $new_user->password=Hash::make('123');
-        // $new_user->save();
+        $movies_banner = $this->getMovieBanner();
+        return view('main.index', compact('movies_banner'));
+    }
 
-        // $users=User::all();
+    public function getMovieBanner()
+    {
+        $genres = $this->moviesServices->getGenres()['genres'];
+        $genres = collect($genres)->sortBy('id')->values()->all();
 
-        // $movies_in_wishlist = WishlistMovies::select("*")
-        //     ->join("wishlists", "wishlists_movies.wishlist_id", "=", "wishlists.wishlist_id")->get();
+        $movies_banner = $this->moviesServices->getPopularMovies()['results'];
+        foreach ($movies_banner as &$movie) {
+            $movie = $this->moviesServices->getMovieDetails($movie['id']);
+        }
+        foreach ($movies_banner as &$movie) {
+            $movie_certification = $this->moviesServices->getMovieCertificate($movie['id']);
+            $movie['certificate'] = $movie_certification['results'][0]['iso_3166_1'];
+        }
+        $movies_banner = collect($movies_banner)->take(3)->values();
+        // dd($movies_banner);
 
-        $movies_in_wishlist = WishlistMovies::whereHas('wishlist', function ($query) {
-            $query->where('wishlist_id', 'wishlist1');
-        })->get();
-
-        $movies_popular = $this->moviesServices->getPopularMovies();
-
-        // dd($movies_popular);
-        return view('main.index');
+        return $movies_banner;
     }
 }
