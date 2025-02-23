@@ -1,6 +1,8 @@
 <?php
 
 use App\Http\Controllers\main\HomeController;
+use App\Http\Controllers\main\ListMoviesController;
+use App\Http\Controllers\main\MovieController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -16,21 +18,15 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', [HomeController::class, 'index'])->name('index');
 Route::prefix('mvr')->group(function () {
-    Route::get('/', function () {
-        return view('main.index');
-    })->name('index');
+    Route::get('/', [HomeController::class,'index'])->name('index');
 
     Route::get('/catalog-grid', function () {
         return view('main.catalog_grid');
     })->name('cataloggrid');
 
-    Route::get('/all-movies', function () {
-        return view('main.all_movies_list');
-    })->name('allmovies');
+    Route::get('/all-movies/{type?}/{key?}', [ListMoviesController::class,'index'])->name('allmovies');
 
-    Route::get('/details', function () {
-        return view('main.movie_detail');
-    })->name('details');
+    Route::get('/details/{any?}', [MovieController::class,'index'])->name('details');
 
     Route::get('/lists', function () {
         return view('main.movies_list');

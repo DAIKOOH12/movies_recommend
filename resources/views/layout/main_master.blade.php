@@ -106,7 +106,7 @@
                                         <!--Logo -->
                                         <div class="logo-default">
                                             <a class="navbar-brand text-primary" href="{{route('index')}}">
-                                                <img class="img-fluid logo" src="{{asset('assets')}}/main/img/logo.html" loading="lazy" alt="streamit" />
+                                                <img class="img-fluid logo" src="{{asset('assets')}}/main/img/logo.jpg" loading="lazy" alt="streamit" />
                                             </a>
                                         </div>
                                         <div class="logo-hotstar">
@@ -152,7 +152,7 @@
                                                 <a class="nav-link " href="{{route('cataloggrid')}}"> Genres </a>
                                             </li>
                                             <li class="nav-item">
-                                                <a class="nav-link " href="{{route('allmovies')}}"> All Movies </a>
+                                                <a class="nav-link " href="{{route('allmovies')}}/list/all"> All Movies </a>
                                             </li>
                                             <li class="nav-item">
                                                 <a class="nav-link " href="{{route('actor')}}"> Casts </a>
@@ -315,7 +315,7 @@
                             <!--Logo -->
                             <div class="logo-default">
                                 <a class="navbar-brand text-primary" href="{{route('index')}}">
-                                    <img class="img-fluid logo" src="{{asset('assets')}}/main/img/logo.html" loading="lazy" alt="streamit" />
+                                    <img class="img-fluid logo" src="{{asset('assets')}}/main/img/logo.jpg" loading="lazy" alt="streamit" />
                                 </a>
                             </div>
                             <div class="logo-hotstar">
@@ -334,7 +334,7 @@
                                 </a>
                             </div>
                         </div>
-                        <p class="mb-4 font-size-14">Email us: <span class="text-white">customer@streamit.com</span>
+                        <p class="mb-4 font-size-14">Email us: <span class="text-white">customer@movierecommedy.com</span>
                         </p>
                         <p class="text-uppercase letter-spacing-1 font-size-14 mb-1">customer services</p>
                         <p class="mb-0 contact text-white">+ (480) 555-0103</p>
@@ -439,11 +439,11 @@
                                 <a href="{{route('yourwatchlist')}}"> Watch List </a>
                             </li>
                         </ul>
-                        <p class="font-size-14">© <span class="currentYear"></span> <span class="text-primary">STREAMIT</span>. All Rights Reserved. All videos and shows on this platform are trademarks of, and all related images and content are the property of, Streamit Inc. Duplication and copy of this is strictly prohibited.</p>
+                        <p class="font-size-14">© <span class="currentYear"></span> <span class="text-primary">MOVIE RECOMMENDY</span>. All Rights Reserved. All videos and shows on this platform are trademarks of, and all related images and content are the property of, MOVIE RECOMMENDY Inc. Duplication and copy of this is strictly prohibited.</p>
                     </div>
                     <div class="col-md-3"></div>
                     <div class="col-md-3">
-                        <h6 class="font-size-14 pb-1">Download Streamit Apps </h6>
+                        <h6 class="font-size-14 pb-1">Download MOVIE RECOMMENDY Apps </h6>
                         <div class="d-flex align-items-center">
                             <a class="app-image" href="#">
                                 <img src="{{asset('assets')}}/main/img/footer/google-play.html" loading="lazy" alt="play-store" />
