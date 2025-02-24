@@ -15,14 +15,20 @@ jobs:
     - name: Install Dependencies
       run: composer install -q --no-ansi --no-interaction --no-scripts --no-suggest --no-progress --prefer-dist
 
+    - name: Setup .env
+      run: |
+        if [ ! -f .env ]; then
+            cp .env.example .env
+        else
+            echo ".env file exists."
+        fi
+      shell: bash
+
     - name: Config Clearing
       run: php artisan config:clear
 
     - name: Cache Clearing
       run: php artisan cache:clear
-
-    - name: Generate Key
-      run: php artisan key:generate
 
     - name: 📂 Sync files
       uses: SamKirkland/FTP-Deploy-Action@4.0.0
