@@ -65,7 +65,7 @@
 					<div class="iq-card card-hover">
 						<div class="block-images position-relative w-100">
 							<div class="img-box w-100">
-								<a href="{{route('details')}}/{{ $item['id'] }}" class="position-absolute top-0 bottom-0 start-0 end-0"></a>
+								<a href="{{route('details')}}/{{ $item['id'] }}-{{ Str::slug($item['title']) }}" class="position-absolute top-0 bottom-0 start-0 end-0"></a>
 								<img src="{{ env('TMDB_URL') }}{{ $item['poster_path'] }}" alt="movie-card" class="img-fluid object-cover w-100 d-block border-0">
 							</div>
 							<div class="card-description with-transition">

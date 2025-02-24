@@ -46,7 +46,7 @@
                             </div>
                             <ul class="p-0 mt-2 list-inline d-flex flex-wrap movie-tag">
                                 @foreach($movie_detail['genres'] as $genre)
-                                <li class="trending-list"><a class="text-primary" href="{{route('allmovies')}}/genres/{{ $genre['id'] }}">{{ $genre['name'] }}</a></li>
+                                <li class="trending-list"><a class="text-primary" href="{{route('allmovies')}}/genres/{{ $genre['id'] }}-{{ Str::slug($genre['name']) }}">{{ $genre['name'] }}</a></li>
                                 @endforeach
                             </ul>
                             <div class="d-flex flex-wrap align-items-center text-white text-detail flex-wrap mb-4">
@@ -286,14 +286,14 @@
                             <div class="iq-card card-hover">
                                 <div class="block-images position-relative w-100">
                                     <div class="img-box w-100">
-                                        <a href="{{route('details')}}/{{ $recom['id'] }}" class="position-absolute top-0 bottom-0 start-0 end-0"></a>
+                                        <a href="{{route('details')}}/{{ $recom['id'] }}-{{ Str::slug($recom['title']) }}" class="position-absolute top-0 bottom-0 start-0 end-0"></a>
                                         <img src="https://image.tmdb.org/t/p/w1280{{ $recom['poster_path'] }}" alt="movie-card" class="img-fluid object-cover w-100 d-block border-0">
                                     </div>
                                     <div class="card-description with-transition">
                                         <div class="cart-content">
                                             <div class="content-left">
                                                 <h5 class="iq-title text-capitalize">
-                                                    <a href="{{route('details')}}/{{ $recom['id'] }}">{{ $recom['title'] }}</a>
+                                                    <a href="{{route('details')}}/{{ $recom['id'] }}-{{ Str::slug($recom['title']) }}">{{ $recom['title'] }}</a>
                                                 </h5>
                                             </div>
                                             <div class="watchlist">
@@ -348,7 +348,7 @@
                                             </li>
                                         </ul>
                                         <div class="iq-button">
-                                            <a href="{{route('details')}}" class="btn text-uppercase position-relative rounded-circle">
+                                            <a href="{{route('details')}}/{{ $recom['id'] }}-{{ Str::slug($recom['title']) }}" class="btn text-uppercase position-relative rounded-circle">
                                                 <i class="fa-solid fa-play ms-0"></i>
                                             </a>
                                         </div>
@@ -380,14 +380,14 @@
                             <div class="iq-card card-hover">
                                 <div class="block-images position-relative w-100">
                                     <div class="img-box w-100">
-                                        <a href="{{route('details')}}/{{ $rel['id'] }}" class="position-absolute top-0 bottom-0 start-0 end-0"></a>
+                                        <a href="{{route('details')}}/{{ $rel['id'] }}-{{ Str::slug($rel['title']) }}" class="position-absolute top-0 bottom-0 start-0 end-0"></a>
                                         <img src="https://image.tmdb.org/t/p/w1280{{ $rel['poster_path'] }}" alt="movie-card" class="img-fluid object-cover w-100 d-block border-0">
                                     </div>
                                     <div class="card-description with-transition">
                                         <div class="cart-content">
                                             <div class="content-left">
                                                 <h5 class="iq-title text-capitalize">
-                                                    <a href="{{route('details')}}/{{ $rel['id'] }}">{{ $rel['title'] }}</a>
+                                                    <a href="{{route('details')}}/{{ $rel['id'] }}-{{ Str::slug($rel['title']) }}">{{ $rel['title'] }}</a>
                                                 </h5>
                                             </div>
                                             <div class="watchlist">
@@ -442,7 +442,7 @@
                                             </li>
                                         </ul>
                                         <div class="iq-button">
-                                            <a href="{{route('details')}}" class="btn text-uppercase position-relative rounded-circle">
+                                            <a href="{{route('details')}}/{{ $rel['id'] }}-{{ Str::slug($rel['title']) }}" class="btn text-uppercase position-relative rounded-circle">
                                                 <i class="fa-solid fa-play ms-0"></i>
                                             </a>
                                         </div>

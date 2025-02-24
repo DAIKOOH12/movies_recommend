@@ -52,7 +52,7 @@
                                                 <ul class="p-0 mb-0 list-inline d-flex flex-wrap align-items-center movie-tag">
                                                     @foreach($movie['genres'] as $genre)
                                                     <li class="position-relative text-capitalize font-size-14 letter-spacing-1">
-                                                        <a href="{{route('allmovies')}}/genres/{{ $genre['id'] }}" class="text-decoration-none">{{ $genre['name'] }}</a>
+                                                        <a href="{{route('allmovies')}}/genres/{{ $genre['id'] }}-{{ Str::slug($genre['name']) }}" class="text-decoration-none">{{ $genre['name'] }}</a>
                                                     </li>
                                                     @endforeach
                                                 </ul>
@@ -91,7 +91,7 @@
                                         </div>
                                         <div class="RightAnimate-four">
                                             <div class="iq-button">
-                                                <a href="{{route('details')}}/{{ $movie['id'] }}" class="btn text-uppercase position-relative">
+                                                <a href="{{route('details')}}/{{ $movie['id'] }}-{{ Str::slug($movie['title']) }}" class="btn text-uppercase position-relative">
                                                     <span class="button-text">Details</span>
                                                     <i class="fa-solid fa-play"></i>
                                                 </a>
@@ -126,7 +126,7 @@
                         <div class="iq-top-ten-block">
                             <div class="block-image position-relative">
                                 <div class="img-box">
-                                    <a class="overly-images" href="{{route('details')}}/{{ $m['id'] }}">
+                                    <a class="overly-images" href="{{route('details')}}/{{ $m['id'] }}-{{ Str::slug($m['title']) }}">
                                         <img src="https://image.tmdb.org/t/p/w500{{ $m['poster_path'] }}" alt="movie-card" class="img-fluid object-cover">
                                     </a>
                                     <span class="top-ten-numbers texture-text">{{ $i }}</span>
@@ -161,14 +161,14 @@
                             <div class="iq-card card-hover">
                                 <div class="block-images position-relative w-100">
                                     <div class="img-box w-100">
-                                        <a href="{{route('details')}}/{{ $movie['id'] }}" class="position-absolute top-0 bottom-0 start-0 end-0"></a>
+                                        <a href="{{route('details')}}/{{ $movie['id'] }}-{{ Str::slug($movie['title']) }}" class="position-absolute top-0 bottom-0 start-0 end-0"></a>
                                         <img src="https://image.tmdb.org/t/p/w500{{ $movie['poster_path'] }}" alt="movie-card" class="img-fluid object-cover w-100 d-block border-0">
                                     </div>
                                     <div class="card-description with-transition">
                                         <div class="cart-content">
                                             <div class="content-left">
                                                 <h5 class="iq-title text-capitalize">
-                                                    <a href="{{route('details')}}/{{ $movie['id'] }}">{{ $movie['title'] }}</a>
+                                                    <a href="{{route('details')}}/{{ $movie['id'] }}-{{ Str::slug($movie['title']) }}">{{ $movie['title'] }}</a>
                                                 </h5>
                                                 <div class="movie-time d-flex align-items-center my-2">
                                                     <span class="movie-time-text font-normal">
@@ -265,7 +265,7 @@
                                         <img src="https://image.tmdb.org/t/p/w1280{{ $movie['backdrop_path'] }}" class="img-fluid" alt="" loading="lazy">
                                     </div>
                                     <div class="block-description">
-                                        <h6 class="iq-title"><a href="{{ route('details') }}/{{ $movie['id'] }}">{{ $movie['title'] }}</a></h6>
+                                        <h6 class="iq-title"><a href="{{ route('details') }}/{{ $movie['id'] }}-{{ Str::slug($movie['title']) }}">{{ $movie['title'] }}</a></h6>
                                         <div class="movie-time d-flex align-items-center my-2">
                                             <span class="text-body">
                                                 @php
@@ -297,7 +297,7 @@
                                     <ul class="ps-0 mb-0 mb-1 pb-1 list-inline d-flex flex-wrap align-items-center movie-tag">
                                         @foreach($movie['genres'] as $genre)
                                         <li class="position-relative text-capitalize font-size-14 letter-spacing-1">
-                                            <a href="{{route('allmovies')}}/{{ $genre['id'] }}" class="text-white text-decoration-none">{{ $genre['name'] }}</a>
+                                            <a href="{{route('allmovies')}}/genres/{{ $genre['id'] }}-{{ Str::slug($genre['name']) }}" class="text-white text-decoration-none">{{ $genre['name'] }}</a>
                                         </li>
                                         @endforeach
                                     </ul>
@@ -323,7 +323,7 @@
                                     </div>
                                     <p class="mt-0 mb-3 line-count-2">{{ $movie['overview'] }}</p>
                                     <div class="iq-button">
-                                        <a href="{{route('details')}}/{{ $movie['id'] }}" class="btn text-uppercase position-relative">
+                                        <a href="{{route('details')}}/{{ $movie['id'] }}-{{ Str::slug($movie['title']) }}" class="btn text-uppercase position-relative">
                                             <span class="button-text">Details</span>
                                             <i class="fa-solid fa-play"></i>
                                         </a>
@@ -354,9 +354,9 @@
                         <img src="https://image.tmdb.org/t/p/w1280{{ $cast['profile_path'] }}" alt="personality" class="img-fluid object-cover mb-4 rounded">
                         <div class="text-center">
                             <h6 class="mb-0">
-                                <a href="{{ route('myprofile') }}/{{ $cast['id'] }}" class="font-size-14 text-decoration-none cast-title text-capitalize">{{ $cast['name'] }}</a>
+                                <a href="{{ route('myprofile') }}/{{ $cast['id'] }}-{{ Str::slug($cast['name']) }}" class="font-size-14 text-decoration-none cast-title text-capitalize">{{ $cast['name'] }}</a>
                             </h6>
-                            <a href="{{ route('myprofile') }}/{{ $cast['id'] }}" class="font-size-14 text-decoration-none text-capitalize text-body">{{ $cast['known_for_department'] }}</a>
+                            <a href="{{ route('myprofile') }}/{{ $cast['id'] }}-{{ Str::slug($cast['name']) }}" class="font-size-14 text-decoration-none text-capitalize text-body">{{ $cast['known_for_department'] }}</a>
                         </div>
                     </li>
                     @endforeach
@@ -386,7 +386,7 @@
                                     <div class="img-box rounded position-relative">
                                         <img src="{{asset('assets')}}/main/img/genre/bgr_genre.jpg" alt="geners-img" class="img-fluid object-cover w-100 rounded">
                                         <div class="blog-description">
-                                            <h6 class="mb-0 iq-title"><a href="{{ route('cataloggrid') }}" class="text-decoration-none text-capitalize line-count-2 p-2">{{ $genre['name'] }}</a></h6>
+                                            <h6 class="mb-0 iq-title"><a href="{{ route('allmovies') }}/genres/{{ $genre['id'] }}-{{ Str::slug($genre['name']) }}" class="text-decoration-none text-capitalize line-count-2 p-2">{{ $genre['name'] }}</a></h6>
                                         </div>
                                     </div>
                                 </div>

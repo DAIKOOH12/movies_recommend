@@ -60,7 +60,6 @@ class ListMoviesController extends Controller
     public function getGenresListMovies($id)
     {
         $list = $this->movieAPIServices->getListMoviesWithGenres($id)['results'];
-        // dd($list);
         return $list;
     }
 }

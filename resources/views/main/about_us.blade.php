@@ -8,7 +8,7 @@
             <div class="col-lg-6 col-md-12">
                 <div class="title-box text-center">
                     <h2>Masterminds Team</h2>
-                    <p class="mb-0">Your Streamit is build by one of the best and well experienced web developers and an
+                    <p class="mb-0">Your Movie Recommedy is build by one of the best and well experienced web developers and an
                         awarded Envato Elite Author.</p>
                 </div>
             </div>
@@ -66,7 +66,7 @@
             </div>
             <div class="col-lg-6 col-md-7">
                 <h2 class="text-capitalize text-start">Contact Us Here</h2>
-                <p class="mb-0 text-start">Streamit is located in Los Angeles city and you can contact us at <a href="mailto:info@medyapim.com">hello@streamit.com</a> for any tech-related support and assistance. We love to hear from our Streamit users.</p>
+                <p class="mb-0 text-start">Movie Recommedy is located in Los Angeles city and you can contact us at <a href="mailto:info@medyapim.com">hello@mvr.com</a> for any tech-related support and assistance. We love to hear from our Movie Recommedy users.</p>
                 <div class="row mt-2 iq-rtl-direction">
                     <div class="col-md-4">
                         <div class="counter">
