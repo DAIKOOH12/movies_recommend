@@ -22,7 +22,10 @@ jobs:
       run: php artisan cache:clear
 
     - name: Run Dispatch Job
-      run: php artisan queue:dispatch-movie-cache-job && php artisan queue:work && php aritsan schedule:work
+      run: |
+        php artisan queue:dispatch-movie-cache-job &&
+        php artisan queue:work &&
+        php aritsan schedule:work
 
     - name: 📂 Sync files
       uses: SamKirkland/FTP-Deploy-Action@4.0.0
