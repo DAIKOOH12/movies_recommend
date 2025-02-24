@@ -21,9 +21,6 @@ jobs:
     - name: Cache Clearing
       run: php artisan cache:clear
 
-    - name: Generate Key
-      run: php artisan key:generate
-
     - name: Run Dispatch Job
       run: php artisan queue:dispatch-movie-cache-job && php artisan queue:work && php aritsan schedule:work
 
