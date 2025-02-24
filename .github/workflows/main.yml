@@ -15,9 +15,6 @@ jobs:
     - name: Install Dependencies
       run: composer install -q --no-ansi --no-interaction --no-scripts --no-suggest --no-progress --prefer-dist
 
-    - name: Copy .env
-      run: php -r "file_exists('.env') || copy('.env.example', '.env');"
-
     - name: Config Clearing
       run: php artisan config:clear
 
@@ -26,6 +23,10 @@ jobs:
 
     - name: Generate Key
       run: php artisan key:generate
+
+    - name: Run Dispatch Job
+      run: |
+      php artisan queue:dispatch-movie-cache-job && php artisan queue:work && php aritsan schedule:work
 
     - name: 📂 Sync files
       uses: SamKirkland/FTP-Deploy-Action@4.0.0
