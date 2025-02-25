@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\main\CastController;
 use App\Http\Controllers\main\HomeController;
 use App\Http\Controllers\main\ListMoviesController;
 use App\Http\Controllers\main\MovieController;
@@ -18,15 +19,15 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', [HomeController::class, 'index'])->name('index');
 Route::prefix('mvr')->group(function () {
-    Route::get('/', [HomeController::class,'index'])->name('index');
+    Route::get('/', [HomeController::class, 'index'])->name('index');
 
     Route::get('/catalog-grid', function () {
         return view('main.catalog_grid');
     })->name('cataloggrid');
 
-    Route::get('/all-movies/{type?}/{key?}', [ListMoviesController::class,'index'])->name('allmovies');
+    Route::get('/all-movies/{type?}/{key?}', [ListMoviesController::class, 'index'])->name('allmovies');
 
-    Route::get('/details/{any?}', [MovieController::class,'index'])->name('details');
+    Route::get('/movies/{any?}', [MovieController::class, 'index'])->name('details');
 
     Route::get('/lists', function () {
         return view('main.movies_list');
@@ -52,13 +53,9 @@ Route::prefix('mvr')->group(function () {
         return view('main.profile');
     })->name('myprofile');
 
-    Route::get('/actor', function () {
-        return view('main.actor');
-    })->name('actor');
+    Route::get('/casts', [CastController::class, 'index'])->name('actor');
 
-    Route::get('/actor-info', function () {
-        return view('main.actor_info');
-    })->name('actorinfo');
+    Route::get('/info/{any?}', [CastController::class, 'getCastDetail'])->name('actorinfo');
 
     Route::get('/contacts', function () {
         return view('main.contacts');

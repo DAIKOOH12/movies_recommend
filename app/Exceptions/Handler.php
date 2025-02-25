@@ -32,12 +32,12 @@ class Handler extends ExceptionHandler
     }
     public function render($request, Throwable $exception)
     {
-        if ($exception instanceof ModelNotFoundException || $exception instanceof NotFoundHttpException) {
-            return redirect()->route('notfound');
-        }
-        if($exception instanceof HttpException && $exception->getStatusCode() == 500){
-            return redirect()->route('notfound');
-        }
+        // if ($exception instanceof ModelNotFoundException || $exception instanceof NotFoundHttpException) {
+        //     return redirect()->route('notfound');
+        // }
+        // if($exception instanceof HttpException && $exception->getStatusCode() == 500){
+        //     return redirect()->route('notfound');
+        // }
         return parent::render($request, $exception);
     }
 }

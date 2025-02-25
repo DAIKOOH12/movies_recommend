@@ -254,7 +254,7 @@
                                     </div>
                                     <div class="col-8 block-description">
                                         <h6 class="iq-title">
-                                            <a href="" tabindex="0">{{ $cast['name'] }}</a>
+                                            <a href="{{ route('actorinfo') }}/{{ $cast['id'] }}-{{ Str::slug($cast['name']) }}" tabindex="0">{{ $cast['name'] }}</a>
                                         </h6>
                                         <div class="video-time d-flex align-items-center my-2">
                                             <small class="text-white">As {{ $cast['character'] }}</small>

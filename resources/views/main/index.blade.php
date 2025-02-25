@@ -354,7 +354,7 @@
                         <img src="https://image.tmdb.org/t/p/w1280{{ $cast['profile_path'] }}" alt="personality" class="img-fluid object-cover mb-4 rounded">
                         <div class="text-center">
                             <h6 class="mb-0">
-                                <a href="{{ route('myprofile') }}/{{ $cast['id'] }}-{{ Str::slug($cast['name']) }}" class="font-size-14 text-decoration-none cast-title text-capitalize">{{ $cast['name'] }}</a>
+                                <a href="{{ route('actorinfo') }}/{{ $cast['id'] }}-{{ Str::slug($cast['name']) }}" class="font-size-14 text-decoration-none cast-title text-capitalize">{{ $cast['name'] }}</a>
                             </h6>
                             <a href="{{ route('myprofile') }}/{{ $cast['id'] }}-{{ Str::slug($cast['name']) }}" class="font-size-14 text-decoration-none text-capitalize text-body">{{ $cast['known_for_department'] }}</a>
                         </div>

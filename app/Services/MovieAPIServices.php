@@ -187,4 +187,15 @@ class MovieAPIServices
         ]);
         return $response->json();
     }
+    public function getMoviesWithCast($person_id)
+    {
+        $client = new Client();
+        $promise = [
+            'cast_detail' => $client->getAsync("{$this->base_url}person/{$person_id}?api_key={$this->api_key}&language=en-US"),
+            'most_views_movies' => $client->getAsync("{$this->base_url}person/{$person_id}/movie_credits?api_key={$this->api_key}&language=en-US"),
+        ];
+
+        $response = Promise\Utils::unwrap($promise);
+        return $response;
+    }
 }
