@@ -58,11 +58,10 @@ class HomeController extends Controller
             $movie_certification = $this->moviesServices->getMovieCertificate($movie['id']);
             $movie['certificate'] = $movie_certification['results'][0]['iso_3166_1'];
             $casts = $this->moviesServices->getMovieCasts($movie['id'])['cast'];
-            $movie['cast_represent'] = collect($casts)->sortByDesc('popularity')->values()->all()[0];
+            $casts = collect($casts)->sortByDesc('popularity')->values()->take(1)->first();
+            $movie['cast_represent'] = $casts;
         }
         $movies_banner = collect($movies_banner)->take(3)->values();
-        // dd($movies_banner);
-
         return $movies_banner;
     }
     public function getTopTenMovies()
@@ -90,7 +89,8 @@ class HomeController extends Controller
             $movie_certification = $this->moviesServices->getMovieCertificate($movie['id']);
             $movie['certificate'] = $movie_certification['results'][0]['iso_3166_1'];
             $casts = $this->moviesServices->getMovieCasts($movie['id'])['cast'];
-            $movie['cast_represent'] = collect($casts)->sortByDesc('popularity')->values()->all()[0];
+            $casts = collect($casts)->sortByDesc('popularity')->values()->take(1)->first();
+            $movie['cast_represent'] = $casts;
         }
         $movie_trending = collect($movie_trending)->take(5)->values();
         // dd($movie_trending);
