@@ -198,4 +198,26 @@ class MovieAPIServices
         $response = Promise\Utils::unwrap($promise);
         return $response;
     }
+
+    public function getMoviesWithFilter($min_run_time, $max_run_time, $min_vote, $max_vote, $sort_by)
+    {
+        $uri="{$this->base_url}discover/movie?api_key={$this->api_key}&include_adult=false&include_video=false&language=en-US&page=1";
+        if($min_run_time!=null){
+            $uri.="&with_runtime.gte={$min_run_time}&with_runtime.lte={$max_run_time}";
+        }
+        if($min_vote!=null){
+            $uri.="&vote_average.gte={$min_vote}&vote_average.lte={$max_vote}";
+        }
+        if($sort_by!=null){
+            $uri.="&sort_by={$sort_by}";
+        }
+        $client = new Client();
+
+        $promise = [
+            'movies_filter' => $client->getAsync($uri),
+        ];
+
+        $response = Promise\Utils::unwrap($promise);
+        return $response;
+    }
 }

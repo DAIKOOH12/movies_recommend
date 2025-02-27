@@ -16,41 +16,37 @@
 
 						<!-- filter desk -->
 						<div class="filter__items">
-							<span>Quality:</span>
-							<select class="filter__select" name="quality" id="filter__quality">
-								<option value="0">Any quality</option>
-								<option value="1">HD 1080</option>
-								<option value="2">HD 720</option>
-								<option value="3">DVD</option>
-								<option value="4">TS</option>
+							<span>Runtime:</span>
+							<select class="filter__select" name="runtiume" id="filter__runtime">
+								<option value="0">None</option>
+								<option value="" data-gte="60" data-lte="119">1 hour+</option>
+								<option value="" data-gte="120" data-lte="179">2 hours+</option>
+								<option value="" data-gte="180" data-lte="300">3 hours+</option>
 							</select>
 
-							<span>Rates:</span>
+							<span>Voted:</span>
 							<select class="filter__select" name="rate" id="filter__rate">
-								<option value="0">Any rating</option>
-								<option value="1">from 3.0</option>
-								<option value="2">from 5.0</option>
-								<option value="3">from 7.0</option>
-								<option value="4">Highest</option>
+								<option value="0">None</option>
+								<option value="" data-gte="4" data-lte="5">4 - 5</option>
+								<option value="" data-gte="5" data-lte="6">5 - 6</option>
+								<option value="" data-gte="6" data-lte="7">6 - 7</option>
+								<option value="" data-gte="7" data-lte="8">7 - 8</option>
+								<option value="" data-gte="8" data-lte="10">8+</option>
 							</select>
 
 							<span>Order By:</span>
 							<select class="filter__select" name="sort" id="filter__sort">
-								<option value="0">None</option>
-								<option value="1">Most Rated</option>
-								<option value="2">Newest</option>
-								<option value="3">Oldest</option>
+								<option value="">None</option>
+								<option value="vote_count.desc">Most Voted</option>
+								<option value="primary_release_date.desc">Newest</option>
+								<option value="primary_release_date.asc">Oldest</option>
 							</select>
 						</div>
 						<!-- end filter desk -->
 
 						<!-- apply btn -->
-						<button class="filter__btn" type="button"><span>apply</span></button>
+						<button class="filter__btn" id="filter__btn" type="button"><span>apply</span></button>
 						<!-- end apply btn -->
-
-						<!-- amount -->
-						<span class="filter__amount">Showing 12 of 169</span>
-						<!-- end amount -->
 					</div>
 				</div>
 			</div>
@@ -143,4 +139,9 @@
 		</div>
 	</div>
 </div>
+@endsection
+
+@section('scripts')
+<script src="{{asset('assets')}}/main/js/movies-filter.js" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 @endsection

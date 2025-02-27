@@ -584,6 +584,7 @@
     <!-- Streamit Script -->
     <script src="{{asset('assets')}}/main/js/streamit.js" defer></script>
     <script src="{{asset('assets')}}/main/js/swiper.js" defer></script>
+    @yield('scripts')
 </body>
 
 
