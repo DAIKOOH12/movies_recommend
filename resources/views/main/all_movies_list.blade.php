@@ -136,6 +136,7 @@
 				</div>
 				@endforeach
 			</div>
+			{{ $paginated_movies->links("pagination::bootstrap-4") }}
 		</div>
 	</div>
 </div>

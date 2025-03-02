@@ -5,19 +5,39 @@ namespace App\Http\Controllers\main;
 use App\Http\Controllers\Controller;
 use App\Services\MovieAPIServices;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Cache;
+use Illuminate\Pagination\LengthAwarePaginator;
+use Illuminate\Pagination\Paginator;
+
 
 class CastController extends Controller
 {
+    private $movieAPIServices;
     public function __construct(MovieAPIServices $movieAPIServices)
     {
         $this->movieAPIServices = $movieAPIServices;
     }
     public function index()
     {
-        $casts_list = $this->movieAPIServices->getPopularCasts()['results'];
-        $casts_list = collect($casts_list)->take(12)->toArray();
+        $perPage = 20;
+        $currentPage = request()->input('page');
+        $casts_list = $this->movieAPIServices->getPopularCasts($currentPage);
 
-        return view('main.actor', compact('casts_list'));
+        $list = $casts_list['results'];
+        // dd($top_rated_results);
+        $array = $casts_list['results'];
+        $total = $casts_list['total_results'];
+
+        $paginated_movies = new LengthAwarePaginator(
+            $array,
+            $total,
+            $perPage,
+            $currentPage,
+            ['path' => request()->url()]
+        );
+        $list = collect($list)->take(12)->toArray();
+
+        return view('main.actor', compact('list','paginated_movies'));
     }
     public function getCastDetail(Request $request)
     {

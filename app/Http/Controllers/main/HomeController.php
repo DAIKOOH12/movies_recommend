@@ -13,6 +13,7 @@ use Illuminate\Support\Facades\Hash;
 
 class HomeController extends Controller
 {
+    private $moviesServices;
     public function __construct(MovieAPIServices $moviesServices)
     {
         $this->moviesServices = $moviesServices;

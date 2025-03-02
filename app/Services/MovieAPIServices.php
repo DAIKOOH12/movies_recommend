@@ -126,13 +126,14 @@ class MovieAPIServices
 
         return $response->json();
     }
-    public function getMovieTags($movie_id)
+    public function getMovieTags($movie_id, $page = 1)
     {
         $url = "{$this->base_url}movie/{$movie_id}/keywords";
 
         $response = Http::get($url, [
             'api_key' => $this->api_key,
-            'language' => 'en-US'
+            'language' => 'en-US',
+            'page' => $page
         ]);
 
         return $response->json();
@@ -149,14 +150,14 @@ class MovieAPIServices
         return $response->json();
     }
 
-    public function getPopularCasts()
+    public function getPopularCasts($page = 1)
     {
         $url = "{$this->base_url}person/popular";
 
         $response = Http::get($url, [
             'api_key' => $this->api_key,
             'language' => 'en-US',
-            'page' => 1
+            'page' => $page
         ]);
 
         return $response->json();
@@ -174,19 +175,32 @@ class MovieAPIServices
         $response = Promise\Utils::unwrap($promise);
         return $response;
     }
-    public function getListMoviesWithGenres($id)
+    public function getListMoviesWithGenres($id, $page = 1)
     {
         $url = "{$this->base_url}discover/movie";
 
         $response = Http::get($url, [
             'api_key' => $this->api_key,
             'language' => 'en-US',
-            'page' => 1,
+            'page' => $page,
             'include_adult' => false,
             'with_genres' => $id
         ]);
         return $response->json();
     }
+
+    public function getListMoviesWithPages($page = 1, $type)
+    {
+        $url = "{$this->base_url}movie/{$type}";
+        $response = Http::get($url, [
+            'api_key' => $this->api_key,
+            'language' => 'en-US',
+            'page' => $page,
+            'include_adult' => false,
+        ]);
+        return $response->json();
+    }
+
     public function getMoviesWithCast($person_id)
     {
         $client = new Client();
@@ -201,15 +215,15 @@ class MovieAPIServices
 
     public function getMoviesWithFilter($min_run_time, $max_run_time, $min_vote, $max_vote, $sort_by)
     {
-        $uri="{$this->base_url}discover/movie?api_key={$this->api_key}&include_adult=false&include_video=false&language=en-US&page=1";
-        if($min_run_time!=null){
-            $uri.="&with_runtime.gte={$min_run_time}&with_runtime.lte={$max_run_time}";
+        $uri = "{$this->base_url}discover/movie?api_key={$this->api_key}&include_adult=false&include_video=false&language=en-US&page=1";
+        if ($min_run_time != null) {
+            $uri .= "&with_runtime.gte={$min_run_time}&with_runtime.lte={$max_run_time}";
         }
-        if($min_vote!=null){
-            $uri.="&vote_average.gte={$min_vote}&vote_average.lte={$max_vote}";
+        if ($min_vote != null) {
+            $uri .= "&vote_average.gte={$min_vote}&vote_average.lte={$max_vote}";
         }
-        if($sort_by!=null){
-            $uri.="&sort_by={$sort_by}";
+        if ($sort_by != null) {
+            $uri .= "&sort_by={$sort_by}";
         }
         $client = new Client();
 

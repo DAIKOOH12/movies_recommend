@@ -10,6 +10,7 @@ use Illuminate\Support\Facades\Cache;
 
 class MovieController extends Controller
 {
+    private $moviesServices;
     public function __construct(MovieAPIServices $moviesServices)
     {
         $this->moviesServices = $moviesServices;

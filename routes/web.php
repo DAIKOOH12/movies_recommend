@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\main\CastController;
+use App\Http\Controllers\main\GenresController;
 use App\Http\Controllers\main\HomeController;
 use App\Http\Controllers\main\ListMoviesController;
 use App\Http\Controllers\main\MovieController;
@@ -21,9 +22,7 @@ Route::get('/', [HomeController::class, 'index'])->name('index');
 Route::prefix('mvr')->group(function () {
     Route::get('/', [HomeController::class, 'index'])->name('index');
 
-    Route::get('/catalog-grid', function () {
-        return view('main.catalog_grid');
-    })->name('cataloggrid');
+    Route::get('/catalog-grid', [GenresController::class, 'index'])->name('cataloggrid');
 
     Route::get('/all-movies/{type?}/{key?}', [ListMoviesController::class, 'index'])->name('allmovies');
 

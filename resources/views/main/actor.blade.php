@@ -4,7 +4,7 @@
 <section class="section-padding">
     <div class="container-fluid">
         <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-5 row-cols-xl-6">
-            @foreach($casts_list as $cast)
+            @foreach($list as $cast)
             <div class="col">
                 <div class="iq-cast">
                     <img src="{{ env('TMDB_CAST_URL') }}{{ $cast['profile_path'] }}" class="img-fluid" alt="castImg" />
@@ -18,10 +18,7 @@
             </div>
             @endforeach
         </div>
-        <div class="text-center">
-            <div class="iq-button">
-            </div>
-        </div>
+        {{ $paginated_movies->links("pagination::bootstrap-4") }}
     </div>
 </section>
 @endsection
