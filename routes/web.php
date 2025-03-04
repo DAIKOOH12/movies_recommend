@@ -1,11 +1,16 @@
 <?php
 
+use App\Http\Controllers\main\AccountController;
 use App\Http\Controllers\main\CastController;
 use App\Http\Controllers\main\GenresController;
 use App\Http\Controllers\main\HomeController;
 use App\Http\Controllers\main\ListMoviesController;
 use App\Http\Controllers\main\MovieController;
+use App\Http\Controllers\main\MovieWatchlistController;
+use App\Http\Controllers\main\WatchlistController;
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Mail;
+use App\Mail\TestEmail;
 
 /*
 |--------------------------------------------------------------------------
@@ -60,17 +65,19 @@ Route::prefix('mvr')->group(function () {
         return view('main.contacts');
     })->name('contactus');
 
-    Route::get('/signin', function () {
-        return view('main.login');
-    })->name('signinform');
+    Route::get('/signin', [AccountController::class, 'index'])->name('signinform');
+    Route::post('/signin', [AccountController::class, 'signInUser']);
 
-    Route::get('/signup', function () {
-        return view('main.signup');
-    })->name('signupform');
+    Route::get('/signup', [AccountController::class, 'signUp'])->name('signupform');
+    Route::post('/signup', [AccountController::class, 'createUser']);
 
-    Route::get('/reset-password', function () {
-        return view('main.forgot_password');
-    })->name('resetpassword');
+    Route::get('/singout', [AccountController::class, 'signOut'])->name('signout');
+
+    Route::get('/reset-password', [AccountController::class, 'resetPassword'])->name('resetpassword');
+    Route::post('/reset-password', [AccountController::class, 'sendResetEmail']);
+
+    Route::get('/update-password/{token}', [AccountController::class, 'updateForm'])->name('password.reset');
+    Route::post('/update', [AccountController::class, 'updatePassword']);
 
     Route::get('/not-found', function () {
         return view('main.404');
@@ -80,13 +87,13 @@ Route::prefix('mvr')->group(function () {
         return view('main.playlist');
     })->name('playlists');
 
-    Route::get('/your-watchlist', function () {
-        return view('main.watchlists');
-    })->name('yourwatchlist');
+    Route::get('/your-watchlist', [WatchlistController::class, 'index'])->name('yourwatchlist')->middleware('auth.check');
+    Route::post('/your-watchlist', [WatchlistController::class, 'createWatchlist'])->middleware('auth.check');
 
-    Route::get('/detail-watchlist', function () {
-        return view('main.detail_watchlist');
-    })->name('detailwatchlist');
+    Route::get('/detail-watchlist/{id}-{slug}', [MovieWatchlistController::class, 'index'])->where(['id' => 'wl\d+', 'slug' => '.*'])->name('detailwatchlist');
+
+    Route::get('/watchlist', [WatchlistController::class, 'getWatchList']);
+    Route::post('/addtowatchlist', [WatchlistController::class, 'addToWatchList']);
 });
 Route::prefix('admin')->group(function () {
     Route::get('/', function () {

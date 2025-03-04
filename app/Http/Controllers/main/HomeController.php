@@ -10,6 +10,7 @@ use App\Models\Wishlist;
 use App\Models\WishlistMovies;
 use Illuminate\Support\Facades\Cache;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Auth;
 
 class HomeController extends Controller
 {

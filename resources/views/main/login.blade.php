@@ -1,6 +1,6 @@
 @extends('layout.account_master')
 
-@section('content')
+@section('content')>
 <div class="container">
     <div class="row justify-content-center align-items-center height-self-center vh-100">
         <div class="col-lg-5 col-md-12 align-self-center">
@@ -28,14 +28,22 @@
                         </a>
                     </div>
                 </div>
-                <form action="https://templates.iqonic.design/streamit-dist/frontend/html/post">
+                @if($errors->any())
+                @foreach($errors->all() as $error)
+                <p style="color:red;min-width:100%;margin:3px 0">*{{ $error }}</p>
+                @endforeach
+                @endif
+                @if(session()->has('message'))
+                <p style="color:green;min-width:100%;margin:3px 0">*{{ session()->get('message') }}</p>
+                @endif
+                <form action="" method="post">
                     <div class="mb-3">
                         <label class="text-white fw-500 mb-2">Username or Email Address</label>
-                        <input type="text" class="form-control rounded-0" required="">
+                        <input type="text" class="form-control rounded-0" name="account" required="">
                     </div>
                     <div class="mb-3">
                         <label class="text-white fw-500 mb-2">Password</label>
-                        <input type="password" class="form-control rounded-0" required="">
+                        <input type="password" class="form-control rounded-0" name="password" required="">
                     </div>
                     <div class="text-end mb-3">
                         <a href="{{route('resetpassword')}}" class="text-primary fw-semibold fst-italic">Forgot
@@ -46,12 +54,13 @@
                             class="form-check-input m-0 me-2" type="checkbox">Remember Me</label>
                     <div class="full-button">
                         <div class="iq-button">
-                            <a href="#" class="btn text-uppercase position-relative">
+                            <button type="submit" class="btn text-uppercase position-relative">
                                 <span class="button-text">log in</span>
                                 <i class="fa-solid fa-play"></i>
-                            </a>
+                            </button>
                         </div>
                     </div>
+                    @csrf
                 </form>
                 <p class="my-4 text-center fw-500 text-white">New to Movies Recommendy? <a href="{{route('signupform')}}"
                         class="text-primary ms-1">Register</a></p>

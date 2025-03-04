@@ -2,10 +2,12 @@
 
 namespace App\Services;
 
+use Barryvdh\Debugbar\Facades\Debugbar;
 use Illuminate\Support\Facades\Http;
 use Illuminate\Support\Str;
 use GuzzleHttp\Client;
 use GuzzleHttp\Promise;
+use GuzzleHttp\Promise\Utils;
 
 class MovieAPIServices
 {
@@ -233,5 +235,33 @@ class MovieAPIServices
 
         $response = Promise\Utils::unwrap($promise);
         return $response;
+    }
+
+    public function getMoviesWithID($array_id)
+    {
+        $client = new Client();
+
+        $promise = [];
+
+        foreach ($array_id as $movie) {
+            $uri = "{$this->base_url}movie/{$movie->movie_id}?api_key={$this->api_key}&language=en-US";
+            $promise[$movie->movie_id] = $client->getAsync($uri);
+        }
+
+
+        $response = Utils::settle($promise)->wait();
+
+        Debugbar::info($response);
+
+        $movies = [];
+
+        foreach ($response as $item) {
+            $movies[] = json_decode($item['value']->getBody(), true);
+        }
+
+        Debugbar::info($movies);
+
+        // return json_decode($response['movie_detail']->getBody(), true);
+        return $movies;
     }
 }

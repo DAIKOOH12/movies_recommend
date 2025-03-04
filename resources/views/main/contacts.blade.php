@@ -8,7 +8,7 @@
       <div class="col-lg-8">
         <div class="title-box">
           <h2>Create With Us</h2>
-          <p class="mb-0">To learn more about how Streamit can help you, contact us.</p>
+          <p class="mb-0">To learn more about how Movie Recommedy can help you, contact us.</p>
         </div>
         <form class="mb-5 mb-lg-0">
           <div class="row">
@@ -43,7 +43,7 @@
         </div>
         <div class="border-bottom pb-4 mb-4">
           <h5>Get In Touch</h5>
-          <a class="text-primary">support@streamit.com</a>
+          <a class="text-primary">support@mvr.com</a>
           <p class="mb-0">(144) 1234 4567</p>
         </div>
         <div>
@@ -87,7 +87,7 @@
     <div class="row">
       <div class="col-lg-10">
         <div class="title-box">
-          <h3 class="fw-500">To Learn More About How Streamit Can Help You, Contact Us. We'd Be Happy To Take On The Challenge!</h3>
+          <h3 class="fw-500">To Learn More About How Movie Recommedy Can Help You, Contact Us. We'd Be Happy To Take On The Challenge!</h3>
         </div>
       </div>
       <div class="col-lg-2 d-none d-lg-block"></div>

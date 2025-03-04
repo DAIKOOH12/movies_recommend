@@ -18,10 +18,18 @@ class Wishlist extends Model
     public $incrementing = false;
 
     protected $fillable = [
-        'wishlist_title','wishlits_description','wishlist_state','wishlist_image'
+        'wishlist_title',
+        'wishlits_description',
+        'wishlist_state',
+        'wishlist_image'
     ];
 
-    public function user(){
-        return $this->belongsTo(User::class,'user_id','user_id');
+    public function wishlistMovies()
+    {
+        return $this->hasMany(WishlistMovies::class, 'wishlist_id', 'wishlist_id');
+    }
+    public function user()
+    {
+        return $this->belongsTo(User::class, 'user_id', 'user_id');
     }
 }

@@ -7,9 +7,12 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="csrf-token" content="{{ csrf_token() }}">
 	<title>Movies Recommendy</title>
 	<!-- Google Font Api KEY-->
 	<meta name="google_font_api" content="AIzaSyBG58yNdAjc20_8jAvLNSVi9E4Xhwjau_k">
+
+	<link rel="favicon.io" type="image/ico" href="{{ asset('assets') }}/main/img/logo.jpg">
 
 	<!-- Library / Plugin Css Build -->
 	<link rel="stylesheet" href="{{asset('assets')}}/main/css/core/libs.min.css" />
@@ -184,6 +187,7 @@
 	<!-- Streamit Script -->
 	<script src="{{asset('assets')}}/main/js/streamit.js" defer></script>
 	<script src="{{asset('assets')}}/main/js/swiper.js" defer></script>
+	@yield('scripts')
 </body>
 
 

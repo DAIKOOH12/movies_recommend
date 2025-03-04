@@ -10,7 +10,7 @@
                         <i aria-hidden="true" class="fas fa-minus active"></i>
                         <i aria-hidden="true" class="fas fa-plus inactive"></i>
                     </div>
-                    <h4 class="mb-0 accordian-title">What is streamit?</h4>
+                    <h4 class="mb-0 accordian-title">What is mvr?</h4>
                 </div>
                 <div class="iq-accordian-details" style="display: block;">
                     <p class="mb-0"> It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using ‘Content here, content here’, making it look like readable English. </p>

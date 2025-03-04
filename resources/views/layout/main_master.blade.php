@@ -4,9 +4,12 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="csrf-token" content="{{ csrf_token() }}">
     <title>Movie Recommedy</title>
     <!-- Google Font Api KEY-->
     <meta name="google_font_api" content="AIzaSyBG58yNdAjc20_8jAvLNSVi9E4Xhwjau_k">
+
+    <link rel="favicon.io" type="image/ico" href="{{ asset('assets') }}/main/img/logo.jpg">
 
     <!-- Library / Plugin Css Build -->
     <link rel="stylesheet" href="{{asset('assets')}}/main/css/core/libs.min.css" />
@@ -46,6 +49,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com/">
     <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,300&amp;display=swap" rel="stylesheet">
+
+    @yield('styles')
 
 </head>
 
@@ -236,7 +241,7 @@
                                                     <svg class="icon-18" width="18" viewBox="0 0 24 24" fill="none"
                                                         xmlns="http://www.w3.org/2000/svg">
                                                         <path fill-rule="evenodd" clip-rule="evenodd"
-                                                            d="M9.87651 15.2063C6.03251 15.2063 2.74951 15.7873 2.74951 18.1153C2.74951 20.4433 6.01251 21.0453 9.87651 21.0453C13.7215 21.0453 17.0035 20.4633 17.0035 18.1363C17.0035 15.8093 13.7415 15.2063 9.87651 15.2063Z"
+                                                            d="M9.87651 15.2063C6.03251 15.2063 2.74951 15.7873 2.74951 18.1153C2.74951 20.4433 6.01251 21.0453 9.87651 21.0453C13.7215 21.0453 17.0035 20.4633 17.0035 18.1363C17.0035 15.8093 13.7415f 15.2063 9.87651 15.2063Z"
                                                             stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
                                                             stroke-linejoin="round"></path>
                                                         <path fill-rule="evenodd" clip-rule="evenodd"
@@ -253,12 +258,13 @@
                                         </a>
                                         <ul class="dropdown-menu dropdown-menu-end dropdown-user border-0 p-0 m-0"
                                             aria-labelledby="navbarDropdown">
+                                            @if(Auth::check())
                                             <li class="user-info d-flex align-items-center gap-3 mb-3">
                                                 <img src="{{asset('assets')}}/main/img/user/user1.html" class="img-fluid" alt="" loading="lazy">
-                                                <span class="font-size-14 fw-500 text-capitalize text-white">Jenny</span>
+                                                <span class="font-size-14 fw-500 text-capitalize text-white">{{ Auth::user()->user_fullname }}</span>
                                             </li>
                                             <li>
-                                                <a href="playlist.html" class="iq-sub-card d-flex align-items-center gap-3">
+                                                <a href="" class="iq-sub-card d-flex align-items-center gap-3">
                                                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 22" fill="none">
                                                         <path fill-rule="evenodd" clip-rule="evenodd" d="M7.84455 20.6621C4.15273 20.6621 1 20.0876 1 17.7868C1 15.486 4.13273 13.3621 7.84455 13.3621C11.5364 13.3621 14.6891 15.4654 14.6891 17.7662C14.6891 20.066 11.5564 20.6621 7.84455 20.6621Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
                                                         <path fill-rule="evenodd" clip-rule="evenodd" d="M7.83725 10.1738C10.26 10.1738 12.2236 8.21015 12.2236 5.78742C12.2236 3.36469 10.26 1.40015 7.83725 1.40015C5.41452 1.40015 3.44998 3.36469 3.44998 5.78742C3.4418 8.20196 5.3918 10.1656 7.80634 10.1738C7.81725 10.1738 7.82725 10.1738 7.83725 10.1738Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
@@ -279,7 +285,7 @@
                                                 </a>
                                             </li>
                                             <li>
-                                                <a href="login.html"
+                                                <a href="{{ route('signout') }}"
                                                     class="iq-sub-card iq-logout-2 mt-1 d-flex justify-content-center gap-2">
                                                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"
                                                         fill="none">
@@ -290,6 +296,17 @@
                                                     <h6 class="mb-0 font-size-14 fw-normal">Logout</h6>
                                                 </a>
                                             </li>
+                                            @else
+                                            <li>
+                                                <a href="{{ route('signinform') }}" class="iq-sub-card d-flex align-items-center gap-3">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 22" fill="none">
+                                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M7.84455 20.6621C4.15273 20.6621 1 20.0876 1 17.7868C1 15.486 4.13273 13.3621 7.84455 13.3621C11.5364 13.3621 14.6891 15.4654 14.6891 17.7662C14.6891 20.066 11.5564 20.6621 7.84455 20.6621Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M7.83725 10.1738C10.26 10.1738 12.2236 8.21015 12.2236 5.78742C12.2236 3.36469 10.26 1.40015 7.83725 1.40015C5.41452 1.40015 3.44998 3.36469 3.44998 5.78742C3.4418 8.20196 5.3918 10.1656 7.80634 10.1738C7.81725 10.1738 7.82725 10.1738 7.83725 10.1738Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                                    </svg>
+                                                    <h6 class="mb-0 font-size-14 fw-normal">SignIn/SignUp</h6>
+                                                </a>
+                                            </li>
+                                            @endif
                                         </ul>
                                     </li>
                                 </ul>

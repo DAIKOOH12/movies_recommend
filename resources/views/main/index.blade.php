@@ -1,5 +1,9 @@
 @extends('layout.main_master')
 
+@section('styles')
+<link href="https://cdn.jsdelivr.net/npm/toastr@2.1.4/build/toastr.min.css" rel="stylesheet">
+@endsection
+
 @section('content')
 <div class="iq-banner-thumb-slider">
     <div class="slider">
@@ -182,7 +186,7 @@
                                                 </div>
                                             </div>
                                             <div class="watchlist">
-                                                <a class="watch-list-not" href="playlist.html">
+                                                <a href="" class="watch-list-not" data-movie-id="{{ $movie['id'] }}" name="addbutton" data-bs-toggle="modal" data-bs-target="#addNewPlaylist">
                                                     <svg width="10" height="10" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="icon-10">
                                                         <path d="M12 4V20M20 12H4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
                                                     </svg>
@@ -401,4 +405,40 @@
         </div>
     </div>
 </div>
+<div class="modal fade" id="addNewPlaylist" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content border-0" style="background-color: #141314;">
+            @if(!Auth::check())
+            <div class="modal-header border-0">
+                <div>
+                    <h1 class="modal-title text-capitalize fs-5 fw-500">Sign In to continue</h1>
+                </div>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="form-group d-flex align-items-center justify-content-center gap-3">
+                <a href="{{ route('signinform') }}" class="btn btn-sm btn-primary text-uppercase fw-medium" id="signInBtn">SignIn</a>
+            </div>
+            @else
+            <div class="modal-header border-0">
+                <div>
+                    <h1 class="modal-title text-capitalize fs-5 fw-500">Select Your WatchList</h1>
+                </div>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+            </div>
+            <div class="form-group d-flex align-items-center gap-3">
+                <button class="btn btn-sm btn-light text-uppercase fw-medium">cancel</button>
+                <button type="submit" class="btn btn-sm btn-primary text-uppercase fw-medium" id="addWatchlist">add</button>
+            </div>
+            @endif
+        </div>
+    </div>
+</div>
+@endsection
+
+@section('scripts')
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script src="https://cdn.jsdelivr.net/npm/toastr@2.1.4/toastr.min.js"></script>
+<script src="{{asset('assets')}}/main/js/add-watchlist.js"></script>
 @endsection

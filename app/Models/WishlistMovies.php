@@ -17,6 +17,8 @@ class WishlistMovies extends Model
 
     protected $keyType = 'string';
 
+    public $timestamps = false;
+
     protected $fillable = [
         'wishlist_id',
         'movie_id',
